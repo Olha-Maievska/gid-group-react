@@ -1,0 +1,131 @@
+.modal-call {
+  background: rgba(#131313, 95%);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  animation-duration: 1.6s;
+  z-index: 99;
+  overflow: hidden;
+  animation-name: modalOpen;
+
+  &__wrapper {
+    max-width: 700px;
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  &__contant {
+    padding: 35px 50px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  &__name,
+  &__phone {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 12px;
+    border: 3px solid rgba(0, 0, 0, .4);
+
+    &::placeholder {
+      color: #4F4F4F;
+      font-weight: 300;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 300px;
+    margin: 10px auto 0;
+    padding: 17px 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333;
+    background-color: #FAFF09;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes modalClose {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-call {
+    padding: 0 30px;
+
+     &__contant {
+      padding: 25px 20px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .modal-call {
+    &__btn {
+      width: 220px;
+      padding: 12px 20px;
+      font-size: 20px;
+    }
+
+    &__title {
+      text-align: left;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__name,
+    &__phone {
+      padding: 10px;
+      color: #000;
+      font-size: 16px;
+      line-height: 24px;
+      border: 1px solid rgba(0, 0, 0, .4);
+
+      &::placeholder {
+        color: #4F4F4F;
+        font-weight: 300;
+      }
+    }
+
+    &__contant {
+      padding: 15px 20px;
+    }
+  }
+}

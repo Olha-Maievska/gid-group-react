@@ -1,0 +1,18 @@
+.repair-works {
+  padding-bottom: 35px;
+  border-bottom: 1px solid #BDBDBD;
+  
+  &__inner {
+    position: relative;
+    margin-top: 50px;
+  }
+  
+  &__items {
+    overflow: hidden;
+  }
+
+  &__track {
+    display: flex;
+    width: 100%;
+  }
+}

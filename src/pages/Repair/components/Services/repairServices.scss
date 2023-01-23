@@ -1,0 +1,109 @@
+.repair-services {
+  margin-bottom: 150px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 105px;
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 6px solid #000;
+    border-radius: 6px;
+    padding: 40px;
+    width: 420px;
+    height: 315px;
+    position: relative;
+    box-shadow: 20px 20px 20px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
+    transition: all .6s ease;
+    overflow: hidden;
+
+    &:hover {
+      border: 6px solid #FAFF09;
+    }
+
+    &:hover .repair-services__content {
+      transform: translateY(0);
+    }
+  }
+
+  &__content {
+    border-radius: 4px;
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    bottom: 0;
+    transform: translateY(-310px);
+    background: #000;
+    width: 410px;
+    height: 310px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all .6s ease;
+  }
+
+  &__title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 38px;
+
+    & span {
+      display: block;
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  &__text {
+    padding-left: 26px;
+    font-weight: 400;
+    margin-bottom: 13px;
+    color: #fff;
+    text-align: left;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 5px;
+      left: 0;
+      background-color: #FAFF09;
+      width: 10px;
+      height: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    width: 860px;
+    margin: 0 auto;
+    font-size: 38px;
+    line-height: 50px;
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -20px;
+      left: 50%;
+      width: 220px;
+      height: 4px;
+      background-color: #FAFF09;
+      transform: translateX(-50%);
+    }
+  }
+}

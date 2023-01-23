@@ -1,0 +1,41 @@
+{
+  "getCall": [
+    {
+      "name": "lidiya",
+      "phone": "684983498948",
+      "id": 1
+    },
+    {
+      "name": "olha",
+      "phone": "+3809768755",
+      "id": 2
+    },
+    {
+      "name": "апа",
+      "phone": "45645546546",
+      "id": 3
+    }
+  ],
+  "getCatalog": [
+    {
+      "email": "olha@mail.ru",
+      "checkbox": true,
+      "id": 1
+    },
+    {
+      "email": "ivan@mail.com",
+      "checkbox": true,
+      "id": 2
+    },
+    {
+      "email": "olha@gmail.com",
+      "checkbox": true,
+      "id": 3
+    },
+    {
+      "email": "kate@gmail.com",
+      "checkbox": true,
+      "id": 4
+    }
+  ]
+}

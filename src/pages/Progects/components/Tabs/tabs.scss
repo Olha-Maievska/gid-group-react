@@ -1,0 +1,23 @@
+.tabs {
+	width: 914px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.tab {
+	max-width: 209px;
+	height: 60px;
+	background-color: #F2F2F2;
+	padding: 20px 52px;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	color: #4F4F4F;
+	cursor: pointer;
+	margin: 0 13px;
+  
+	&.active {
+		background-color: #FAFF09;
+		color: #000;
+	}
+}

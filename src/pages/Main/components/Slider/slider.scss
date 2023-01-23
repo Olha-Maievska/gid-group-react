@@ -1,0 +1,157 @@
+.slider {
+  height: 100vh;
+  width: 100%;
+  margin-top: -104px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, .8);
+  
+  &__inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  &__slide  {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__slide-active {
+    position: absolute;
+    opacity: 1.3;
+    animation: fade 1.4s;
+    width: 100%;
+    height: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 94px;
+    color: #F2F2F2;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 780px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+    padding: 0 15px;
+  }
+
+  &__button {
+    background: rgba(1, 1, 1, .4);
+    width: 348px;
+    height: 77px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    color: #fff;
+    border: 1px solid #C4C4C4;
+    padding: 25px 0 24px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+
+    &:hover {
+      background: rgba(1, 1, 1, .8);
+    }
+  }
+
+  &__dots {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 53px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .3s;
+    animation: fade 1.5s;
+
+    &.active {
+      background: rgba(255, 255, 255, .6);
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    // transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    // transform: translateX(0%);
+  }
+}
+
+@media (max-width: 1090px) {
+  .slider {
+    &__title {
+      font-size: 48px;
+      line-height: 56px;
+      top: 45%;
+    }
+
+    &__buttons {
+      width: 590px;
+    }
+
+    &__button {
+      width: 254px;
+      height: 61px;
+      font-size: 18px;
+      padding: 17px 0 23px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+	.slider {
+		margin-top: -94px;
+
+    &__title {
+      width: 300px;
+      font-size: 36px;
+      line-height: 42px;
+      top: 40%;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      width: 300px;
+    }
+
+    &__button {
+      margin-bottom: 25px;
+    }
+	}
+}

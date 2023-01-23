@@ -1,0 +1,25 @@
+.breadcrumbs__link {
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 16px;
+	color: #828282;
+	position: relative;
+	margin-right: 5px;
+	padding-right: 10px;
+
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0px;
+		content: '/';
+	}
+
+	&:last-child {
+		font-weight: 400;
+		color: #4F4F4F;
+		
+		&::after {
+			display: none;;
+		} 
+	}
+}

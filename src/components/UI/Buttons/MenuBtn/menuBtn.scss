@@ -1,0 +1,46 @@
+.menu {
+	width: 36px;
+	height: 32px;
+	background-color: transparent;
+	border: none;
+	position: relative;
+	cursor: pointer;
+
+	div {
+		margin: 13px 0;
+		width: 70%;
+		height: 4px;
+		background-color: #BDBDBD;
+		transition: all .3s ease-out;
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			left: 0;
+			right: 0;
+			height: 4px;
+			background-color: #BDBDBD;
+			transition: all .3s ease-out;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+	}
+
+	&:hover {
+		div {
+			width: 100%;
+			&::before,
+			&::after {
+				width: 70%;
+			}
+		}
+	}
+}

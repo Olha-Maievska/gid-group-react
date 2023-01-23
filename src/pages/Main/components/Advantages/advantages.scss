@@ -1,0 +1,133 @@
+.advantage {
+  margin: 45px 0 66px;
+  
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 37px 80px;
+    width: 100%;  
+  }
+
+  &__item {
+    color: #0E0E0E;
+    width: 390px;
+  }
+
+  &__item:nth-child(4) {
+    width: 270px;
+  }
+
+  &__item-number {
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 500;
+    margin-bottom: 17px;
+  }
+
+  &__item-title {
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 500;
+    padding-left: 27px;
+    margin-bottom: 16px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #0E0E0E;
+      top: 5px;
+      left: 0px;
+    }
+  }
+  &__item-text {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 1660px) {
+  .advantage {
+    &__inner {
+      padding: 37px 40px 0;
+    }
+
+    &__item {
+      width: 45%;
+      margin-bottom: 60px;
+
+      &:last-child {
+        width: 45%;
+      }
+    }
+    &__item-number {
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: 13px;
+    }
+
+    &__item-title {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 13px;
+      display: inline-block;
+
+      &::before {
+        top: 2px;
+        left: 0px;
+      }
+    }
+
+    &__item-text {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .advantage {
+    &__item-number {
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      text-align: center;
+      width: 100%;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    &__item-title {
+      padding-left: 0;
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 8px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__item-text {
+      margin-right: 0;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        background-color: #0E0E0E;
+      }
+    }
+  }
+} 
