@@ -3,16 +3,16 @@ import img from './images/catalog.jpg'
 
 import './catalog.scss'
 
-const Catalog = () => {
+const Catalog = ({title}) => {
   return (
     <section className="catalog">
-      <h2 className="title">ПОЛУЧИТЕ КАТАЛОГ НАШИХ ПРОЕКТОВ</h2>
+      <h2 className="title">{title}</h2>
       <div className="container">
         <div className="catalog__inner">
           <div className="catalog__img">
             <img src={img} alt="" />
           </div>
-          
+
           <div className="catalog__content">
             <h5 className="catalog__title">
               Оставьте ваш E-mail, чтобы получить каталог наших проектов

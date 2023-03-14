@@ -1,18 +1,56 @@
 .repair-works {
   padding-bottom: 35px;
-  border-bottom: 1px solid #BDBDBD;
   
   &__inner {
     position: relative;
-    margin-top: 50px;
+    margin: 50px 0;
+    padding: 0 60px;
   }
   
   &__items {
     overflow: hidden;
+    height: 100%;
   }
 
   &__track {
     display: flex;
-    width: 100%;
+		max-width: 1580px;
+		width: 100%;
+    transition: all .3s ease-in-out;
+  }
+
+  .projects__item {
+		min-width: 33.3333%;
+		margin-bottom: 0px;
+	}
+}
+
+@media (max-width: 1750px) {
+  .repair-works {
+    &__track {
+      flex-wrap: wrap;
+    }
+
+    .projects__item {
+      min-width: 50%;
+      margin-bottom: 20px;
+    }
+
+    .arrow {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .repair-works {
+    &__inner {
+      padding: 0;
+      margin: 30px 0;
+    }
+
+    .projects__item {
+      margin-bottom: 0px;
+    }
   }
 }

@@ -1,0 +1,51 @@
+.stages__btn {
+  max-width: 432px;
+  background: transparent;
+  width: 100%;
+  height: 92px;
+  padding: 25px 90px 25px 0;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 36px;
+  line-height: 42px;
+  position: relative;
+  color: #000;
+  display: block;
+  
+  &::before {
+    content: url('./images/arrow-right.svg');
+    position: absolute;
+    right: 75px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .stages__btn {
+    max-width: 340px;
+    width: 100%;
+    height: 74px;
+    padding: 22px 186px 22px 50px;
+    font-size: 28px;
+    line-height: 28px;
+    
+    &::before {
+      right: 45px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .stages__btn {
+    width: 206px;
+    height: 60px;
+    padding: 16px 0;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 auto;
+    
+    &::before {
+      display: none;
+    }
+  }
+}

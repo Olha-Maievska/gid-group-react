@@ -16,7 +16,7 @@
     border: 6px solid #000;
     border-radius: 6px;
     padding: 40px;
-    width: 420px;
+    width: 410px;
     height: 315px;
     position: relative;
     box-shadow: 20px 20px 20px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset, 2px 2px 2px #ffffff inset;
@@ -32,6 +32,10 @@
     }
   }
 
+  &__item + .repair-services__item {
+    margin-left: 40px;
+  }
+
   &__content {
     border-radius: 4px;
     position: absolute;
@@ -40,8 +44,8 @@
     bottom: 0;
     transform: translateY(-310px);
     background: #000;
-    width: 410px;
-    height: 310px;
+    width: 100%;
+    height: 100%;
     text-align: center;
     padding: 10px;
     display: flex;
@@ -104,6 +108,75 @@
       height: 4px;
       background-color: #FAFF09;
       transform: translateX(-50%);
+    }
+  }
+}
+
+@media (max-width: 1380px) {
+  .repair-services {
+    &__inner {
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 80px 0;
+    }
+
+     &__item {
+      margin-bottom: 40px;
+     }
+  }
+}
+
+@media (max-width: 1090px) {
+  .repair-services {
+    &__inner {
+      margin: 50px 0;
+    }
+
+    &__item {
+      width: 330px;
+      height: 230px;
+      padding: 30px;
+    }
+
+    &__title {
+      margin-top: 10px;
+      font-size: 24px;
+      line-height: 30px;
+
+      & span {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 5px;
+      padding-left: 17px;
+      &::after {
+        position: absolute;
+        content: '';
+        top: 3px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &__img {
+      height: 90px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .repair-services {
+    &__inner {
+      flex-direction: column;
+    }
+    
+    &__item + .repair-services__item {
+      margin-left: 0px;
     }
   }
 }

@@ -1,5 +1,5 @@
 .price {
-	padding-bottom: 50px;
+	margin-bottom: 180px;
 	position: relative;
 
 	&__inner {
@@ -84,8 +84,7 @@
 
 @media (max-width: 1270px) {
 	.price {
-		padding-bottom: 0;
-
+		margin-bottom: 100px;
 		&__inner {
 			margin-top: 40px;
 		}
@@ -140,6 +139,7 @@
 
 @media (max-width: 790px)  {
 	.price {
+		margin-bottom: 70px;
 		&__inner { 
 			flex-direction: column;
 			justify-content: center;

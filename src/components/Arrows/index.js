@@ -1,20 +1,22 @@
-import { useState } from 'react'
-import arrowLeft from './images/arrow-left-black.svg'
 import arrowRight from './images/arrow-right-black.svg'
+import arrowLeft from './images/arrow-left-black.svg'
 
 import './arrows.scss'
 
-const Arrows = ({goToPrev, goToRight}) => {
+const NextArrow = ({fn}) => {
   return (
-    <div className="arrows">
-      <div className="arrow arrow__left" onClick={goToPrev}>
-        <img src={arrowLeft} alt="arrow left" />
-      </div>
-      <div className="arrow arrow__right" onClick={goToRight}>
-        <img src={arrowRight} alt="arrow right" />
-      </div>
+    <div className="arrow arrow__right" onClick={fn}>
+      <img src={arrowRight} alt="arrow right" />
     </div>
   )
 }
 
-export default Arrows
+const PrevArrow = ({fn}) => {
+  return (
+    <div className="arrow arrow__left" onClick={fn}>
+      <img src={arrowLeft} alt="arrow left" />
+    </div>
+  )
+}
+
+export {PrevArrow, NextArrow}

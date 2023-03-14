@@ -38,7 +38,7 @@ const Slider = () => {
           )}
         <div className="slider__buttons">
           <SliderBtn className="slider__button" text="Проекты" src="/projects"/>
-          <SliderBtn className="slider__button" text="Расчитать стоимость" src=""/>
+          <SliderBtn className="slider__button" text="Расчитать стоимость" src="/calculator"/>
         </div>
       </div>
       <SliderDots index={slideIndex} moveDot={moveDot} />

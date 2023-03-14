@@ -1,0 +1,90 @@
+.team-people {
+  margin-top: 160px;
+
+  &__inner {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 147.69%;
+    color: #333;
+  }
+
+  &__job {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 147.69%;
+    color: #4F4F4F;
+  }
+
+  &__item {
+    margin-bottom: 70px;
+    width: 32%;
+  }
+}
+
+@media (max-width: 960px) {
+  .team-people {
+    margin-top: 100px;
+    &__inner {
+      margin-top: 40px;
+    }
+
+    &__name {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    &__job {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &__img {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .team-people {
+    margin-top: 80px;
+    margin-bottom: 0;
+    &__inner {
+      margin-top: 20px;
+    }
+
+    &__item {
+      margin-bottom: 50px;
+      width: 48%;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .team-people {
+    &__item {
+      width: 100%;
+      text-align: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__img {
+      width: 300px;
+      height: auto;
+    }
+  }
+}

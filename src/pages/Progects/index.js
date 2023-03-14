@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-
 import Header from '@layout/Header'
 import Footer from '@layout/Footer'
 import Logo from '@components/Logo'
@@ -7,7 +6,6 @@ import MenuBtn from '@ui/Buttons/MenuBtn'
 import CallBtn from '@ui/Buttons/CallBtn'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ProjectsList from '@main/Projects/ProjectsList'
-import Tabs from './components/Tabs'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
 import Loader from '@components/Loader'
 import ProjectsRequest from './components/Request'
@@ -43,26 +41,24 @@ const Projects = () => {
         <CallBtn />
       </Header>
 
-      <section className="projects-page">
+      <main className="projects-page">
         <div className="container">
-          <div>
+          <div className="breadcrumbs">
             <BreadcrumbLink src="/" title="Главная" />
             <BreadcrumbLink src="/projects" title="Проекты" />
           </div>
-
-          <Tabs />
 
           <ProjectsList data={items} />
           {loading && <Loader />}
           <ProjectsBtnElse
             text="Еще проекты"
             isDisabled={isDisabled}
-            addProject={addProjects}
+            fn={addProjects}
           />
 
           <ProjectsRequest />
         </div>
-      </section>
+      </main>
     <Footer />
     </>
   )

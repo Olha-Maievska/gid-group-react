@@ -8,9 +8,9 @@ import './projects.scss'
 
 const Projects = () => {
   const [items, setItems] = useState([])
-  const [offset, setOffset] = useState(6)
-  const [start, setStart] = useState(0)
   const navigate = useNavigate()
+  const start = 0
+  const offset = 6
 
   const addProjects = () => {
     window.scrollTo(0, 0)
@@ -19,13 +19,13 @@ const Projects = () => {
 
   useEffect(() => {
     setItems(projectsData.slice(start, offset))
-  }, [offset, start])
+  }, [])
   
   return (
     <section className="projects">
       <h2 className="title">НАШИ ПРОЕКТЫ</h2>
       <ProjectsList data={items} />
-      <ProjectsBtnElse text="Еще проекты" addProject={addProjects} />
+      <ProjectsBtnElse text="Еще проекты" fn={addProjects} />
     </section>
   )
 }

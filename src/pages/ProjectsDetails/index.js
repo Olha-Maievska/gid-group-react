@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ProjectsRequest from '../Progects/components/Request'
-import ProjectsDetailsTab from './components/ProjectsTabs'
+import Tab from '@components/Tab'
 import Description from './components/Description'
 import Header from '@layout/Header'
 import Footer from '@layout/Footer'
@@ -14,6 +15,7 @@ import './projectsDetails.scss'
 
 const ProjectsDetails = () => {
   const [tab, setTab] = useState('')
+  const { id } = useParams()
 
   function handleTabs(e) {
     if (e.target.textContent === 'Описание') {
@@ -35,19 +37,19 @@ const ProjectsDetails = () => {
 
       <section className="view-page">
         <div className="container">
-          <div>
+          <div className="breadcrumbs">
             <BreadcrumbLink src="/" title="Главная" />
             <BreadcrumbLink src="/projects" title="Проекты" />
-            <BreadcrumbLink src="/projects/:id" title="Проект" />
+            <BreadcrumbLink src={`/projects/${id}`} title="Проект" />
           </div>
 
-          <div className="view-page__tabs">
-            <ProjectsDetailsTab
+          <div className="tabs">
+            <Tab
               title="Описание"
               active={tab === 'Description' ? 'active' : ''}
               handleTabs={handleTabs}
             />
-            <ProjectsDetailsTab
+            <Tab
               title="Процесс"
               active={tab === 'Process' ? 'active' : ''}
               handleTabs={handleTabs}
@@ -58,13 +60,13 @@ const ProjectsDetails = () => {
         {tab === 'Description' ? <Description /> : <Process />}
 
         <div className="container">
-          <div className="view-page__tabs">
-            <ProjectsDetailsTab
+          <div className="tabs">
+            <Tab
               title="Описание"
               active={tab === 'Description' ? 'active' : ''}
               handleTabs={handleTabs}
             />
-            <ProjectsDetailsTab
+            <Tab
               title="Процесс"
               active={tab === 'Process' ? 'active' : ''}
               handleTabs={handleTabs}

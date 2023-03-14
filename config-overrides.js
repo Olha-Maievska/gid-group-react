@@ -7,9 +7,13 @@ module.exports = function override(config, env) {
         '@form': 'src/components/form',
         '@ui': 'src/components/UI',
         '@store': 'src/store',
+        '@utils': 'src/utils',
         '@layout': 'src/layout',
         '@main': 'src/pages/Main/components',
         '@repair': 'src/pages/Repair/components',
+        '@design': 'src/pages/Design/components',
+        '@services': 'src/pages/Services/components',
+        '@calc': 'src/pages/Calculator/components',
     })(config);
 
     return config;

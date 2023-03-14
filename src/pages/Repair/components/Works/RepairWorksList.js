@@ -1,48 +1,67 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ProjectsItem from '@main/Projects/ProjectsItem'
-import Arrows from '@components/Arrows'
+import {PrevArrow, NextArrow} from '@components/Arrows'
+import { projectsData } from '@data/projectsData'
 
-const RepairWorksList = ({ data = [] }) => {
-  const [prev, setPrev] = useState(false)
-  const [next, setNext] = useState(false)
-  const wrapper = useRef()
-  let position = 0
+const RepairWorksList = () => {
+  const itemsRef = useRef()
+  const [offset, setOffset] = useState(0)
+  const [width, setWidth] = useState(1580)
+  const [pages, setPages] = useState([])
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
-  function goToPrev() {
-    if (position === 0) {
-      setPrev(true)
+  function handleLeftArrowClick() {
+    if (offset === 0) {
+      setTimeout(() => {
+        setOffset( -(width * 2))
+      }, 300)
+      return
     } else {
-      setPrev(false)
-      position += 566
-      wrapper.current.childNodes.forEach(item => {
-        item.style.transform = `translateX(${position}px)`
+      setOffset((currentOffset) => {
+        const newOffset = currentOffset + width
+        return Math.min(newOffset, 0)
       })
     }
   }
 
-  function goToRight() {
-    if (position ===  -(data.length - 3) * 566 + 566) {
-      setNext(true)
-      setPrev(false)
+  function handleRightArrowClick() {
+    if (offset === -(width * 2)) {
+      setOffset(0)
     } else {
-      setPrev(false)
-      position -= 566
-      wrapper.current.childNodes.forEach(item => {
-        item.style.transform = `translateX(${position}px)`
+      setOffset((currentOffset) => {
+        const newOffset = currentOffset - width
+        return Math.min(newOffset, 0)
       })
     }
   }
+
+  useEffect(() => {
+    console.log((windowWidth));
+    if (windowWidth <= 1750) {
+      setOffset(0)
+      setPages(projectsData.slice(0, 6))
+    } else {
+      setPages(projectsData.slice(0, 9))
+    }
+  }, [windowWidth])
 
   return (
     <div className="repair-works__inner">
-      <div className="repair-works__items">
-        <div className="repair-works__track" ref={wrapper}>
-          {data.map(item =>
+      <div className="repair-works__items" >
+        <div
+          className="repair-works__track"
+          ref={itemsRef}
+          style={{ transform: `translateX(${offset}px)` }}
+        >
+          {pages.map(item =>
             <ProjectsItem key={item.id} {...item} />
           )}
         </div>
       </div>
-      <Arrows goToPrev={goToPrev} goToRight={goToRight} />
+      <div>
+        <PrevArrow fn={handleLeftArrowClick} />
+        <NextArrow fn={handleRightArrowClick} />
+      </div>
     </div>
   )
 }

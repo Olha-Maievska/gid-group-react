@@ -1,16 +1,16 @@
-import RepairStagesItem from './RepairStagesItem'
-import {repairStages} from '@data/repair.js'
+import RepairStagesList from './RepairStagesList'
 
 import './repairStages.scss'
 
-const RepairStages = () => {
+const RepareStages = () => {
   return (
-    <div className="repair-stages__inner">
-      {repairStages.map(stage =>
-        <RepairStagesItem key={stage.title} {...stage} />
-      )}
+    <div className="repair-stages">
+      <h2 className="title">ЭТАПЫ ВЫПОЛНЕНИЯ РАБОТ</h2>
+      <div className="container">
+        <RepairStagesList />
       </div>
+    </div>
   )
 }
 
-export default RepairStages
+export default RepareStages

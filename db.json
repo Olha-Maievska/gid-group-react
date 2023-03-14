@@ -37,5 +37,6 @@
       "checkbox": true,
       "id": 4
     }
-  ]
+  ],
+  "getContact": []
 }

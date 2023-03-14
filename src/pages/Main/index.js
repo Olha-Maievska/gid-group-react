@@ -30,7 +30,7 @@ const Main = () => {
         <Stages />
         <Target />
         <Gallery />
-        <Catalog />
+        <Catalog title="ПОЛУЧИТЕ КАТАЛОГ НАШИХ ПРОЕКТОВ"/>
       </div>
       <Footer />
     </div>

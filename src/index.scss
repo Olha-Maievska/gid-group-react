@@ -73,6 +73,32 @@ a {
   padding-bottom: 90px;
 }
 
+.calc {
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 100px;
+	}
+	&__price {
+		font-size: 32px;
+		line-height: 42px;
+		color: #000;
+		font-weight: 400;
+	}
+	&__btn {
+		width: 407px;
+		height: 74px;
+		background-color: #000;
+		font-size: 24px;
+		line-height: 28px;
+		color: #F2F2F2;
+		text-align: center;
+		padding: 23px 0;
+		cursor: pointer;
+	}
+}
+
 .title {
 	font-weight: 300;
 	font-size: 48px;
@@ -102,11 +128,21 @@ a {
 }
 
 .form__error {
-	font-size: 16px;
+	font-size: 14px;
 	height: 17px;
 	color: red;
 	margin-bottom: 8px;
 	text-align: left;
+}
+
+.breadcrumbs {
+	margin: 14px 0 77px;
+}
+
+.tabs {
+	width: 445px;
+	display: flex;
+	margin: 30px auto 0;
 }
 
 .js-focus-visible:focus:not(.focus-visible) {
@@ -118,11 +154,11 @@ a {
 		font-size: 24px;
 		line-height: 28px;
 		padding-bottom: 8px;
-		padding-left: 61px;
+		padding-left: 40px;
 		width: 408px;
 
 		&::before {
-			width: 77px;
+			width: 97px;
 			height: 5px;
 		}
 	}
@@ -130,7 +166,7 @@ a {
 
 @media (max-width: 690px) {
 	.title {
-		padding-bottom: 11px;
+		padding-bottom: 15px;
 		padding-left: 0px;
 		width: 340px;
 		display: block;
@@ -142,5 +178,20 @@ a {
 			bottom: 0;
 			transform: translateX(-50%);
 		}
+	}
+
+	.title__page {
+		text-align: center;
+		font-size: 38px;
+		line-height: 45px;
+	}
+
+	.breadcrumbs {
+		margin: 8px 0 30px;
+	}
+
+	
+	.tabs {
+		width: 300px;
 	}
 }

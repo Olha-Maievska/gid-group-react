@@ -20,6 +20,7 @@ export const menuData = [
   {id: uuidv4(), title: 'Главная', href: '/'},
   {id: uuidv4(), title: '3D-Дизайн', href: '/design'},
   {id: uuidv4(), title: 'Ремонт', href: '/repair'},
+  {id: uuidv4(), title: 'Услуги', href: '/services'},
   {id: uuidv4(), title: 'Блог', href: '/blog'},
   {id: uuidv4(), title: 'Проекты', href: '/projects'},
   {id: uuidv4(), title: 'Контакты', href: '/contacts'},

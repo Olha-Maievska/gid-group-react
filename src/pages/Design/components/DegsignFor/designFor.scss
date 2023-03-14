@@ -1,0 +1,145 @@
+.design-for {
+  margin-top: 102px;
+  margin-bottom: 150px;
+
+  &__text {
+    max-width: 1400px;
+    width: 100%;
+    margin: 102px auto;
+    font-size: 48px;
+    line-height: 146.69%;
+    font-weight: 400;
+    color: #000000;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    max-width: 409px;
+    width: 100%;
+    margin-right: 40px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 146.69%;
+    color: #333333;
+    margin-bottom: 35px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: #333333;
+      top: 7px;
+      left: 0;
+    }
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 146.69%;
+    color: #4F4F4F;
+  }
+}
+
+@media (max-width: 1240px) {
+  .design-for {
+    margin-bottom: 100px;
+    &__text {
+      font-size: 34px;
+      line-height: 126.69%;
+    }
+
+    &__inner {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin-right: 0px;
+      margin-bottom: 40px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+
+    &__item-title {
+      font-size: 20px;
+      line-height: 126.69%;
+      padding-left: 25px;
+      margin-bottom: 20px;
+      &::before {
+        width: 15px;
+        height: 15px;
+        top: 3px;
+      }
+    }
+
+    &__item-text {
+      font-size: 18px;
+      line-height: 126.69%;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .design-for {
+    &__inner {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 24px;
+      margin: 50px auto;
+    }
+
+    &__item {
+      text-align: center;
+      &:first-child {
+        margin-right: 0px;
+      }
+    }
+
+    &__item-title {
+      display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .design-for {
+    &__text {
+      font-size: 20px;
+    }
+
+    &__item-title {
+      padding-left: 0px;
+      margin-bottom: 15px;
+      &::before {
+        top: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+     &__item {
+      margin-bottom: 70px;
+     }
+  }
+}

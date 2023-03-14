@@ -3,11 +3,19 @@ import Footer from '@layout/Footer'
 import Logo from '@components/Logo'
 import MenuBtn from '@ui/Buttons/MenuBtn'
 import CallBtn from '@ui/Buttons/CallBtn'
-
-import './repair.scss'
-import RepairStages from './components/Stages'
+import RepairBenefits from './components/Benefits'
 import RepairServices from './components/Services'
 import RepairWorks from './components/Works'
+import Catalog from '@main/Catalog'
+import RepairStages from './components/Stages'
+import RepairResult from './components/Result'
+import RepairTeam from './components/Team'
+import RepairBlog from './components/Blog'
+import RepairReviews from './components/Reviews'
+import ProjectsRequest from '../Progects/components/Request'
+import {repairBenefits} from '@data/repair.js'
+
+import './repair.scss'
 
 const Repair = () => {
   return (
@@ -18,13 +26,23 @@ const Repair = () => {
         <CallBtn />
       </Header>
 
-      <section className="repair">
-        <iframe title="Видео работы GID" width="1980px" height="940px" src="https://www.youtube.com/embed/mtfdVmiQn6A"></iframe>
+      <main className="repair">
+        <iframe className="repair__video" title="Видео работы GID" src="https://www.youtube.com/embed/mtfdVmiQn6A"></iframe>
 
-        <RepairStages />
+        <RepairBenefits data={repairBenefits} />
         <RepairServices />
         <RepairWorks />
-      </section>
+        <Catalog title="ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?" />
+        <RepairTeam />
+        <RepairStages />
+        <RepairResult />
+        <RepairBlog />
+        <RepairReviews />
+
+        <div className="container">
+          <ProjectsRequest />
+        </div>
+      </main>
 
       <Footer />
     </>

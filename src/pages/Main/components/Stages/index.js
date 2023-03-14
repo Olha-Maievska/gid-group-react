@@ -1,7 +1,7 @@
 import StagesList from './StagesList'
+import StagesBtn from '@ui/Buttons/StagesBtn'
 
 import './stages.scss'
-import { Link } from 'react-router-dom'
 
 const Stages = () => {
   return (
@@ -13,9 +13,7 @@ const Stages = () => {
         <div className="stages__inner">
           <StagesList/>
         </div>
-        <Link className="stages__btn repair-stages__btn" to="/">
-          Начать
-        </Link>
+        <StagesBtn />
       </div>
     </section>
   )
