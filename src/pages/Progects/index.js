@@ -1,9 +1,4 @@
 import { useEffect, useState } from 'react'
-import Header from '@layout/Header'
-import Footer from '@layout/Footer'
-import Logo from '@components/Logo'
-import MenuBtn from '@ui/Buttons/MenuBtn'
-import CallBtn from '@ui/Buttons/CallBtn'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ProjectsList from '@main/Projects/ProjectsList'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
@@ -13,8 +8,8 @@ import { projectsData } from '@data/projectsData'
 
 const Projects = () => {
   const [items, setItems] = useState([])
-  const [offset, setOffset] = useState(6)
-  const [start, setStart] = useState(0)
+  const [offset, setOffset] = useState(9)
+  const [start, setStart] = useState(6)
   const [loading, setLoading] = useState(false)
   const [isDisabled, setIsDisabled] = useState(false)
 
@@ -25,42 +20,33 @@ const Projects = () => {
     setLoading(true)
     setStart(offset)
     setOffset(prev => prev + 3)
-    setItems(item => [...item, ...projectsData.slice(start, offset)])
+    setItems([...items, ...projectsData.slice(start, offset)])
     setLoading(false)
   }
 
   useEffect(() => {
-    setItems(projectsData.slice(start, offset))
-  }, [offset, start])
+    setItems(projectsData.slice(0, 6))
+  }, [])
 
   return (
-    <>
-      <Header>
-        <MenuBtn/>
-        <Logo/>
-        <CallBtn />
-      </Header>
-
-      <main className="projects-page">
-        <div className="container">
-          <div className="breadcrumbs">
-            <BreadcrumbLink src="/" title="Главная" />
-            <BreadcrumbLink src="/projects" title="Проекты" />
-          </div>
-
-          <ProjectsList data={items} />
-          {loading && <Loader />}
-          <ProjectsBtnElse
-            text="Еще проекты"
-            isDisabled={isDisabled}
-            fn={addProjects}
-          />
-
-          <ProjectsRequest />
+    <main className="projects-page">
+      <div className="container">
+        <div className="breadcrumbs">
+          <BreadcrumbLink src="/" title="Home" />
+          <BreadcrumbLink src="/projects" title="Projects" />
         </div>
-      </main>
-    <Footer />
-    </>
+
+        <ProjectsList data={items} />
+        {loading && <Loader />}
+        <ProjectsBtnElse
+          text="Another project"
+          isDisabled={isDisabled}
+          fn={addProjects}
+        />
+
+        <ProjectsRequest />
+      </div>
+    </main>
   )
 }
 

@@ -6,10 +6,10 @@ import './designFor.scss'
 const DesignFor = () => {
   return (
   <div className="design-for">
-    <h2 className="title">ДЛЯ КОГО ЭТО</h2>
+    <h2 className="title">FOR WHO IS THIS ?</h2>
     <div className="container">
       <div className="design-for__text">
-        Мы делаем дизайн интерьеров для людей, которые хотят доверить нам весь процесс: дизайн-проект, ремонт, закупку материалов и мебели.
+        We do interior design for people who want to entrust us with the entire process: design project, renovation, purchase of materials and furniture.
       </div>
       <div className="design-for__inner">
         {designForData.map(item =>

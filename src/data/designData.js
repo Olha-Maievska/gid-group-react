@@ -14,23 +14,23 @@ import ben4 from '@design/DesignBenefits/images/benefits-4.png'
 export const designBenefits = [
   {
     title: '25',
-    subtitle: 'проектов',
-    text: 'Сделали за прошлый год. Все - уникальны.',
+    subtitle: 'projects',
+    text: 'We did it last year. Everyone is unique.',
   },
   {
     title: '37',
-    subtitle: 'лет',
-    text: 'Суммарный опыт специалистов студии в дизайне',
+    subtitle: 'years',
+    text: 'Total experience of studio specialists in design',
   },
   {
-    title: '30',
-    subtitle: 'млн. руб.',
-    text: 'Сумма, сэкономленная клиентам при закупке мебели',
+    title: '2',
+    subtitle: 'million dollars',
+    text: 'Amount saved for clients when purchasing furniture',
   },
   {
     title: '',
     subtitle: '',
-    text: 'Удовольствие от возможности взять всё под свой контроль.',
+    text: 'The pleasure of being able to take control.',
     imageSrc: infinite,
     isImage: true
   },
@@ -39,18 +39,18 @@ export const designBenefits = [
 export const designForData = [
   {
     id: crypto.randomUUID(),
-    title: 'Для тех, кто ценит эстетику',
-    text: 'Ежегодно посещаем зарубежные выставки, поэтому используем последние мировые тенденции в дизайне. Работаем только с проверенными решениями.',
+    title: 'Who appreciate aesthetics',
+    text: 'We visit foreign exhibitions every year, so we use the latest global trends in design. We work only with proven solutions.',
   },
   {
     id: crypto.randomUUID(),
-    title: 'Кому важна экспертность',
-    text: 'В процессе работы над дизайн-проектом мы консультируемся с опытными строителями, чтобы получить технически реализуемые решения.',
+    title: 'Who cares about expertise',
+    text: 'In the process of working on a design project, we consult with experienced builders to obtain technically feasible solutions.',
   },
   {
     id: crypto.randomUUID(),
-    title: 'Кому нужен тройной контроль',
-    text: 'На каждый проект назначается группа из пяти человек. Это позволяет выдержать сроки, учесть нюансы, не упустить детали и досконально продумать интерьер.',
+    title: 'Who needs triple control',
+    text: 'A team of five people is assigned to each project. This allows you to meet deadlines, take into account nuances, not miss details and thoroughly think through the interior.',
   },
 ]
 
@@ -58,38 +58,38 @@ export const designWorkData = [
   {
     id: crypto.randomUUID(),
     img: work1,
-    title: 'Определение стиля',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Defining style',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
   {
     id: crypto.randomUUID(),
     img: work2,
-    title: 'Цветовые решения',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Color solutions',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
   {
     id: crypto.randomUUID(),
     img: work3,
-    title: 'Чертежи и проекты',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Drawings and projects',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
   {
     id: crypto.randomUUID(),
     img: work4,
-    title: 'Бюджет',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Budget',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
   {
     id: crypto.randomUUID(),
     img: work5,
-    title: 'Материалы и предметы',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Materials and objects',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
   {
     id: crypto.randomUUID(),
     img: work6,
-    title: 'Визуализация',
-    text: 'Переносим утвержденный дизайн интерьера на бумагу. В результате вы получаете комплект дизайнерских документов: строительные чертежи, фотореалистичные визуализации, и необходимые спецификации.',
+    title: 'Visualization',
+    text: 'We transfer the approved interior design to paper. As a result, you receive a set of design documents: construction drawings, photorealistic renderings, and the necessary specifications.',
   },
 ]
 
@@ -97,21 +97,21 @@ export const designBenefitsData = [
   {
     id: crypto.randomUUID(),
     img: ben1,
-    title: 'Функциональность',
+    title: 'Functionality',
   },
   {
     id: crypto.randomUUID(),
     img: ben2,
-    title: 'Эстетику',
+    title: 'Aesthetics',
   },
   {
     id: crypto.randomUUID(),
     img: ben3,
-    title: 'Качественный ремонт',
+    title: 'High-quality repair',
   },
   {
     id: crypto.randomUUID(),
     img: ben4,
-    title: 'Уникальные условия',
+    title: 'Unique conditions',
   },
 ]

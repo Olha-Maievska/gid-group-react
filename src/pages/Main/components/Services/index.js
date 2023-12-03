@@ -5,7 +5,7 @@ import './services.scss'
 const Services = () => {
   return (
     <section className="services">
-      <h2 className="title">ОСНОВНЫЕ УСЛУГИ</h2>
+      <h2 className="title">BASIC SERVICES</h2>
       <div className="container">
         <ServicesList />
       </div>

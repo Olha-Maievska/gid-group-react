@@ -1,5 +1,5 @@
 .services {
-	padding: 85px 0;
+	margin-bottom: 120px;
 
 	&__inner {
 		margin-top: 52px;
@@ -22,6 +22,7 @@
 	}
 
 	&__item-content {
+		text-align: center;
 		border: 1px solid #E0E0E0;
 		padding: 30px 15px;
 		height: 250px;
@@ -76,7 +77,12 @@
 
 @media (max-width: 690px) {
 	.services {
-		padding: 85px 0 50px;
+		margin-bottom: 50px;
+
+		&__inner {
+			margin-top: 30px;
+		}
+
 		&__item {
 			width: 100%;
 			margin-bottom: 40px;
@@ -106,7 +112,6 @@
 			text-align: center;
 			height: 100%;
 			border: none;
-
 		}
 	}
 }

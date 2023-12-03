@@ -1,22 +1,26 @@
 import { useNavigate } from 'react-router-dom'
 import RepairWorksList from './RepairWorksList'
 import ProjectsBtnElse from '@components/UI/Buttons/ProjectsBtnElse'
-import {openPage} from '@utils/utils'
+import { openPage } from '@utils/utils'
 
 import './repairWorks.scss'
 
 const RepairWorks = () => {
   const navigate = useNavigate()
 
+  function toPage() {
+    navigate('/projects')
+  }
+
   return (
     <div className="repair-works">
-      <h2 className="title">ВЫПОЛНЕННЫЕ РАБОТЫ</h2>
+      <h2 className="title">COMPLETED WORKS</h2>
       <div className="container">
         <RepairWorksList />
         <ProjectsBtnElse
-          text="Портфолио"
+          text="Portfolio"
           arrowRound={false}
-          fn={() => openPage(navigate('/projects'))}
+          fn={() => openPage(toPage)}
         />
       </div>
     </div>

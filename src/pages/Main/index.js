@@ -15,25 +15,17 @@ import Catalog from './components/Catalog'
 
 const Main = () => {
   return (
-    <div className="wrapper">
-      <div className="content">
-        <Header fone='rgba(0, 0, 0, .4)'>
-          <MenuBtn/>
-					<Logo/>
-          <CallBtn />
-        </Header>
-        <Slider />
-        <Advantages />
-        <Price />
-        <Services />
-        <Projects />
-        <Stages />
-        <Target />
-        <Gallery />
-        <Catalog title="ПОЛУЧИТЕ КАТАЛОГ НАШИХ ПРОЕКТОВ"/>
-      </div>
-      <Footer />
-    </div>
+    <main>
+      <Slider />
+      <Advantages />
+      <Price />
+      <Services />
+      <Projects />
+      <Stages />
+      <Target />
+      <Gallery />
+      <Catalog title="GET A CATALOG OF OUR PROJECTS"/>
+    </main>
   )
 }
 

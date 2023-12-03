@@ -1,5 +1,5 @@
 .price {
-	margin-bottom: 180px;
+	margin-bottom: 160px;
 	position: relative;
 
 	&__inner {
@@ -30,9 +30,9 @@
 	}
 
 	&__content-btn {
-		display: inline-block;
 		color: #FFF;
 		font-weight: 300;
+		font-size: 30px;
 		padding: 35px 104px;
 		background-color: #000;
 		transition: all .2s ease-out;
@@ -51,14 +51,13 @@
 		width: 607px;
 		height: 333px;
 		margin-top: 20px;
-		margin-bottom: 34px;
+		margin-bottom: 44px;
 	}
 
 	&__bonus-list {
 		list-style: none;
 		font-weight: 400;
 		color: #000;
-		margin-left: 75px;
 	}
 
 	&__bonus-item {
@@ -140,11 +139,13 @@
 @media (max-width: 790px)  {
 	.price {
 		margin-bottom: 70px;
+
 		&__inner { 
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
+			margin-top: 20px;
 		}
 		&__content {
 			max-width: 450px;
@@ -153,8 +154,8 @@
 		}
 
 		&__content-title {
-			font-size: 28px;
-			line-height: 36px;
+			font-size: 26px;
+			line-height: 34px;
 			margin-bottom: 20px;
 		}
 

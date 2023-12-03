@@ -6,16 +6,26 @@
 	top: 0;
 	bottom: 0;
 	z-index: 98;
-	animation-name: modalMenu;
-	animation-duration: 1.6s;
+	transition: all .3s;
+	
+	&.active {
+		animation-name: modalOpenMenu;
+		animation-duration: 1.6s;
+	}
+
+	&.disabled {
+		animation-name: modalCloseMenu;
+		animation-duration: 1.6s;
+	}
 
 	&__list {
 		text-align: center;
-		margin: 40px auto 70px;
+		margin: 154px auto 70px;
 		width: 250px;
 	}
 
 	&__item {
+		display: inline-block;
 		margin-bottom: 30px;
 		&:last-child {
 			margin-bottom: 0;
@@ -68,21 +78,29 @@
 	}
 }
 
-@keyframes modalMenu {
+@keyframes modalOpenMenu {
   from {
-    opacity: 0;
     transform: translateX(-100%);
   }
   to {
-    opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+@keyframes modalCloseMenu {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
 
 @media (max-width: 690px) {
 	.main-menu {
 		&__social {
-			width: 330px;
+			max-width: 330px;
+			width: 100%;
 		}
 
 		&__social-item {
@@ -100,7 +118,7 @@
 
 		&__list {
 			width: 125px;
-			margin: 30px auto 50px;
+			margin: 100px auto 50px;
 		}
 
 		&__link  {

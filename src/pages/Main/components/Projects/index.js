@@ -23,9 +23,9 @@ const Projects = () => {
   
   return (
     <section className="projects">
-      <h2 className="title">НАШИ ПРОЕКТЫ</h2>
+      <h2 className="title">OUR PROJECTS</h2>
       <ProjectsList data={items} />
-      <ProjectsBtnElse text="Еще проекты" fn={addProjects} />
+      <ProjectsBtnElse text="More projects" fn={addProjects} />
     </section>
   )
 }

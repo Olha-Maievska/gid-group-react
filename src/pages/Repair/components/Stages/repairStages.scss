@@ -1,37 +1,39 @@
 .repair-stages {
-  margin-top: 90px;
+  margin: 90px 0;
 
   &__items {
-    margin-top: 85px;
+    margin: 85px auto 0;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .stages__item {
-    width: 30%;
-    height: 325px;
+    width: 31%;
+    margin-right: 30px;
   }
 }
 
-@media (max-width: 1350px) {
-  .stages__btn {
-    margin-right: 20px;
-  }
-
-  .stages__item {
-    width: 45% !important;
-    height: 250px !important;
+@media (max-width: 1310px) {
+  .repair-stages {
+    &__items {
+      margin: 55px auto 0;
+    }
+    .stages__item {
+      width: 45%;
+      margin-bottom: 30px;
+    }
   }
 }
 
 @media (max-width: 750px) {
   .repair-stages {
+    margin: 40px 0 70px;
     &__items {
       justify-content: center;
     }
   }
+
   .stages__btn {
     margin: 0 auto;
   }

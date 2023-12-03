@@ -1,5 +1,5 @@
 .projects {
-	padding-bottom: 135px;
+	margin-bottom: 135px;
 	z-index: 1;
 
 	&__inner {
@@ -153,7 +153,11 @@
 
 @media (max-width: 680px) {
 	.projects {
-		padding-bottom: 90px;
+		margin-bottom: 90px;
+
+		&__inner {
+			margin: 20px auto 35px;
+		}
 		
 		&__item {
 			width: 100%;

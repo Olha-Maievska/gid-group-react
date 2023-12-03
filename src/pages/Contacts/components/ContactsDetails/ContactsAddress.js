@@ -4,9 +4,9 @@ const ContactsAddress = () => {
   return (
     <div className="contacts__item-address">
       <div className="contacts__item-title">
-        Офис:
+        Office:
       </div>
-      <div>ул. Набережная 21, к. 41, 02000, Киев, Украина</div>
+      <div>st. Embankment 21, room 41, 02000, Kyiv, Ukraine</div>
     </div>
   )
 }

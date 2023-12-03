@@ -1,5 +1,4 @@
 .gallery {
-  margin-top: 92px;
 
   &__title {
     display: block;
@@ -50,6 +49,11 @@
 
 @media (max-width: 690px) {
   .gallery {
+    &__title {
+      width: 180px;
+      margin: 0 auto;
+    }
+
     &__item {
       width: 100%;
       padding-left: 0;

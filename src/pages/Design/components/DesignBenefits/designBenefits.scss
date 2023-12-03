@@ -65,6 +65,8 @@
 
 @media (max-width: 490px) {
   .design-benefits {
+    margin: 50px 0;
+
     &__title {
       font-size: 20px;
       line-height: 31px;
@@ -81,6 +83,7 @@
 
     &__item  {
       height: 250px;
+      width: 280px;
     }
   }
 }

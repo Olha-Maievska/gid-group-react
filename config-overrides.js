@@ -13,7 +13,7 @@ module.exports = function override(config, env) {
         '@repair': 'src/pages/Repair/components',
         '@design': 'src/pages/Design/components',
         '@services': 'src/pages/Services/components',
-        '@calc': 'src/pages/Calculator/components',
+        '@calc': 'src/pages/Calculator/',
     })(config);
 
     return config;

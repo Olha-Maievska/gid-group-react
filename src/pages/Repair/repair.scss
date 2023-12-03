@@ -1,6 +1,8 @@
 .repair {
   margin-bottom: 80px;
+  
   &__video {
+    padding-top: 104px;
     width: 100%;
     height: 940px;
   }
@@ -18,9 +20,10 @@
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 690px) {
   .repair {
     &__video {
+      padding-top: 80px;
       height: 400px;
     }
   }

@@ -1,19 +1,10 @@
 .modal-call {
-  background: rgba(#131313, 95%);
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  animation-duration: 1.6s;
-  z-index: 99;
-  overflow: hidden;
-  animation-name: modalOpen;
-
   &__wrapper {
     max-width: 700px;
     width: 100%;
     background-color: rgb(252, 252, 252);
+    box-shadow: 0 0 15px #000;
+    border-radius: 20px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -28,7 +19,7 @@
     text-align: center;
     font-size: 28px;
     line-height: 33px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #000;
   }
 
@@ -40,7 +31,8 @@
     color: #000;
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    outline: transparent;
     border: 3px solid rgba(0, 0, 0, .4);
 
     &::placeholder {
@@ -51,48 +43,17 @@
 
   &__btn {
     display: block;
-    width: 300px;
     margin: 10px auto 0;
-    padding: 17px 40px;
+    padding: 10px 40px;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 28px;
     color: #333;
     background-color: #FAFF09;
+    border-radius: 8px;
+    text-transform: uppercase;
     border: none;
     cursor: pointer;
-  }
-}
-
-@keyframes modalOpen {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-
-@keyframes modalClose {
-  from {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
-
-@media (max-width: 768px) {
-  .modal-call {
-    padding: 0 30px;
-
-     &__contant {
-      padding: 25px 20px;
-    }
   }
 }
 

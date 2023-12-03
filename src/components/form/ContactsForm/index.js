@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { onSubmit, handlePhone } from '@utils/formUtils'
+import { onSubmit, handleNumber } from '@utils/formUtils'
 import { API_URL_CONTACT } from '../../../config'
 import Loader from '../../Loader'
 
@@ -22,56 +22,57 @@ const ContactsForm = () => {
 
   return (
     <div className="contacts-form" onSubmit={handleSubmit((d) => onSubmit(d, API_URL_CONTACT, params))}>
-      <h3 className="title__page">Свяжитесь с нами</h3>
+      <h3 className="title__page">Contact us</h3>
       <form className="contacts-form__content">
+
         <div className="contacts-form__info">
-          <label className="contacts-form__label" for="name">Имя</label>
+          <label className="contacts-form__label" htmlFor="name">Name</label>
           <input
             className="contacts-form__input"
             type="text"
-            placeholder="Укажите ваше имя"
+            placeholder="Please enter your name"
             {...register('name', {
-              required: 'Заполните поле!',
+              required: 'Fill in the field!',
             })}
           />
           <div className="form__error">
             {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
           </div>
 
-          <label className="contacts-form__label" for="phone">Номер телефона</label>
+          <label className="contacts-form__label" htmlFor="phone">Phone number</label>
           <input
             className="contacts-form__input"
             type="text"
-            placeholder="Укажите ваш номер телефона"
+            placeholder="Please enter your phone number"
             {...register('phone', {
-              required: 'Номер телефона обязательный!',
+              required: 'Phone number is required!',
               minLength: {
                 value: 6,
-                message: 'Минимум 6 символов'
+                message: 'Minimum 6 characters'
               },
               maxLength: {
                 value: 14,
-                message: 'Мaxимум 16 символов'
+                message: 'Maximum 16 characters'
               }
             })}
             onChange={event => {
-              event.target.value = handlePhone(event.target.value)
+              event.target.value = handleNumber(event.target.value)
             }}
           />
           <div className="form__error">
             {errors?.phone && <p>{errors?.phone.message || 'Error'}</p>}
           </div>
 
-          <label className="contacts-form__label" for="square">Площадь объекта</label>
+          <label className="contacts-form__label" htmlFor="square">Object area</label>
           <input
             className="contacts-form__input"
             type="text"
-            placeholder="м2"
+            placeholder="m2"
             {...register('square', {
-              required: 'Заполните поле!',
+              required: 'Fill in the field!',
             })}
             onChange={event => {
-              event.target.value = handlePhone(event.target.value)
+              event.target.value = handleNumber(event.target.value)
             }}
           />
           <div className="form__error">
@@ -80,32 +81,33 @@ const ContactsForm = () => {
         </div>
 
         <div className="contacts-form__message">
-          <label className="contacts-form__label" for="message">Комментарий</label>
+          <label className="contacts-form__label" htmlFor="message">Comment</label>
           <textarea
             className="contacts-form__textarea"
-            placeholder="Введите текст"
+            placeholder="Enter text"
             {...register('message')}
           ></textarea>
 
-          <div className="contacts-form__agree">
+          <div className="agreement">
             <input
-              className="contacts-form__checkbox"
+              className="checkbox"
               type="checkbox"
               {...register('checkbox', {
-              required: 'Соглашение обязательно!',
+              required: 'Agreement is mandatory!',
               })}
             />
-            <label className="contacts-form__checkbox__label">Я согласен на <span>обработку персональных данных</span> </label>
+            <label className="label">I agree to the <span>processing of personal data</span></label>
             <div className="form__error">
               {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
             </div>
           </div>
+
           <div style={{height: '15px', marginTop: '5px'}}>
             {loading && <Loader />}
-            {data && <div style={{textAlign: 'center'}}>Спасибо! Мы перезвоним в течении часа.</div>}
-            {error && <div style={{textAlign: 'center', color: 'red'}}>Что-то пошло не так. Попробуйте еще раз!</div>}
+            {data && <div style={{textAlign: 'center'}}>Thank you! We will call you back within an hour.</div>}
+            {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
           </div>
-          <button className="contacts-form__btn" type="submit">Отправить</button>
+          <button className="contacts-form__btn" type="submit">Send</button>
         </div>
 
       </form>

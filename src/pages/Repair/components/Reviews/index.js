@@ -1,10 +1,10 @@
 import {useState} from 'react'
 import { reviewsData } from '@data/reviews'
 import RepairReviewsItem from './RepairReviewsItem'
+import { NextArrow, PrevArrow } from '@components/Arrows'
+import Dots from '@components/UI/Dots'
 
 import './repairReviews.scss'
-import { NextArrow, PrevArrow } from '@components/Arrows'
-import Dots from './Dots'
 
 const RepairReviews = () => {
   const [index, setIndex] = useState(1)
@@ -31,7 +31,7 @@ const RepairReviews = () => {
 
   return (
     <div className="repair-review">
-      <h2 className="title">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
+      <h2 className="title">REVIEWS FROM OUR CLIENTS</h2>
       <div className="container">
         <div className="repair-review__inner">
           {reviewsData.map((item, i) =>
@@ -48,7 +48,7 @@ const RepairReviews = () => {
           </div>
         </div>
 
-        <Dots index={index} moveDot={moveDot}/>
+        <Dots index={index} moveDot={moveDot} data={reviewsData}/>
       </div>
     </div>
   )

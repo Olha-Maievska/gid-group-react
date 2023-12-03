@@ -10,7 +10,7 @@ const BlogDetailsItem = ({title, text1, text2, author, date, link, imgMain, img1
         <img className="blog-details__img" src={img2} alt={title} />
       </div>
       <div className="blog-details__author">
-        Автор: <a
+        Author: <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
@@ -19,7 +19,7 @@ const BlogDetailsItem = ({title, text1, text2, author, date, link, imgMain, img1
         </a>
       </div>
       <div className="blog-details__data">{date}</div>
-      <a className="blog-details__btn" href="#">Читать следующее</a>
+      <a className="blog-details__btn" href="#">Read next</a>
     </div>
   )
 }

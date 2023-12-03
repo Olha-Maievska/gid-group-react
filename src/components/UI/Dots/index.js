@@ -1,10 +1,9 @@
-import React from 'react'
-import { reviewsData } from '@data/reviews'
+import './dots.scss'
 
-const Dots = ({index, moveDot}) => {
+const Dots = ({ index, moveDot, data}) => {
   return (
     <ul className="question__dots">
-      {reviewsData.map((dot, i) =>
+      {data.map((dot, i) =>
         <li
           className={index === i + 1 ? "question__dot active" : "question__dot"}
           key={dot.id}

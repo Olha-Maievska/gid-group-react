@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Header from '@layout/Header'
 import Logo from '../Logo'
 import MenuList from './components/MenuList'
@@ -9,7 +9,8 @@ import { closeModalMenu } from '@store/modal/modalActions'
 
 import './menu.scss'
 
-const Menu = () => {
+const Menu = ({openModalCall}) => {
+  const { menu } = useSelector(state => state.modal)
   const dispatch = useDispatch()
 
   const closeMenu = () => {
@@ -17,15 +18,15 @@ const Menu = () => {
   }
   
   return (
-    <section className="main-menu">
+    <section className={`main-menu ${menu ? 'active' : ''}`} onClick={closeMenu}>
+      <Header fone='rgba(#131313, 95%)'>
+        <CloseBtn close={closeMenu}/>
+        <Logo />
+        <CallBtn fn={openModalCall} />
+      </Header>
       <div className="container">
-        <Header fone='rgba(#131313, 95%)'>
-          <CloseBtn close={closeMenu}/>
-          <Logo />
-          <CallBtn />
-        </Header>
         <nav>
-          <MenuList/>
+          <MenuList onClick={e => e.stopPropagation()}/>
         </nav>
         <MenuSocial/>
       </div>

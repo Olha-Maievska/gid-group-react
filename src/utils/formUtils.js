@@ -1,21 +1,23 @@
 import { sendForm } from '@components/API/PostFrom'
 
-export const handlePhone = (value) => {
-  const phoneNumber = value.replace(/[^+\d]/g, '')
-  return phoneNumber
+export const handleNumber = (value) => {
+  const number = value.replace(/[^+\d]/g, '')
+  return number
 }
 
-const resetState = (setData, setError) => {
+export const resetState = (setData, setError) => {
   setTimeout(() => {
     setData(false)
     setError(false)
-  }, 4000)
+  }, 3500)
 }
 
 export const onSubmit = (data, url, other) => {
-  const {setLoading, setError, setData, reset} = other
+  const { setLoading, setError, setData, reset } = other
+  const id = new Date().getTime()
+
   setLoading(true)
-  sendForm(url, data)
+  sendForm(url, {...data, id})
     .then(d => {
       setLoading(false)
       setError(false)

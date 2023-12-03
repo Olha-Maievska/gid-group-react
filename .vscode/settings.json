@@ -1,0 +1,14 @@
+{
+  "css.hover.documentation": true,
+  "css.hover.references": true,
+  "less.hover.documentation": true,
+  "less.hover.references": true,
+  "scss.hover.documentation": true,
+  "scss.hover.references": true,
+  "html.hover.documentation": true,
+  "html.hover.references": true,
+  "npm.fetchOnlinePackageInfo": true,
+  "npm.scriptHover": true,
+  "diffEditor.experimental.showEmptyDecorations": true,
+  "files.restoreUndoStack": false
+}

@@ -6,7 +6,7 @@ import './designBenefits.scss'
 const designBenefits = () => {
   return (
     <div className="design-benefits">
-      <h2 className="title">ЧТО ВЫ ПОЛУЧИТЕ</h2>
+      <h2 className="title">WHAT YOU WILL GET</h2>
       <div className="container">
         <div className="design-benefits__innet">
           {designBenefitsData.map(item =>

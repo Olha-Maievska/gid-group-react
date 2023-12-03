@@ -18,57 +18,54 @@ import result4 from '../pages/Repair/components/Result/images/repair-result4.png
 export const repairBenefits = [
   {
     title: '24/7',
-    text: 'Ваш личный менеджер всегда на связи',
+    text: 'Your personal manager is always in touch',
   },
   {
-    title: 'Наблюдение',
-    text: 'На объекте ведётся круглосуточное видеонаблюдение',
+    title: 'Observation',
+    text: 'The facility is under 24-hour video surveillance',
   },
   {
-    title: 'Документация',
-    text: 'Подготовим и утвердим всю проектную документацию',
+    title: 'Documentation',
+    text: 'We will prepare and approve all project documentation',
   },
   {
-    title: '7 лет',
-    text: 'Гарантии на все работы',
+    title: '7 years',
+    text: 'Guarantees for all work',
   },
 ]
 
 export const repairServices = [
   {
-    id: uuidv4(),
     src: services1,
-    title: '"со своим дизайн проектом"',
+    title: '"with your design project"',
     items: [
-      {text: 'Ваш дизайн проект',},
-      {text: 'Наш ремонт',},
+      {text: 'Your design project',},
+      {text: 'Our repair',},
     ]
   },
   {
-    id: uuidv4(),
     src: services2,
-    title: '"ремонт под ключ"',
+    title: '"turnkey renovation"',
     items: [
-      {text: 'Планировочное решение',},
-      {text: 'Дизайн-концепция',},
-      {text: '3Д Визуализация',},
-      {text: 'Подбор материалов',},
-      {text: 'Строительные чертежи',},
+      {text: 'Planning solution',},
+      {text: 'Design concept',},
+      {text: '3D Visualization',},
+      {text: 'Selection of materials',},
+      {text: 'Construction drawings',},
     ]
   },
   {
-    id: uuidv4(),
     src: services3,
-    title: '"все включено"',
+    title: '"all inclusive"',
     items: [
-      {text: 'Планировочное решение',},
-      {text: 'Дизайн-концепция',},
-      {text: '3Д Визуализация',},
-      {text: 'Подбор материалов',},
-      {text: 'Строительные чертежи',},
-      {text: 'Ремонт объекта',},
-      {text: 'Поставка мебели и материалов',},
-      {text: 'Финальное декорирование',},
+      {text: 'Planning solution',},
+      {text: 'Design concept',},
+      {text: '3D Visualization',},
+      {text: 'Selection of materials',},
+      {text: 'Construction drawings',},
+      {text: 'Facility renovation',},
+      {text: 'Furniture and materials',},
+      {text: 'Final decoration',},
     ]
   },
 ]
@@ -77,36 +74,36 @@ export const repairStages = [
   {
     id: uuidv4(),
     num: '01',
-    title: 'Черновой',
-    text: 'Работы по демонтажу, штукатурке, стяжке и другие',
+    title: 'Draft',
+    text: 'Dismantling, plastering, screeding and other works',
     img: stages1,
   },
   {
     id: uuidv4(),
     num: '02',
-    title: 'Инженерные работы',
-    text: 'Электротехнические работы, отопление, водоснабжение и другие',
+    title: 'Engineering work',
+    text: 'Electrical work, heating, water supply and others',
     img: stages2,
   },
   {
     id: uuidv4(),
     num: '03',
-    title: 'Предчистовая отделка',
-    text: 'Гипсокартонные работы, шпатлевка, напольные покрытия и другое',
+    title: 'Pre-finishing',
+    text: 'Plasterboard works, putty, floor coverings and more',
     img: stages3,
   },
   {
     id: uuidv4(),
     num: '04',
-    title: 'Чистовая отделка',
-    text: 'Монтаж и декоративные покрытия',
+    title: 'Finishing',
+    text: 'Installation and decorative coatings',
     img: stages4,
   },
   {
     id: uuidv4(),
     num: '05',
-    title: 'Заключительный этап',
-    text: 'Меблировка, декорирование и клининг',
+    title: 'The final stage',
+    text: 'Furnishing, decoration and cleaning',
     img: stages5,
   },
 ]
@@ -114,22 +111,22 @@ export const repairStages = [
 export const repairResult = [
   {
     id: uuidv4(),
-    text: 'Полностью готовый ремонт “под ключ”',
+    text: 'Complete turnkey renovation”',
     img: result1,
   },
   {
     id: uuidv4(),
-    text: 'Соблюдение всех сроков и бюджета',
+    text: 'Meeting all deadlines and budget',
     img: result2,
   },
   {
     id: uuidv4(),
-    text: 'Гарантия на ремонт до 6 лет',
+    text: 'Repair warranty up to 6 years',
     img: result3,
   },
   {
     id: uuidv4(),
-    text: 'Рекомендации друзьям',
+    text: 'Recommendations to friends',
     img: result4,
   },
 ]

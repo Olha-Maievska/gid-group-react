@@ -1,42 +1,37 @@
 {
   "getCall": [
     {
-      "name": "lidiya",
-      "phone": "684983498948",
-      "id": 1
-    },
-    {
       "name": "olha",
-      "phone": "+3809768755",
-      "id": 2
-    },
-    {
-      "name": "апа",
-      "phone": "45645546546",
-      "id": 3
+      "phone": "+420344574744",
+      "id": 1701600014588
     }
   ],
   "getCatalog": [
     {
-      "email": "olha@mail.ru",
+      "email": "jan@gmail.com",
       "checkbox": true,
-      "id": 1
-    },
-    {
-      "email": "ivan@mail.com",
-      "checkbox": true,
-      "id": 2
-    },
-    {
-      "email": "olha@gmail.com",
-      "checkbox": true,
-      "id": 3
-    },
-    {
-      "email": "kate@gmail.com",
-      "checkbox": true,
-      "id": 4
+      "id": 1701599975721
     }
   ],
-  "getContact": []
+  "getContact": [
+    {
+      "name": "olha",
+      "phone": "577676868668",
+      "square": "657",
+      "message": "",
+      "checkbox": true,
+      "id": 1
+    }
+  ],
+  "getPrice": [
+    {
+      "name": "ivan",
+      "phone": "+47745965695649",
+      "checkbox": true,
+      "projectSize": "from 80 to 120 m2",
+      "projectStyle": "Scandinavian",
+      "startProject": "Already needed",
+      "id": 1701599818674
+    }
+  ]
 }

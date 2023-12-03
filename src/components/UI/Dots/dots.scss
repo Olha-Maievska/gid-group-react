@@ -1,0 +1,17 @@
+.question__dots {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 245px;
+}
+
+.question__dot {
+  width: 20px;
+  height: 20px;
+  background: #C4C4C4;
+  cursor: pointer;
+  
+  &.active {
+    background: #FAFF09;
+  }
+}

@@ -7,7 +7,7 @@ const Target = () => {
   return (
     <section className="target">
       <div className="target__inner">
-        <h4 className="target__title">МЫ ТАМ, ГДЕ:</h4>
+        <h4 className="target__title">WE ARE WHERE:</h4>
         <TargetList />
       </div>
     </section>

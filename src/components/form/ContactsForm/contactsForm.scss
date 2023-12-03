@@ -3,7 +3,7 @@
   padding: 74px 0;
 
   &__content {
-    margin-top: 60px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -42,6 +42,11 @@
       font-size: 18px;
       line-height: 21px;
       color: #BDBDBD;
+    }
+
+    &:focus {
+      border: 1px solid #dee203;
+      box-shadow: 1px 1px 10px rgba(#FAFF09, 60%);
     }
   }
 

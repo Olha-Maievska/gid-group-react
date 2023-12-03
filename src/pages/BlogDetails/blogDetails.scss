@@ -1,5 +1,5 @@
 .blog-details {
-  margin-bottom: 100px;
+  padding-bottom: 40px;
 
   &__title {
     width: 719px;
@@ -54,12 +54,12 @@
 
   &__btn {
     width: 310px;
-    height: 76px;
     font-size: 24px;
     line-height: 28px;
     color: #000;
     border: 1px solid #000000;
-    padding: 24px 70px 24px 20px;
+    padding: 24px 0;
+    text-align: center;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -67,8 +67,8 @@
     &::after {
       content: url(./images/arrow-up.svg);
       position: absolute;
-      top: 14px;
-      right: 37px;
+      top: 16px;
+      right: 62px;
       transform: rotate(90deg);
     }
   }
@@ -89,6 +89,7 @@
 
 @media (max-width: 690px) {
   .blog-details {
+    padding-bottom: 0;
     &__title {
       font-size: 24px;
       line-height: 36px;
@@ -110,11 +111,22 @@
 
     &__data {
       text-align: center;
-      margin: 5px 0 30px;
+      margin: 5px 0 20px;
     }
 
     &__author {
       text-align: center;
+    }
+
+    &__btn {
+      width: 260px;
+      font-size: 22px;
+      line-height: 15px;
+      padding: 20px 0;
+
+      &::after {
+        display: none;
+      }
     }
   }
 }

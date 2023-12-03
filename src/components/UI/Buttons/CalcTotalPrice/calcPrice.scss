@@ -1,0 +1,17 @@
+.calc__price {
+  font-size: 32px;
+  line-height: 42px;
+  color: #000;
+  font-weight: 400;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 1140px) {
+  .calc__price {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}

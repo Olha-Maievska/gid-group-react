@@ -17,9 +17,9 @@ const Description = () => {
                 <img className="description__img--big" src={photo[0]} alt={title} />
                 <div className="description__img-content">
                   <h4 className="description__img-title">{title}</h4>
-                  <div className="description__img-subtitle">ЖК - {complex}</div>
-                  <div className="description__img-square">{square} м2</div>
-                  <div className="description__img-author">Дизайнер -<span> {designer}</span></div>
+                  <div className="description__img-subtitle">{complex}</div>
+                  <div className="description__img-square">{square} m2</div>
+                  <div className="description__img-author">Designer -<span> {designer}</span></div>
                 </div>
               </div>
 
@@ -27,13 +27,12 @@ const Description = () => {
                 <div className="description__content">
                   <div className="description__content-desc">
                   <h5 className="description__content-title">{title}</h5>
-                  <div className="description__content-sub">Стиль - {style}</div>
-                  <div className="description__content-square">{square} м2</div>
+                  <div className="description__content-sub">Style - {style}</div>
+                  <div className="description__content-square">{square} m2</div>
                   </div>
                   <div className="description__content-text">
                     <p>
-                      Идейные соображения высшего порядка, а также внедрение современных методик обеспечивает актуальность глубокомысленных рассуждений. Мы вынуждены отталкиваться от того, что глубокий уровень погружения, в своём классическом представлении,
-                      допускает внедрение своевременного выполнения сверхзадачи.
+                      Higher-order ideological considerations, as well as the introduction of modern techniques, ensure the relevance of thoughtful reasoning. We are forced to start from the fact that a deep level of immersion, in its classical presentation, allows for the implementation of timely completion of a super task.
                     </p>
                   </div>
                 </div>
@@ -48,14 +47,14 @@ const Description = () => {
               <div className="container">
                 <div className="description__content">
                   <div className="description__content-desc">
-                    <h5 className="description__content-title">Современная кухня в лучшем стиле</h5>
+                    <h5 className="description__content-title">Modern kitchen in the best style</h5>
                   </div>
                   <div className="description__content-text">
                     <p>
-                      Идейные соображения высшего порядка, а также внедрение современных методик обеспечивает актуальность глубокомысленных рассуждений. Мы вынуждены отталкиваться от того, что глубокий уровень погружения, в своём классическом представлении, допускает внедрение своевременного выполнения сверхзадачи.
+                      Higher-order ideological considerations, as well as the introduction of modern techniques, ensure the relevance of thoughtful reasoning. We are forced to start from the fact that a deep level of immersion, in its classical presentation, allows for the implementation of timely completion of a super task.
                     </p>
                     <p>
-                      Мы вынуждены отталкиваться от того, что глубокий уровень погружения, в своём классическом представлении, допускает внедрение своевременного выполнения сверхзадачи.
+                      We are forced to start from the fact that a deep level of immersion, in its classical presentation, allows for the implementation of timely completion of a super task.
                     </p>
                   </div>
                 </div>
@@ -72,15 +71,14 @@ const Description = () => {
               <div className="container">
                 <div className="description__content">
                   <div className="description__content-desc">
-                    <h5 className="description__content-title">Уютная спальня с личным просторным гардеробом</h5>
+                    <h5 className="description__content-title">Cozy bedroom with personal spacious wardrobe</h5>
                   </div>
                   <div className="description__content-text">
                     <p>
-                      Идейные соображения высшего порядка, а также внедрение современных методик обеспечивает актуальность глубокомысленных рассуждений. Мы вынуждены отталкиваться от того, что глубокий уровень погружения, в своём классическом представлении,
-                      допускает внедрение своевременного выполнения сверхзадачи.
+                      Higher-order ideological considerations, as well as the introduction of modern techniques, ensure the relevance of thoughtful reasoning. We are forced to start from the fact that a deep level of immersion, in its classical presentation, allows for the implementation of timely completion of a super task.
                     </p>
                     <p>
-                      Мы вынуждены отталкиваться от того, что глубокий уровень погружения, в своём классическом представлении, допускает внедрение своевременного выполнения сверхзадачи.
+                      We are forced to start from the fact that a deep level of immersion, in its classical presentation, allows for the implementation of timely completion of a super task.
                     </p>
                   </div>
                 </div>

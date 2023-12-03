@@ -1,4 +1,5 @@
 .catalog {
+  margin-bottom: 50px;
   &__input {
     width: 100%;
     border: 1px solid #000;
@@ -9,53 +10,14 @@
     margin-bottom: 10px;
 
     &::placeholder {
-        font-weight: 200;
-        font-size: 20px;
-        color: #4F4F4F;
-    }
-  }
-
-  &__agree {
-    position: relative;
-  }
-
-  &__checkbox {
-    opacity: 0;
-    position: absolute;
-    z-index: 1;
-    width: 15px;
-    height: 15px;
-  }
-
-  &__checkbox:checked + .catalog__label::after {
-    color: #fff;
-  }
-
-  &__label {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
-    position: relative;
-    padding-left: 25px;
-
-    span {
-      border-bottom: 1px solid #333;
+      font-weight: 200;
+      font-size: 20px;
+      color: #4F4F4F;
     }
 
-    &::after {
-      content: '\2713';
-      position: absolute;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      left: 0px;
-      top: -2px;
-      width: 17px;
-      height: 17px;
-      background: #333;
-      z-index: -1;
+    &:focus {
+      border: 1px solid #dee203;
+      box-shadow: 1px 1px 10px rgba(#FAFF09, 60%);
     }
   }
 
@@ -83,6 +45,8 @@
 
 @media (max-width: 1090px) {
   .catalog {
+    margin-bottom: 0px;
+
     &__input {
       font-size: 16px;
       line-height: 18px;
@@ -107,11 +71,20 @@
 
 @media (max-width: 690px) {
   .catalog {
+    margin-bottom: 10px;
+
     &__btn {
       width: 100%;
       font-size: 18px;
       line-height: 21px;
-      padding: 20px 0;
+      padding: 12px 0;
+      height: 60px;
+      margin: 15px 0 25px;
+    }
+
+    &__input {
+      padding: 15px;
+      margin-bottom: 5px;
     }
   }
 }

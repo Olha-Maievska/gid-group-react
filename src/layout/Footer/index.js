@@ -1,6 +1,6 @@
-import FooterSocialList from './FooterSocialList'
-import FooterMenu from './FooterMenu'
-import ButtonUp from './ButtonUp'
+import FooterSocialList from './components/FooterSocialList'
+import FooterMenu from './components/FooterMenu'
+import ButtonUp from '@components/UI/Buttons/ButtonUp'
 import logoSmall from './images/logo-small.png'
 
 import './footer.scss'

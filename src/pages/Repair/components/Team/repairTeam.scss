@@ -6,7 +6,6 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: space-around;
-    align-items: center;
     margin: 130px 0 84px;
     }
 
@@ -80,6 +79,11 @@
   .repair-team {
     &__inner {
       justify-content: center;
+    }
+
+    &__content {
+      max-width: 390px;
+      width: 100%;
     }
 
     &__item {

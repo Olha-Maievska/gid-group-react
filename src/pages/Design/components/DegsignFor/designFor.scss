@@ -56,6 +56,7 @@
 @media (max-width: 1240px) {
   .design-for {
     margin-bottom: 100px;
+
     &__text {
       font-size: 34px;
       line-height: 126.69%;
@@ -84,7 +85,7 @@
       &::before {
         width: 15px;
         height: 15px;
-        top: 3px;
+        top: 4px;
       }
     }
 
@@ -124,6 +125,9 @@
 
 @media (max-width: 640px) {
   .design-for {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
     &__text {
       font-size: 20px;
     }

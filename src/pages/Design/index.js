@@ -1,9 +1,3 @@
-import {Link} from 'react-router-dom'
-import Header from '@layout/Header'
-import Footer from '@layout/Footer'
-import Logo from '@components/Logo'
-import MenuBtn from '@ui/Buttons/MenuBtn'
-import CallBtn from '@ui/Buttons/CallBtn'
 import RepairBenefits from '@repair/Benefits'
 import Price from '@main/Price'
 import RepairWorks from '@repair/Works'
@@ -22,34 +16,27 @@ import './design.scss'
 
 const Design = () => {
   return (
-    <>
-      <Header>
-        <MenuBtn/>
-        <Logo/>
-        <CallBtn />
-      </Header>
-      <main className="design">
-        <div className="design__img">
-          <Link className="design__link" to="/design/options">3D-дизайн</Link>
-        </div>
+    <main className="design">
+      <div className="design__img">
+        <div className="design__link">3D design</div>
+      </div>
 
-        <RepairBenefits data={designBenefits} />
-        <Price />
-        <RepairWorks />
-        <DesignFor />
-        <Target />
-        <DesignWork />
-        <DesignBenefits />
-        <RepairReviews />
-        <RepairTeam />
-        <RepairBlog />
-        <Catalog title="ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?"/>
-        <div className="container">
-          <ProjectsRequest />
-        </div>
-    </main>
-      <Footer />
-    </>
+      <RepairBenefits data={designBenefits} />
+      <Price />
+      <RepairWorks />
+      <DesignFor />
+      <Target />
+      <DesignWork />
+      <DesignBenefits />
+      <RepairReviews />
+      <RepairTeam />
+      <RepairBlog />
+      <Catalog title="NOT READY TO ORDER REPAIRS YET?" />
+      
+      <div className="container">
+        <ProjectsRequest />
+      </div>
+  </main>
   )
 }
 

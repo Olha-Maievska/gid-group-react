@@ -7,13 +7,14 @@
 	height: 787px;
 	color: #fff;
 	position: relative;
+	margin-bottom: 92px;
 
 	&__inner {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		max-width: 800px;
+		max-width: 850px;
 		width: 100%;
 	}
 
@@ -55,11 +56,12 @@
 @media (max-width: 1060px) {
 	.target {
 		height: 523px;
+		margin-bottom: 62px;
 
 		&__title {
 			font-size: 36px;
-			line-height: 146.69%;
-			margin-bottom: 70px;
+			line-height: 48px;
+			margin-bottom: 60px;
 		}
 
 		&__item  {
@@ -68,8 +70,8 @@
 		}
 
 		&__inner {
-			max-width: 550px;
-		} 
+			max-width: 580px;
+		}
 	}
 }
 
@@ -77,19 +79,20 @@
 	.target {
 		height: 277px;
 		text-align: center;
+		margin-bottom: 50px;
 
 		&__title {
-			font-size: 18px;
-			line-height: 146.69%;
-			margin-bottom: 20px;
+			font-size: 24px;
+			line-height: 36px;
+			margin-bottom: 10px;
+			margin-left: 5px;
 		}
 
 		&__item  {
-			font-size: 14px;
-			line-height: 146.69%;
-			padding-left: 0;
-			padding-bottom: 16px;
-			margin-bottom: 25px;
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 15px;
+			padding: 0 5px 15px;
 
 			&::before {
 				width: 10px;

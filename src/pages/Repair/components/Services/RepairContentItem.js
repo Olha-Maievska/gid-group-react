@@ -1,5 +1,3 @@
-import React from 'react'
-
 const RepairContentItem = ({text}) => {
   return (
     <li className="repair-services__text">{text}</li>

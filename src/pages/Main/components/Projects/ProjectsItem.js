@@ -14,13 +14,13 @@ const ProjectsItem = (props) => {
       <div className="projects__item-img">
         <img src={img} alt={title} />
         <div className="projects__item-hover">
-          <button className="projects__item-link" onClick={openProject}>Смотреть проект</button>
+          <button className="projects__item-link" onClick={openProject}>View project</button>
         </div>
       </div>
       <div className="projects__item-content">
         <div className="projects__item-title">{title}</div>
-        <div className="projects__item-suptitle">Стиль - {style}</div>
-        <div className="projects__item-num">{square} м2</div>
+        <div className="projects__item-suptitle">Style - {style}</div>
+        <div className="projects__item-num">{square} m2</div>
       </div>
     </div>
   )

@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
-
 import stages1 from '@main/Stages/images/stages1.png'
 import stages2 from '@main/Stages/images/stages2.png'
 import stages3 from '@main/Stages/images/stages3.png'
@@ -9,50 +7,50 @@ import stages6 from '@main/Stages/images/stages6.png'
 
 export const stagesData = [
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages1,
-    title: 'Заявка',
-    text: 'Оставляйте заявку на сайте и получите 2 варианта планировки квартиры БЕСПЛАТНО',
+    title: 'Request',
+    text: 'Leave a request on the website and receive 2 apartment layout options for FREE',
     num: '01',
-    btn: 'Оставить заявку',
+    btn: 'Leave a request',
   },
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages2,
-    title: 'Дизайн',
-    text: 'Собираете на сайте стиль из четырех готовых решений с возможностью редактирования',
+    title: 'Design',
+    text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '02',
-    btn: 'Выбрать дизайн',
+    btn: 'Select design',
   },
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages3,
-    title: 'Расчет',
-    text: 'Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора',
+    title: 'Calculation',
+    text: 'Calculate the final cost of repairs using an online calculator',
     num: '03',
-    btn: 'Посчитать'
+    btn: 'Calculate'
   },
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages4,
-    title: 'Договор',
-    text: 'Собираете на сайте стиль из четырех готовых решений возможностью редактирования',
+    title: 'Agreement',
+    text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '04',
-    btn: 'Оставить заявку',
+    btn: 'Leave a request',
   },
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages5,
-    title: 'Ремонт',
-    text: 'Собираете на сайте стиль из четырех готовых решений возможностью редактирования',
+    title: 'Repair',
+    text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '05',
-    btn: 'Оставить заявку',
+    btn: 'Leave a request',
   },
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     img: stages6,
-    title: 'Сдача объекта',
-    text: 'Расчитываете финальную стоимость ремонта с помощью онлайн-калькулятора',
+    title: 'Delivery of the object',
+    text: 'Calculate the final cost of repairs using an online calculator',
     num: '06',
   },
 ]

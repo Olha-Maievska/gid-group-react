@@ -1,22 +1,24 @@
 .advantage {
-  margin: 45px 0 66px;
+  margin: 100px 0 150px;
   
   &__inner {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #F2F2F2;
-    padding: 37px 80px;
-    width: 100%;  
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    background: #F2F2F2;
+    width: 100%;
   }
 
   &__item {
-    color: #0E0E0E;
-    width: 390px;
-  }
-
-  &__item:nth-child(4) {
-    width: 270px;
+    padding: 37px;
+    text-align: center;
+    color: #333;
+    width: 25%;
+    border-right: 3px solid #ccc;
+    &:last-child {
+      border-right: none;
+    }
   }
 
   &__item-number {
@@ -32,6 +34,7 @@
     font-weight: 500;
     padding-left: 27px;
     margin-bottom: 16px;
+    display: inline-block;
     position: relative;
 
     &::before {
@@ -39,29 +42,17 @@
       position: absolute;
       width: 20px;
       height: 20px;
-      background-color: #0E0E0E;
-      top: 5px;
-      left: 0px;
+      background-color: #333;
+      top: 6px;
+      left: 0;
     }
-  }
-  &__item-text {
-    margin-right: 30px;
   }
 }
 
 @media (max-width: 1660px) {
   .advantage {
-    &__inner {
-      padding: 37px 40px 0;
-    }
-
     &__item {
-      width: 45%;
-      margin-bottom: 60px;
-
-      &:last-child {
-        width: 45%;
-      }
+      padding: 20px;
     }
     &__item-number {
       font-size: 48px;
@@ -76,8 +67,7 @@
       display: inline-block;
 
       &::before {
-        top: 2px;
-        left: 0px;
+        top: 3px;
       }
     }
 
@@ -88,19 +78,21 @@
   }
 }
 
-@media (max-width: 790px) {
+@media (max-width: 1320px) {
   .advantage {
+    &__inner {
+      padding-bottom: 30px;
+    }
+
     &__item-number {
       margin-bottom: 8px;
     }
 
     &__item {
       text-align: center;
-      width: 100%;
-
-      &:last-child {
-        width: 100%;
-      }
+      width: 50%;
+      flex-wrap: wrap;
+      border-right: none;
     }
 
     &__item-title {
@@ -128,6 +120,21 @@
         height: 10px;
         background-color: #0E0E0E;
       }
+    }
+  }
+} 
+
+@media (max-width: 786px) {
+  .advantage {
+    margin: 60px 0;
+
+    &__item {
+      width: 100%;
+    }
+
+    &__item-number {
+      font-size: 34px;
+      line-height: 40px;
     }
   }
 } 

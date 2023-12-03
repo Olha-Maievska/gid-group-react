@@ -1,0 +1,159 @@
+.calc-other {
+  padding-top: 104px;
+  margin: 15px 0 34px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 82px;
+  }
+
+  &__option {
+    width: 55%;
+  }
+
+  &__option-title {
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+    margin-top: 20px;
+    font-weight: 300;
+  }
+
+  &__wrapper {
+    border: 1px solid #E0E0E0;
+    padding: 15px;
+    height: 532px;
+  }
+
+  &__item {
+    border: 1px solid #E0E0E0;
+    border-left: 1px solid transparent;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-square {
+    width: 45px;
+    height: 45px;
+    background-color: #F2F2F2;
+    margin-right: 12px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-price {
+    margin-right: 30px;
+  }
+
+  &__text {
+    width: 42%;
+    background-color: #F2F2F2;
+    height: 532px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+      max-width: 520px;
+      padding: 20px;
+      display: inline-block;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 43px;
+      color: #4F4F4F;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1140px)  {
+  .calc-other {
+    &__option {
+      width: 64%;
+    }
+
+    &__text {
+      width: 35%;
+
+      & p {
+        font-size: 18px;
+        line-height: 26px;
+        max-width: 350px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .calc-other {
+    &__inner {
+      flex-direction: column;
+      margin-bottom: 22px;
+    }
+
+    &__option {
+      width: 100%;
+    }
+    
+    &__text {
+      margin-top: 20px;
+      width: 100%;
+      height: 220px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .calc-other {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 550px) {
+  .calc-other {
+    &__item-price {
+      margin-right: 5px;
+    }
+
+    &__item {
+      font-size: 14px;
+      height: 30px;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__wrapper {
+      padding: 10px;
+      height: auto;
+    }
+
+    &__inner {
+      margin-top: 10px;
+    }
+
+    &__item-square {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
+    }
+
+    &__option-title {
+      font-size: 22px;
+    }
+  }
+}

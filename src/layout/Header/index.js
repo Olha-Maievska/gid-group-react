@@ -8,7 +8,7 @@ const Header = ({fone = 'rgba(0, 0, 0, .9)', children}) => {
 					{children}
         </div>
       </div>
-  </header>
+    </header>
   )
 }
 

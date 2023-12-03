@@ -5,7 +5,11 @@ import {openPage} from '@utils/utils'
 const RepairReviewsItem = (item) => {
   const navigate = useNavigate()
 
-  const { className, style, text, apartment, id } = item
+  function toReview() {
+    navigate(`/reviews/${item.id}`)
+  }
+
+  const { className, style, text, apartment} = item
   return (
     <div className={className}>
       <div className="repair-review__content">
@@ -13,9 +17,9 @@ const RepairReviewsItem = (item) => {
         <p className="repair-review__text">{text.slice(0, 280)}...</p>
         <button
           className="repair-review__btn"
-          onClick={() => openPage(navigate(`/reviews/${id}`))}
+          onClick={() => openPage(toReview)}
         >
-          Читать полностью
+          Read more
         </button>
       </div>
 

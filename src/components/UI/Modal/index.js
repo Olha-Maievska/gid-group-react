@@ -3,11 +3,12 @@ import { closeModal } from '@store/modal/modalActions'
 
 import './modal.scss'
 
-const Modal = ({img}) => {
+const Modal = ({children, isOpenModal}) => {
   const dispatch = useDispatch()
 
   const close = () => {
-    dispatch(closeModal())
+    isOpenModal(false)
+    dispatch(closeModal)
   }
 
   return (
@@ -15,9 +16,7 @@ const Modal = ({img}) => {
       className="modal"
       onClick={close}
     >
-      <div className="modal__wrapper" onClick={e => e.stopPropagation()}>
-        <img src={img} alt="" />
-      </div>
+      {children}
     </div>
   )
 }

@@ -1,0 +1,44 @@
+.prevBtn {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 42px;
+  padding-left: 80px;
+  color: #000;
+  background-color: transparent;
+  border: none;
+  outline: transparent;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: url(./images/arrow-left.svg);
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}
+
+@media (max-width: 1140px) {
+  .prevBtn {
+    font-size: 26px;
+    line-height: 36px;
+  }
+}
+
+@media (max-width: 800px) {
+  .prevBtn {
+    padding: 5px 20px;
+    font-size: 18px;
+    line-height: 26px;
+    border: 1px solid #000;
+    transition: all .3s ease;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

@@ -68,6 +68,10 @@
 
 @media (max-width: 1190px) {
   .blog {
+    &__inner {
+      margin-top: 40px;
+    }
+
     &__item-img {
       height: 276px;
     }
@@ -87,9 +91,15 @@
       height: 396px;
     }
 
+    &__inner {
+      margin-top: 20px;
+    }
+    
+
     &__item {
       width: 100%;
       margin-bottom: 60px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -105,10 +115,12 @@
     &__item-img {
       max-width: 400px;
       height: 270px;
+      margin-bottom: 25px;
     }
 
     &__item {
       text-align: center;
+      margin-bottom: 40px;
     }
 
     &__item-box-title {

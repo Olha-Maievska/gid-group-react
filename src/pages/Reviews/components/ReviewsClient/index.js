@@ -7,7 +7,7 @@ const ReviewsClient = ({owner, complex, style, photoOwner, }) => {
       <div className="repair-review__box-content">
         <div className="repair-review__box-name">{owner}</div>
         <div className="repair-review__box-client">{complex} </div>
-        <div className="repair-review__box-text">Ремонт квартиры под ключ, <div> с выбранным стилем - {style}</div></div>
+        <div className="repair-review__box-text">Turnkey apartment renovation, <div> with the selected style - {style}</div></div>
       </div>
     </div>
   )

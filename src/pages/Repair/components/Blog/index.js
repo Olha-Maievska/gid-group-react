@@ -8,9 +8,13 @@ import './repairBlog.scss'
 const RepairBlog = () => {
   const navigate = useNavigate()
 
+  function toBlog() {
+    navigate('/blog')
+  }
+
   return (
     <div className="repair-blog">
-      <h2 className="title">НАШ БЛОГ</h2>
+      <h2 className="title">OUR BLOG</h2>
       <div className="container">
         <div className="repair-blog__inner">
           {blogData.slice(0, 4).map(blog =>
@@ -20,9 +24,9 @@ const RepairBlog = () => {
 
         <button
           className="stages__btn repair-blog__link"
-          onClick={() => openPage(navigate('/blog'))}
+          onClick={() => openPage(toBlog)}
         >
-          Перейти в блог
+          Go to the blog
         </button>
       </div>
     </div>

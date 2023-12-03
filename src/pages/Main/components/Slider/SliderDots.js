@@ -1,11 +1,13 @@
-const SliderDots = ({index, moveDot}) => {
+import { dataSlider } from '@data/dataSlider'
+
+const SliderDots = ({ index, moveDot }) => {
   return (
     <div className="slider__dots">
-      {Array.from({length: 3}).map((item, i) =>
+      {dataSlider.map((_, i) =>
         <div
           key={i}
-          className={index === i + 1 ? 'slider__dot active' : 'slider__dot'}
-          onClick={() => moveDot(i + 1)}
+          className={index === i ? 'slider__dot active' : 'slider__dot'}
+          onClick={() => moveDot(i)}
         ></div>
       )}
     </div>

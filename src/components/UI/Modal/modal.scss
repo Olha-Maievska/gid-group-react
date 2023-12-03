@@ -7,6 +7,7 @@
   right: 0;
   z-index: 99;
   overflow: hidden;
+  padding: 0 70px;
   animation-name: modal;
   animation-duration: 1s;
 
@@ -34,6 +35,12 @@
   to {
     transform: scale(1, 1);
     opacity: 1;
+  }
+}
+
+@media (max-width: 878px) {
+  .modal {
+    padding: 0 40px;
   }
 }
 

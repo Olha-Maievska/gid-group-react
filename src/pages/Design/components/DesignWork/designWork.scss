@@ -54,29 +54,32 @@
 
 @media (max-width: 900px) {
   .design-work {
+    &__inner {
+      margin-top: 20px;
+    }
+
     &__item {
       width: 100%;
       margin-right: 0;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
   }
 }
 
 @media (max-width: 690px) {
   .design-work {
-    &__inner {
-      margin-top: 50px;
-    }
+    margin-top: 62px;
+
     &__item-text {
       text-align: center;
       font-size: 18px;
       line-height: 28px;
-
     }
 
     &__item-content {
       justify-content: center;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      height: 80px;
     }
 
     &__item-title {
@@ -92,6 +95,8 @@
 
     &__item-img {
       margin-right: 15px;
+      height: 70px;
+      width: auto;
     }
   }
 }

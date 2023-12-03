@@ -21,41 +21,43 @@ const CatalogForm = () => {
   const params = {setLoading, setError, setData, reset}
 
   return (
-    <form onSubmit={handleSubmit(() => onSubmit(data, API_URL_CATALOG, params))}>
+    <form onSubmit={handleSubmit((data) => onSubmit(data, API_URL_CATALOG, params))}>
       <div className="form__error">
         {errors?.email && <p>{errors?.email.message || 'Error'}</p>}
       </div>
       <input
         className="catalog__input"
-        placeholder="Введите ваш E-mail"
+        placeholder="Enter your E-mail"
         type="email"
         {...register('email', {
-          required: 'Заполните поле!',
+          required: 'Fill in the field!',
           pattern: {
             value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-            message: 'Некоректный email'
+            message: 'Incorrect email'
           },
         })}
       />
+      
       <div className="form__error">
         {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
       </div>
-      <div className="catalog__agree">
+      <div className="agreement">
         <input
-          className="catalog__checkbox"
+          className="checkbox"
           type="checkbox"
           {...register('checkbox', {
-          required: 'Соглашение обязательно!',
+          required: 'Agreement is mandatory!',
           })}
         />
-        <label className="catalog__label">Я согласен на <span>обработку персональных данных</span> </label>
+        <label className="label">I agree to the <span>processing of personal data</span> </label>
       </div>
+
       <div style={{height: '20px', marginTop: '15px'}}>
         {loading && <Loader />}
-        {data && <div style={{textAlign: 'center'}}>Спасибо! Ожидайте каталог в течении часа.</div>}
-        {error && <div style={{textAlign: 'center', color: 'red'}}>Что-то пошло не так. Попробуйте еще раз!</div>}
+        {data && <div style={{textAlign: 'center'}}>Thank you! Expect the catalog within an hour.</div>}
+        {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
       </div>
-      <button className="catalog__btn" type="submit">Получить каталог</button>
+      <button className="catalog__btn" type="submit">Get catalog</button>
     </form>
   )
 }

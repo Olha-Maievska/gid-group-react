@@ -8,14 +8,18 @@ import './repairTeam.scss'
 const RepairTeam = () => {
   const navigate = useNavigate()
 
+  function toTeam() {
+    navigate('/team')
+  }
+
   return (
     <div className="repair-team">
-      <h2 className="title">НАША КОМАНДА</h2>
+      <h2 className="title">OUR TEAM</h2>
       <div className="container">
         <RepairTeamList />
         <ProjectsBtnElse
-          text="Еще сотрудники"
-          fn={() => openPage(navigate('/team'))}
+          text="More employees"
+          fn={() => openPage(toTeam)}
         />
       </div>
     </div>

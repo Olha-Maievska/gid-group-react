@@ -75,37 +75,19 @@
       text-align: center;
       width: 100%;
     }
-
-    &__input {
-      font-size: 16px;
-      line-height: 18px;
-      width: 100%;
-
-      &::placeholder {
-        font-size: 16px;
-        line-height: 18px;
-      }
-    }
-
-    &__btn {
-      font-size: 18px;
-      line-height: 21px;
-      width: 393px;
-      height: 66px;
-      padding: 22px 0;
-      margin: 40px auto;
-    }
   }
 }
 
 @media (max-width: 690px) {
   .catalog {
+    margin-top: 50px;
     &__img {
       height: 280px;
     }
 
     &__content {
-      width: 355px;
+      max-width: 355px;
+      width: 100%;
     }
 
     &__title  {
@@ -117,13 +99,7 @@
     &__text {
       font-size: 14px;
       line-height: 146.19%;
-    }
-
-    &__btn {
-      width: 100%;
-      font-size: 18px;
-      line-height: 21px;
-      padding: 20px 0;
+      margin-bottom: 15px;
     }
   }
 }

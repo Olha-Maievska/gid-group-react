@@ -1,28 +1,26 @@
-import { v4 as uuidv4 } from 'uuid'
-
 export const advantagesArray = [
   {
-    id: uuidv4(),
+    id: crypto.randomUUID(),
     number: '100+',
-    title: 'Реализованные проекты',
-    text: 'Работаем с любой недвижимостью – от дворцов до квартир',
+    title: 'Completed projects',
+    text: 'We work with any real estate - from palaces to apartments',
   },
   {
-    id: uuidv4(),
-    number: '10 лет',
-    title: 'Безупречная репутация',
-    text: 'Наши специалисты постоянно стажируются у лидеров строительных работ',
+    id: crypto.randomUUID(),
+    number: '10 years',
+    title: 'Impeccable reputation',
+    text: 'Our specialists are constantly trained by construction leaders',
   },
   {
-    id: uuidv4(),
-    number: '3 года',
-    title: 'Гарантии на все работы',
-    text: 'Мы внимательно изучаем рынок отделочных материалов и инновационной техники',
+    id: crypto.randomUUID(),
+    number: '3 years',
+    title: 'Guarantees for all work',
+    text: 'We carefully study the market for finishing materials and innovative technology',
   },
   {
-    id: uuidv4(),
-    number: 'Сроки',
-    title: 'Процесс',
-    text: ' Нужно лучшее – закажи это у лучших!',
+    id: crypto.randomUUID(),
+    number: 'Deadlines',
+    title: 'Process',
+    text: 'You need the best - order it from the best!',
   },
 ]

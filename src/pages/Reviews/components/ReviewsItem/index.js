@@ -1,7 +1,8 @@
 import ReviewsClient from '../ReviewsClient'
 
 const ReviewsItem = (item) => {
-  const {text, apartment, apartmentSmall, style} = item
+  const { text, apartment, apartmentSmall, style } = item
+  
   return (
     <div className="container-fluid">
       <ReviewsClient {...item} />

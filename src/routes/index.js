@@ -9,19 +9,23 @@ import Services from "../pages/Services";
 import ProjectsDetails from "../pages/ProjectsDetails";
 import BlogDetails from "../pages/BlogDetails";
 import Reviews from "../pages/Reviews";
-import Calculator from "../pages/Calculator";
+import CalcStyles from "../pages/Calculator/CalcStyles";
+import CalcParams from "../pages/Calculator/CalcParams";
+import CalcAdditionally from "../pages/Calculator/CalcAdditionally";
 
 export const routes = [
-  { path: '', element: <Main/>, exact: true},
-  { path: '/contacts', element: <Contacts/>, exact: true},
-  { path: '/projects', element: <Projects/>, exact: true},
-  { path: '/projects/:id', element: <ProjectsDetails/>, exact: true},
-  { path: '/design', element: <Design/>, exact: true},
-  { path: '/services', element: <Services/>, exact: true},
-  { path: '/blog', element: <Blog/>, exact: true},
-  { path: '/blog/:id', element: <BlogDetails/>, exact: true},
-  { path: '/repair', element: <Repair/>, exact: true},
-  { path: '/team', element: <Team/>, exact: true},
-  { path: '/reviews/:id', element: <Reviews/>, exact: true},
-  { path: '/calculator', element: <Calculator/>, exact: true},
+  { path: '', element: <Main/>},
+  { path: '/contacts', element: <Contacts/>},
+  { path: '/projects', element: <Projects/>},
+  { path: '/projects/:id', element: <ProjectsDetails/>},
+  { path: '/design', element: <Design/>},
+  { path: '/services', element: <Services/>},
+  { path: '/blog', element: <Blog/>},
+  { path: '/blog/:id', element: <BlogDetails/>},
+  { path: '/repair', element: <Repair/>},
+  { path: '/team', element: <Team/>},
+  { path: '/reviews/:id', element: <Reviews/>},
+  { path: '/calculatorStyles', element: <CalcStyles/>},
+  { path: '/calculatorParams', element: <CalcParams/>},
+  { path: '/calculatorAdditionally', element: <CalcAdditionally/>},
 ]

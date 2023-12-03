@@ -9,7 +9,7 @@ const BlogItem = ({date, title, imgMain, blogId}) => {
           <div className="blog__item-box-data">{date}</div>
         </div>
         <Link className="blog__item-box-title" to={`/blog/${blogId}`}>{title}</Link>
-        <Link className="blog__item-btn" to={`/blog/${blogId}`}>Читать полностью</Link>
+        <Link className="blog__item-btn" to={`/blog/${blogId}`}>Read more</Link>
       </div>
     </div>
   )

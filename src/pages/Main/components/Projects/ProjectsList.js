@@ -1,6 +1,6 @@
 import ProjectsItem from './ProjectsItem'
 
-const ProjectsList = ({data = []}) => {
+const ProjectsList = ({ data = [] }) => {
   return (
     <div className="projects__inner">
       {data.map(item =>

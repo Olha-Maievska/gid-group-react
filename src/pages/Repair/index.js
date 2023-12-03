@@ -1,8 +1,3 @@
-import Header from '@layout/Header'
-import Footer from '@layout/Footer'
-import Logo from '@components/Logo'
-import MenuBtn from '@ui/Buttons/MenuBtn'
-import CallBtn from '@ui/Buttons/CallBtn'
 import RepairBenefits from './components/Benefits'
 import RepairServices from './components/Services'
 import RepairWorks from './components/Works'
@@ -19,33 +14,23 @@ import './repair.scss'
 
 const Repair = () => {
   return (
-    <>
-      <Header>
-        <MenuBtn/>
-        <Logo/>
-        <CallBtn />
-      </Header>
+    <main className="repair">
+      <iframe className="repair__video" title="Video of work GID" src="https://www.youtube.com/embed/mtfdVmiQn6A"></iframe>
 
-      <main className="repair">
-        <iframe className="repair__video" title="Видео работы GID" src="https://www.youtube.com/embed/mtfdVmiQn6A"></iframe>
+      <RepairBenefits data={repairBenefits} />
+      <RepairServices />
+      <RepairWorks />
+      <Catalog title="NOT READY TO ORDER REPAIRS YET?" />
+      <RepairTeam />
+      <RepairStages />
+      <RepairResult />
+      <RepairBlog />
+      <RepairReviews />
 
-        <RepairBenefits data={repairBenefits} />
-        <RepairServices />
-        <RepairWorks />
-        <Catalog title="ЕЩЕ НЕ ГОТОВЫ ЗАКАЗАТЬ РЕМОНТ?" />
-        <RepairTeam />
-        <RepairStages />
-        <RepairResult />
-        <RepairBlog />
-        <RepairReviews />
-
-        <div className="container">
-          <ProjectsRequest />
-        </div>
-      </main>
-
-      <Footer />
-    </>
+      <div className="container">
+        <ProjectsRequest />
+      </div>
+    </main>
   )
 }
 

@@ -6,7 +6,7 @@ import './designWork.scss'
 const DesignWork = () => {
   return (
     <div className="design-work">
-      <h2 className="title">КАК МЫ РАБОТАЕМ</h2>
+      <h2 className="title">HOW WE ARE WORKING</h2>
       <div className="container">
         <div className="design-work__inner">
           {designWorkData.map(work =>

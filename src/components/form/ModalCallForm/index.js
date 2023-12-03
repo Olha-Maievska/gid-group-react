@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { API_URL_CALL } from '../../../config'
 import Loader from '../../Loader'
-import { onSubmit, handlePhone } from '@utils/formUtils'
+import { onSubmit, handleNumber } from '@utils/formUtils'
 
 const ModalCallForm = () => {
   const [loading, setLoading] = useState(false)
@@ -19,18 +19,18 @@ const ModalCallForm = () => {
   const params = {setLoading, setError, setData, reset}
 
   return (
-    <form onSubmit={handleSubmit(() => onSubmit(data, API_URL_CALL, params))}>
+    <form onSubmit={handleSubmit((data) => onSubmit(data, API_URL_CALL, params))}>
       <div className="form__error">
         {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
       </div>
       <input
         className="modal-call__name"
-        placeholder="Ваше имя"
+        placeholder="Your name"
         {...register('name', {
-          required: 'Заполните поле!',
+          required: 'Fill in the field!',
           minLength: {
             value: 2,
-            message: 'Минимум 2 символа'
+            message: 'Minimum 2 characters'
           }
         })}
       />
@@ -39,34 +39,30 @@ const ModalCallForm = () => {
       </div>
       <input
         className="modal-call__phone"
-        placeholder="Номер телефона"
+        placeholder="Phone number"
         type="tel"
         {...register('phone', {
-          required: 'Заполните поле!',
+          required: 'Fill in the field!',
            minLength: {
             value: 6,
-            message: 'Минимум 6 символов'
-          },
-          maxLength: {
-            value: 14,
-            message: 'Мaxимум 14 символов'
+            message: 'Minimum 2 characters'
           }
         })}
         onChange={event => {
-          event.target.value = handlePhone(event.target.value)
+          event.target.value = handleNumber(event.target.value)
         }}
 
       />
       <div style={{height: '20px'}}>
         {loading && <Loader />}
-        {data && <div style={{textAlign: 'center'}}>Спасибо! Мы скоро с Вами свяжемся!</div>}
-        {error && <div style={{textAlign: 'center', color: 'red'}}>Что-то пошло не так. Попробуйте еще раз!</div>}
+        {data && <div style={{textAlign: 'center'}}>Thank you! We will contact you shortly!</div>}
+        {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
       </div>
       <button
         className="modal-call__btn"
         type="submit"
       >
-        Позвонить мне
+        Call me
       </button>
     </form>
   )

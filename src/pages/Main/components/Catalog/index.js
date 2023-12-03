@@ -15,10 +15,10 @@ const Catalog = ({title}) => {
 
           <div className="catalog__content">
             <h5 className="catalog__title">
-              Оставьте ваш E-mail, чтобы получить каталог наших проектов
+              Leave your email to receive a catalog of our projects
             </h5>
             <p className="catalog__text">
-              Каталог поможет вам выбрать стиль и продумать планировку квартиры
+              The catalog will help you choose a style and think through the layout of your apartment
             </p>
 
             <CatalogForm />

@@ -36,7 +36,6 @@ const RepairWorksList = () => {
   }
 
   useEffect(() => {
-    console.log((windowWidth));
     if (windowWidth <= 1750) {
       setOffset(0)
       setPages(projectsData.slice(0, 6))

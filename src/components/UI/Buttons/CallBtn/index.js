@@ -1,14 +1,10 @@
-import { useDispatch } from 'react-redux'
-import {openModalCall} from '@store/modal/modalActions'
 import phone from './images/phone.svg'
 
 import './callBtn.scss'
 
-const CallBtn = () => {
-  const dispatch = useDispatch()
-
+const CallBtn = ({fn}) => {
   return (
-    <button className="phone" onClick={() => dispatch(openModalCall())}>
+    <button className="phone" onClick={fn}>
       <img src={phone} alt="phone" />
     </button>
   )
