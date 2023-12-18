@@ -1,6 +1,6 @@
 import { calcStyleData } from '@data/calculatorData'
 import { useDispatch, useSelector } from 'react-redux'
-import { getProjectStyle } from '@store/price/priceActions'
+import { getProjectStyle } from '@store/price/price-slice'
 
 const QuestionSecond = () => {
   const projectStyle = useSelector(state => state.price.projectStyle)

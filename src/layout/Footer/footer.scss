@@ -2,7 +2,7 @@
   padding: 450px 0 30px;
   position: relative;
   overflow: hidden;
-  background: url(./images/footer.png) no-repeat left;
+  background: url(./images/footer.png) no-repeat top left;
   margin-top: 40px;
 
   &__inner {
@@ -71,6 +71,7 @@
     line-height: 26px;
     color: #F2F2F2;
     margin: 6px 0;
+    cursor: pointer;
   }
 
   &__copyright-text {

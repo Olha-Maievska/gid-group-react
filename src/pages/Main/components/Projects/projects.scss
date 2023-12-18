@@ -35,6 +35,13 @@
 		}
 	}
 
+	&__empty__img {
+		width: 100%;
+		height: 657px;
+		background: #ccc;
+		margin-bottom: 15px;
+	}
+
 	&__item-content {
 		margin-left: 10px;
 	}

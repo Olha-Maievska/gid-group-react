@@ -19,7 +19,7 @@ const Footer = () => {
         <FooterMenu/>
         <div className="footer__copyright">
           <div className="footer__copyright-text">
-            Gid.group 2022/ All rights reserved
+            Gid.group 2024/ All rights reserved
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import MenuList from './components/MenuList'
 import MenuSocial from './components/MenuSocial'
 import CallBtn from '@ui/Buttons/CallBtn'
 import CloseBtn from '@ui/Buttons/CloseBtn'
-import { closeModalMenu } from '@store/modal/modalActions'
+import { closeModalMenu } from '@store/modal/modal-slice'
 
 import './menu.scss'
 

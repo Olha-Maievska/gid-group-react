@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { galleryData } from '@data/galleryData'
-import { openModal } from '@store/modal/modalActions'
+import { openModal } from '@store/modal/modal-slice'
 import Modal from '@ui/Modal'
 import GalleryItem from './GalleryItem'
 import { useState } from 'react'

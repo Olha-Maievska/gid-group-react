@@ -3,7 +3,7 @@ import {
   addDoorPrice,
   addFinishPrice,
   addSizeDoor
-} from '@store/calc/calcActions'
+} from '@store/calc/calc-slice'
 
 const OtherParamsItem = ({ name, img, heightOfDoor, className, fn, price}) => {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ const OtherParamsItem = ({ name, img, heightOfDoor, className, fn, price}) => {
     } else {
       dispatch(addDoorPrice(price))
     }
-    dispatch(addFinishPrice)
+    dispatch(addFinishPrice())
     dispatch(addSizeDoor(size))
   }
 

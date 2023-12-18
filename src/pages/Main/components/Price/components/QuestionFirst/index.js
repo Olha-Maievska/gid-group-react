@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { getProjectSize } from '@store/price/priceActions'
+import { getProjectSize } from '@store/price/price-slice'
 
 const sizes = [
   'from 50 to 80 m2',

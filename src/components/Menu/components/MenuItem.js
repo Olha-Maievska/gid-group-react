@@ -1,13 +1,15 @@
 import { useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
-import { closeModalMenu } from '@store/modal/modalActions'
+import { closeModalMenu } from '@store/modal/modal-slice'
 
 const MenuItem = ({ title, href }) => {
   const dispatch = useDispatch()
 
-  const closeMenu = () => {
+  function closeMenu() {
+    window.scrollTo(0, 0)
     dispatch(closeModalMenu())
   }
+
   return (
     <li className="main-menu__item">
       <Link

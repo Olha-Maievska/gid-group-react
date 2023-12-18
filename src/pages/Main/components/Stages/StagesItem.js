@@ -1,4 +1,4 @@
-const StagesItem = ({img, title, text, num, btn = null}) => {
+const StagesItem = ({img, title, text, num}) => {
   return (
     <div className="stages__item">
       <img className="stages__img" src={img} alt={title} />
@@ -8,7 +8,6 @@ const StagesItem = ({img, title, text, num, btn = null}) => {
       </div>
       <div className="stages__content">
         <p className="stages__content-text">{text}</p>
-        <button className={btn ? "stages__content-link" : null}>{btn}</button>
       </div>
     </div>
   )

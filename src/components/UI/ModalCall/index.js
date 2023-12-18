@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { closeModal } from '@store/modal/modalActions'
+import { closeModal } from '@store/modal/modal-slice'
 import ModalCallForm from '@form/ModalCallForm'
 import CloseBtn from '@ui/Buttons/CloseBtn'
 
@@ -10,7 +10,7 @@ const ModalCall = ({setIsOpenModalCall}) => {
 
   const closeModalCall = () => {
     setIsOpenModalCall(false)
-    dispatch(closeModal)
+    dispatch(closeModal())
   }
 
   return (

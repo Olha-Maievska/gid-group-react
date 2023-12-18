@@ -12,7 +12,6 @@ export const stagesData = [
     title: 'Request',
     text: 'Leave a request on the website and receive 2 apartment layout options for FREE',
     num: '01',
-    btn: 'Leave a request',
   },
   {
     id: crypto.randomUUID(),
@@ -20,7 +19,6 @@ export const stagesData = [
     title: 'Design',
     text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '02',
-    btn: 'Select design',
   },
   {
     id: crypto.randomUUID(),
@@ -28,7 +26,6 @@ export const stagesData = [
     title: 'Calculation',
     text: 'Calculate the final cost of repairs using an online calculator',
     num: '03',
-    btn: 'Calculate'
   },
   {
     id: crypto.randomUUID(),
@@ -36,7 +33,6 @@ export const stagesData = [
     title: 'Agreement',
     text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '04',
-    btn: 'Leave a request',
   },
   {
     id: crypto.randomUUID(),
@@ -44,7 +40,6 @@ export const stagesData = [
     title: 'Repair',
     text: 'You assemble a style on your website from four ready-made solutions with the ability to edit',
     num: '05',
-    btn: 'Leave a request',
   },
   {
     id: crypto.randomUUID(),

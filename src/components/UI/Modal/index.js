@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { closeModal } from '@store/modal/modalActions'
+import { closeModal } from '@store/modal/modal-slice'
 
 import './modal.scss'
 
@@ -8,7 +8,7 @@ const Modal = ({children, isOpenModal}) => {
 
   const close = () => {
     isOpenModal(false)
-    dispatch(closeModal)
+    dispatch(closeModal())
   }
 
   return (

@@ -23,7 +23,7 @@ const RepairBlog = () => {
         </div>
 
         <button
-          className="stages__btn repair-blog__link"
+          className="repair-blog__link"
           onClick={() => openPage(toBlog)}
         >
           Go to the blog

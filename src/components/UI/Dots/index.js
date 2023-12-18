@@ -2,10 +2,10 @@ import './dots.scss'
 
 const Dots = ({ index, moveDot, data}) => {
   return (
-    <ul className="question__dots">
+    <ul className="dots">
       {data.map((dot, i) =>
         <li
-          className={index === i + 1 ? "question__dot active" : "question__dot"}
+          className={index === i + 1 ? "dot active" : "dot"}
           key={dot.id}
           onClick={() => moveDot(i + 1)}
         >

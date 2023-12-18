@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { openModal, closeModal } from '@store/modal/modalActions'
+import { openModal } from '@store/modal/modal-slice'
 import Modal from '@components/UI/Modal'
 import ModalCall from '@components/UI/ModalCall'
 

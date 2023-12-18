@@ -6,7 +6,7 @@ import './blogPage.scss'
 
 const Blog = () => {
   return (
-    <main className="blog">
+    <section className="blog">
       <div className="container">
         <div className="breadcrumbs">
           <BreadcrumbLink src="/" title="Home" />
@@ -21,7 +21,7 @@ const Blog = () => {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   )
 }
 

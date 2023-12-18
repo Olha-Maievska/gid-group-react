@@ -9,7 +9,7 @@ const Reviews = () => {
   const { id } = useParams()
   
   return (
-    <main className="reviews">
+    <section className="reviews">
       <div className="container">
         <div className="breadcrumbs">
           <BreadcrumbLink src="/" title="Home" />
@@ -23,7 +23,7 @@ const Reviews = () => {
           } else return null
         })}
       </div>
-    </main>
+    </section>
   )
 }
 

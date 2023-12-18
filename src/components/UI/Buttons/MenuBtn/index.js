@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import {openModalMenu} from '@store/modal/modalActions'
+import { openModalMenu } from '@store/modal/modal-slice'
 
 import './menuBtn.scss'
 

@@ -7,7 +7,7 @@ import {
   addSizeDoor,
   addDoorPrice,
   addFinishPrice,
-} from '@store/calc/calcActions'
+} from '@store/calc/calc-slice'
 
 const OtherParams = () => {
   const [index, setIndex] = useState(null)
@@ -18,7 +18,7 @@ const OtherParams = () => {
     setIndex(ind)
     dispatch(addDoorPrice(price))
     dispatch(addDoor(name))
-    dispatch(addFinishPrice)
+    dispatch(addFinishPrice())
     dispatch(addSizeDoor('2.1'))
   }
 

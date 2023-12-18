@@ -10,6 +10,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9;
+
+    .dots {
+      width: 160px;
+    }
   }
 
   &__height {
@@ -17,10 +21,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-
-  &__dots {
-    width: 160px;
   }
 
   &__buttons {
@@ -453,6 +453,15 @@
     &__content {
       padding: 30px;
       height: 380px;
+
+      .dots {
+        width: 120px;
+      }
+
+      .dot {
+        width: 15px;
+        height: 15px;
+      }
     }
 
     &__height {
@@ -483,15 +492,6 @@
       right: -24px;
       bottom: -6px;
       height: 100px;
-    }
-
-    &__dots {
-      width: 120px;
-    }
-
-    &__dot {
-      width: 15px;
-      height: 15px;
     }
   }
 

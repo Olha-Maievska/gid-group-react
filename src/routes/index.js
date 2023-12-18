@@ -12,6 +12,7 @@ import Reviews from "../pages/Reviews";
 import CalcStyles from "../pages/Calculator/CalcStyles";
 import CalcParams from "../pages/Calculator/CalcParams";
 import CalcAdditionally from "../pages/Calculator/CalcAdditionally";
+import PersonalData from '../pages/PersonalData';
 
 export const routes = [
   { path: '', element: <Main/>},
@@ -28,4 +29,5 @@ export const routes = [
   { path: '/calculatorStyles', element: <CalcStyles/>},
   { path: '/calculatorParams', element: <CalcParams/>},
   { path: '/calculatorAdditionally', element: <CalcAdditionally/>},
+  { path: '/personalData', element: <PersonalData/>},
 ]

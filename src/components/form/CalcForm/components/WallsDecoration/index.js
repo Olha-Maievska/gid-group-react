@@ -1,15 +1,15 @@
 import { useDispatch, useSelector } from "react-redux"
 import WallsDecorationItem from "./WallsDecorationItem"
-import { addFinishPrice } from "@store/calc/calcActions"
+import { addFinishPrice } from "@store/calc/calc-slice"
 
-const WallsDecoration = ({ data, title, actionPrice, actionColor, isPrice }) => {
+const WallsDecoration = ({ data, title, actionPrice, actionColor }) => {
   const dispatch = useDispatch()
   const { decor, floor } = useSelector(state => state.calc)
 
   function handleClick(price, color) {
     dispatch(actionColor(color))
     dispatch(actionPrice(price))
-    dispatch(addFinishPrice)
+    dispatch(addFinishPrice())
   }
 
   function isActive(color) {

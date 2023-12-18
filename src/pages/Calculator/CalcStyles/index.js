@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
 import { calcStyleData } from "@data/calculatorData"
-import { addStylePrice, addStyle} from "@store/calc/calcActions"
+import { addStylePrice, addStyle} from "@store/calc/calc-slice"
 import CalcStyleItem from "./components/CalcStyle"
 import CalcTotalPrice from "@ui/Buttons/CalcTotalPrice"
 

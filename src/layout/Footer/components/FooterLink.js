@@ -1,8 +1,15 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-const FooterLink  = ({title, href}) => {
+const FooterLink = ({ title, href }) => {
+  const navigate = useNavigate()
+
+  function openLink(path) {
+    window.scrollTo(0, 0)
+    navigate(path)
+  }
+  
   return (
-    <Link className="footer__menu-link" to={href}>{title}</Link>
+    <div className="footer__menu-link" onClick={() => openLink(href)}>{title}</div>
   )
 }
 

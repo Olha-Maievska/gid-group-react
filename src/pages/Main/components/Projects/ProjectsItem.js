@@ -12,7 +12,9 @@ const ProjectsItem = (props) => {
   return (
     <div className="projects__item">
       <div className="projects__item-img">
-        <img src={img} alt={title} />
+        {img ? (<img src={img} alt={title} />)
+             : (<div className='projects__empty__img'/>)
+        }
         <div className="projects__item-hover">
           <button className="projects__item-link" onClick={openProject}>View project</button>
         </div>

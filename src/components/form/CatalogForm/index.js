@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { API_URL_CATALOG } from '../../../config'
 import { onSubmit } from '@utils/formUtils'
 import Loader from '../../Loader'
+import CheckboxLabel from './CheckboxLabel'
 
 import './catalogForm.scss'
 
@@ -10,6 +11,7 @@ const CatalogForm = () => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState(false)
   const [error, setError] = useState(false)
+
   const {
     register,
     formState: {
@@ -49,7 +51,7 @@ const CatalogForm = () => {
           required: 'Agreement is mandatory!',
           })}
         />
-        <label className="label">I agree to the <span>processing of personal data</span> </label>
+        <CheckboxLabel />
       </div>
 
       <div style={{height: '20px', marginTop: '15px'}}>

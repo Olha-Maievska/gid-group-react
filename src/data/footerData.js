@@ -15,14 +15,12 @@ export const socialItems = [
 ]
 
 export const companyList = [
-  {title: 'About us', href: '/'},
-  {title: 'Our team', href: '/'},
-  {title: 'Story', href: '/'},
+  {title: 'Our team', href: '/team'},
+  {title: 'Our blog', href: '/blog'},
 ]
 
 export const projectsList = [
-  {title: 'Apartments', href: '/'},
-  {title: 'Cottages', href: '/'},
-  {title: 'Offices', href: '/'},
-  {title: 'Restaurants', href: '/'},
+  {title: 'Apartments', href: '/projects'},
+  {title: 'Cottages', href: '/projects'},
+  {title: 'Offices', href: '/projects'},
 ]

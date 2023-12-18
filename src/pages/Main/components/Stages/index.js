@@ -1,5 +1,4 @@
 import StagesList from './StagesList'
-import StagesBtn from '@ui/Buttons/StagesBtn'
 
 import './stages.scss'
 
@@ -13,7 +12,6 @@ const Stages = () => {
         <div className="stages__inner">
           <StagesList/>
         </div>
-        <StagesBtn />
       </div>
     </section>
   )

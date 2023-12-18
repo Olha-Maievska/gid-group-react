@@ -5,11 +5,13 @@ import { API_URL_CONTACT } from '../../../config'
 import Loader from '../../Loader'
 
 import './contactsForm.scss'
+import CheckboxLabel from '../CatalogForm/CheckboxLabel'
 
 const ContactsForm = () => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState(false)
   const [error, setError] = useState(false)
+
   const {
     register,
     formState: {
@@ -96,7 +98,7 @@ const ContactsForm = () => {
               required: 'Agreement is mandatory!',
               })}
             />
-            <label className="label">I agree to the <span>processing of personal data</span></label>
+            <CheckboxLabel />
             <div className="form__error">
               {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
             </div>

@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import { calcReducer } from "./calc/calcReducer";
-import { modalReducer } from "./modal/modalReducer";
-import { priceReducer } from './price/priceReducer';
+import { modalReducer } from "./modal/modal-slice";
+import { calcReducer } from "./calc/calc-slice";
+import { priceReducer } from './price/price-slice';
 
 export const rootReducer = combineReducers({
   modal: modalReducer,
-  calc: calcReducer,
   price: priceReducer,
+  calc: calcReducer,
 })

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import Logo from '../../images/Logo.png'
 import { useDispatch } from 'react-redux'
-import { closeModal } from '@store/modal/modalActions'
+import { closeModal } from '@store/modal/modal-slice'
 import PriceForm from '@components/form/PriceForm'
 
 const QuestionsFourth = () => {
@@ -12,7 +12,7 @@ const QuestionsFourth = () => {
   function toOtherPage(path) {
     window.scrollTo(0, 0)
     document.querySelector('body').style.overflow = ''
-    dispatch(closeModal)
+    dispatch(closeModal())
     navigate(path)
   }
   

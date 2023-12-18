@@ -1,4 +1,4 @@
-import { getStartProject } from '@store/price/priceActions'
+import { getStartProject } from '@store/price/price-slice'
 import { useDispatch, useSelector } from 'react-redux'
 
 const term = [

@@ -6,7 +6,8 @@ import Loader from '../../Loader'
 import { sendForm } from '../../API/PostFrom'
 import { resetState } from '@utils/formUtils'
 import { useDispatch, useSelector } from 'react-redux'
-import { resetStatePrice } from '@store/price/priceActions'
+import { resetStatePrice } from '@store/price/price-slice'
+import CheckboxLabel from '../CatalogForm/CheckboxLabel'
 
 const PriceForm = () => {
   const price = useSelector(state => state.price)
@@ -39,11 +40,11 @@ const PriceForm = () => {
       setError(true)
     })
 
-  dispatch(resetStatePrice)
+  dispatch(resetStatePrice())
   reset()
   resetState(setData, setError)
 }
-  
+
   return (
     <form onSubmit={handleSubmit((data) => sendData({...data, ...price, id }, API_URL_PRICE))}>
 
@@ -86,7 +87,7 @@ const PriceForm = () => {
           required: 'Agreement is mandatory!',
           })}
         />
-        <label className="label">I agree to the <span>processing of personal data</span> </label>
+        <CheckboxLabel />
       </div>
 
       <div style={{height: '18px', marginTop: '15px'}}>

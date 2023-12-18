@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CalcAdditionallyItem = ({text, price}) => {
   return (
     <div className="calc-other__item">

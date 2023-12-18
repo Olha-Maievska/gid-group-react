@@ -15,7 +15,7 @@ import {
   addDecor,
   addFloorPrice,
   addFloor,
-} from '@store/calc/calcActions'
+} from '@store/calc/calc-slice'
 
 const prices = {
   priceForSquare: 180,
@@ -32,7 +32,7 @@ const CalcForm = () => {
     const totalPrice = value * price
     dispatch(val(value))
     dispatch(fn(totalPrice))
-    dispatch(addFinishPrice)
+    dispatch(addFinishPrice())
   }
 
   return (

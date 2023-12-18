@@ -10,7 +10,7 @@ import Logo from '@components/Logo'
 import MenuBtn from '@ui/Buttons/MenuBtn'
 import CallBtn from '@ui/Buttons/CallBtn'
 import { routes } from '../../routes'
-import { openModal} from '@store/modal/modalActions'
+import { openModal} from '@store/modal/modal-slice'
 
 
 const AppRouter = () => {

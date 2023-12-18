@@ -5,7 +5,7 @@ import TeamPeople from './components/TeamPeople'
 
 const Team = () => {
   return (
-    <main className="team" style={{marginBottom: '80px'}}>
+    <section className="team" style={{marginBottom: '80px'}}>
       <div className="container">
         <div className="breadcrumbs">
           <BreadcrumbLink src="/" title="Home" />
@@ -18,7 +18,7 @@ const Team = () => {
       <div className="container">
         <ProjectsRequest />
       </div>
-    </main>
+    </section>
   )
 }
 
