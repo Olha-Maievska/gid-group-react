@@ -1,21 +1,19 @@
 .main-menu {
-	background: rgba(#131313, 95%);
+	background: rgba(#131313, 98%);
 	position: fixed;
+	top: 0;
 	left: 0;
 	right: 0;
-	top: 0;
 	bottom: 0;
 	z-index: 98;
-	transition: all .3s;
-	
+
 	&.active {
-		animation-name: modalOpenMenu;
-		animation-duration: 1.6s;
+		animation: modalOpenMenu 1s;
 	}
 
 	&.disabled {
-		animation-name: modalCloseMenu;
-		animation-duration: 1.6s;
+		animation: modalCloseMenu 2s;
+		transform: translateY(-100%);
 	}
 
 	&__list {
@@ -27,6 +25,7 @@
 	&__item {
 		display: inline-block;
 		margin-bottom: 30px;
+
 		&:last-child {
 			margin-bottom: 0;
 		}
@@ -40,6 +39,8 @@
 		color: #828282;
 		transition: all .5s ease-in-out;
 		position: relative;
+		outline: transparent;
+		
 		&::after {
 			content: '';
 			position: absolute;
@@ -71,28 +72,33 @@
 
 	&__social-item {
 		transition: all .3s ease-out;
+		outline: transparent;
 
 		&:hover {
 			transform: scale(1.2);
 		}
 	}
+
+	&__social-link {
+		outline: transparent;
+	}
 }
 
 @keyframes modalOpenMenu {
   from {
-    transform: translateX(-100%);
+		transform: translateY(-100%);
   }
   to {
-    transform: translateX(0%);
+		transform: translateY(0%);
   }
 }
 
 @keyframes modalCloseMenu {
   from {
-    transform: translateX(0%);
+		transform: translateY(0%);
   }
   to {
-    transform: translateX(-100%);
+		transform: translateY(-100%);
   }
 }
 

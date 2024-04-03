@@ -1,10 +1,5 @@
-import Header from '@layout/Header'
-import Footer from '@layout/Footer'
-import Logo from '@components/Logo'
-import MenuBtn from '@ui/Buttons/MenuBtn'
-import CallBtn from '@ui/Buttons/CallBtn'
 import Slider from './components/Slider'
-import Advantages from './components/Advantages'
+import Advantages from '@components/Advantages'
 import Price from './components/Price'
 import Services from './components/Services'
 import Projects from './components/Projects'
@@ -12,12 +7,14 @@ import Stages from './components/Stages'
 import Target from './components/Target'
 import Gallery from './components/Gallery'
 import Catalog from './components/Catalog'
+import { advantagesArray } from './data'
+
 
 const Main = () => {
   return (
     <main>
       <Slider />
-      <Advantages />
+      <Advantages data={advantagesArray} />
       <Price />
       <Services />
       <Projects />

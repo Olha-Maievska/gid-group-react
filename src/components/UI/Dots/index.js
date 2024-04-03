@@ -5,9 +5,9 @@ const Dots = ({ index, moveDot, data}) => {
     <ul className="dots">
       {data.map((dot, i) =>
         <li
-          className={index === i + 1 ? "dot active" : "dot"}
+          className={index === i ? "dot active" : "dot"}
           key={dot.id}
-          onClick={() => moveDot(i + 1)}
+          onClick={() => moveDot(i)}
         >
         </li>
       )}

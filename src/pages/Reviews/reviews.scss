@@ -38,6 +38,18 @@
     object-fit: cover;
   }
 
+  &__btn {
+    display: block;
+    width: 230px;
+    font-size: 18px;
+    margin: 20px auto 0;
+    border: none;
+    background: #000;
+    color: #FFF;
+    padding: 15px 0;
+    outline: transparent;
+  }
+
   .title__page {
     margin-bottom: 91px;
   }

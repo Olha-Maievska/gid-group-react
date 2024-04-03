@@ -1,4 +1,4 @@
-import StagesList from './StagesList'
+import StagesList from './components/StagesList'
 
 import './stages.scss'
 

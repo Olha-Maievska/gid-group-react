@@ -1,29 +1,7 @@
-import { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { typeOfDoors } from '@data/calculatorData'
+import { typeOfDoors } from '../../data'
 import OtherParamsItem from './OtherParamsItem'
-import {
-  addDoor,
-  addSizeDoor,
-  addDoorPrice,
-  addFinishPrice,
-} from '@store/calc/calc-slice'
 
 const OtherParams = () => {
-  const [index, setIndex] = useState(null)
-  const dispatch = useDispatch()
-  const { door } = useSelector(state => state.calc)
-
-  function handleActiveTypeOfDoor(ind, price, name) {
-    setIndex(ind)
-    dispatch(addDoorPrice(price))
-    dispatch(addDoor(name))
-    dispatch(addFinishPrice())
-    dispatch(addSizeDoor('2.1'))
-  }
-
-  console.log(door);
-
   return (
     <div className="calc-param__other">
       <div className="calc-param__desc">Doors</div>
@@ -31,8 +9,7 @@ const OtherParams = () => {
       {typeOfDoors.map((item) =>
         <OtherParamsItem
           key={item.id}
-          className={`calc-param__other-item ${item.name === door ? 'active' : ''}`}
-          fn={() => handleActiveTypeOfDoor(index, item.price, item.name)}
+          className="calc-param__other-item"
           {...item}
         />
       )}

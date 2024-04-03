@@ -1,19 +1,24 @@
 import { useSelector, useDispatch } from "react-redux"
 import { Link } from "react-router-dom"
-import { calcStyleData } from "@data/calculatorData"
-import { addStylePrice, addStyle} from "@store/calc/calc-slice"
-import CalcStyleItem from "./components/CalcStyle"
+import { calcStyleData } from "./data"
+import { addStylePrice, addStyle, addFinishPrice} from "@store/calc/calc-slice"
+import CalcStyleItem from "./components/CalcStyleItem"
 import CalcTotalPrice from "@ui/Buttons/CalcTotalPrice"
 
 import './calcStyles.scss'
 
 const CalcStyles = () => {
-  const { calcStylePrice } = useSelector(state => state.calc)
+  const { finishPrice } = useSelector(state => state.calc)
   const dispatch = useDispatch()
 
   function handleClick(price, style) {
     dispatch(addStylePrice(price))
     dispatch(addStyle(style))
+    dispatch(addFinishPrice())
+  }
+
+  if (!calcStyleData) {
+    return <p>No data yet...</p>
   }
 
   return (
@@ -31,7 +36,7 @@ const CalcStyles = () => {
         </div>
 
         <div className="calc__bottom">
-          <CalcTotalPrice price={calcStylePrice} />
+          <CalcTotalPrice price={finishPrice} />
           <Link className="calc__btn" to="/calculatorParams">Next</Link>
         </div>
       </div>

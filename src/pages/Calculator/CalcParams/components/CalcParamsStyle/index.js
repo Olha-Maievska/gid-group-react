@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import { calcStyleData } from "@data/calculatorData"
+import { calcStyleData } from '@calc/CalcStyles/data'
 
 const CalcParamsStyle = () => {
   const { calcStyle } = useSelector(state => state.calc)

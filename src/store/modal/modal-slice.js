@@ -4,15 +4,18 @@ const modalSlice = createSlice({
   name: '@@modal',
   initialState: {
     menu: false,
+    menuClass: '',
     modal: false,
     modalSrc: null,
   },
   reducers: {
-    openModalMenu: (state) => {
+    openModalMenu: (state, { payload }) => {
       state.menu = true
+      state.menuClass = payload
     },
-    closeModalMenu: (state) => {
+    closeModalMenu: (state, { payload }) => {
       state.menu = false
+      state.menuClass = payload
     },
     openModal: (state, action) => {
       state.modal = true

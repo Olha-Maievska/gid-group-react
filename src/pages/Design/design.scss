@@ -1,6 +1,5 @@
 .design {
   position: relative;
-  margin-bottom: 80px;
 
   &__img {
     background-image: url(./images/background-3d.jpg);
@@ -12,9 +11,10 @@
     justify-content: center;
     align-items: center;
     padding-top: 104px;
+    background-color: #ccc;
   }
 
-  &__link {
+  &__title {
     font-weight: 400;
     font-size: 144px;
     line-height: 169px;
@@ -25,7 +25,7 @@
 
 @media (max-width: 1090px) {
   .design {
-    &__link {
+    &__title {
       font-size: 94px;
       line-height: 129px;
     }
@@ -34,7 +34,7 @@
 
 @media (max-width: 690px) {
   .design {
-    &__link {
+    &__title {
       font-size: 54px;
       line-height: 89px;
     }

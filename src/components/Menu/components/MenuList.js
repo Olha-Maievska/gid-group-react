@@ -1,5 +1,5 @@
 import MenuItem from './MenuItem'
-import { menuData } from '@data/menuData'
+import { menuData } from '../data'
 
 const MenuList = () => {
   return (

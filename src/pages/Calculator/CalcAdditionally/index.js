@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 import PrevBtn from "@ui/Buttons/PrevBtn"
 import CalcTotalPrice from "@ui/Buttons/CalcTotalPrice"
 import ResetBtn from "@components/UI/Buttons/ResetBtn"
-import { additionallyData } from '@data/calculatorData'
-import CalcAdditionallyItem from "./CalcAdditionallyItem"
+import { additionallyData } from './data'
+import CalcAdditionallyItem from "./components/CalcAdditionallyItem"
 
 import "./CalcAdditionally.scss"
 

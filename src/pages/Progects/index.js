@@ -1,32 +1,40 @@
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import BreadcrumbLink from '@components/BreadcrumbLink'
-import ProjectsList from '@main/Projects/ProjectsList'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
-import Loader from '@components/Loader'
+import ProjectsList from '@main/Projects/components/ProjectsList'
 import ProjectsRequest from './components/Request'
-import { projectsData } from '@data/projectsData'
+import { loadProjects } from '@store/projects/projects-slice'
+import Error from '@components/Error'
+import { LoaderBigger } from '@components/Loader'
+
+import '@main/Projects/projects.scss'
 
 const Projects = () => {
-  const [items, setItems] = useState([])
-  const [offset, setOffset] = useState(9)
+  const { projects, isLoading, isError } = useSelector(({ projects }) => projects)
+  const dispatch = useDispatch()
+
+  const [items, setItems] = useState(projects.slice(0, 6))
   const [start, setStart] = useState(6)
-  const [loading, setLoading] = useState(false)
+  const [offset, setOffset] = useState(9)
   const [isDisabled, setIsDisabled] = useState(false)
 
   const addProjects = () => {
-    if (offset === 12) {
+    if (offset === projects.length) {
       setIsDisabled(true)
     }
-    setLoading(true)
     setStart(offset)
     setOffset(prev => prev + 3)
-    setItems([...items, ...projectsData.slice(start, offset)])
-    setLoading(false)
+    setItems([...items, ...projects.slice(start, offset)])
   }
 
   useEffect(() => {
-    setItems(projectsData.slice(0, 6))
-  }, [])
+    dispatch(loadProjects())
+  }, [dispatch])
+
+  if (isLoading) return <LoaderBigger />
+
+  if (isError) return <Error />
 
   return (
     <main className="projects-page">
@@ -37,11 +45,10 @@ const Projects = () => {
         </div>
 
         <ProjectsList data={items} />
-        {loading && <Loader />}
         <ProjectsBtnElse
-          text="Another project"
-          isDisabled={isDisabled}
+          text="Another projects"
           fn={addProjects}
+          isDisabled={isDisabled}
         />
 
         <ProjectsRequest />

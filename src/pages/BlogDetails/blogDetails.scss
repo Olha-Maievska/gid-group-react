@@ -20,6 +20,7 @@
     margin: 98px 0 71px;
     width: 100%;
     height: auto;
+    background-color: #ccc;
   }
 
   &__img-box {
@@ -32,6 +33,7 @@
     width: 48%;
     height: auto;
     object-fit: cover;
+    background-color: #ccc;
   }
 
   &__author {
@@ -39,9 +41,10 @@
     line-height: 147.69%;
     color: #4F4F4F;
 
-    & span {
+    & a {
       font-weight: 400;
       color: #333;
+      margin-left: 5px;
     }
   }
 
@@ -50,6 +53,18 @@
     line-height: 147.69%;
     color: #4F4F4F;
     margin: 12px 0 48px;
+  }
+
+  &__btn {
+    display: block;
+    width: 230px;
+    font-size: 18px;
+    margin: 0 auto;
+    border: none;
+    background: #000;
+    color: #FFF;
+    padding: 15px 0;
+    outline: transparent;
   }
 }
 

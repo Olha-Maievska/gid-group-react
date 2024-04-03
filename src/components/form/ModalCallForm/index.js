@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { API_URL_CALL } from '../../../config'
-import Loader from '../../Loader'
 import { onSubmit, handleNumber } from '@utils/formUtils'
+import { config } from '../../../core/config'
+import { LoaderSmall } from '../../Loader'
 
 const ModalCallForm = () => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState(false)
   const [error, setError] = useState(false)
+
   const {
     register,
     formState: {
@@ -16,10 +17,12 @@ const ModalCallForm = () => {
     handleSubmit,
     reset,
   } = useForm({ mode: 'onChange' })
-  const params = {setLoading, setError, setData, reset}
+
+  const params = { setLoading, setError, setData, reset }
+  const url = `${config.api.host}/sendCall`
 
   return (
-    <form onSubmit={handleSubmit((data) => onSubmit(data, API_URL_CALL, params))}>
+    <form onSubmit={handleSubmit((data) => onSubmit(data, url, params))}>
       <div className="form__error">
         {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
       </div>
@@ -54,7 +57,7 @@ const ModalCallForm = () => {
 
       />
       <div style={{height: '20px'}}>
-        {loading && <Loader />}
+        {loading && <LoaderSmall />}
         {data && <div style={{textAlign: 'center'}}>Thank you! We will contact you shortly!</div>}
         {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
       </div>

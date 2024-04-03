@@ -1,4 +1,4 @@
-import { sendForm } from '@components/API/PostFrom'
+import { sendForm } from '../core/api'
 
 export const handleNumber = (value) => {
   const number = value.replace(/[^+\d]/g, '')
@@ -9,7 +9,7 @@ export const resetState = (setData, setError) => {
   setTimeout(() => {
     setData(false)
     setError(false)
-  }, 3500)
+  }, 4000)
 }
 
 export const onSubmit = (data, url, other) => {

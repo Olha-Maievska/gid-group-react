@@ -1,6 +1,8 @@
 .repair-result {
+  margin: 100px 0 220px;
+
   &__inner {
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
@@ -61,7 +63,9 @@
 
 @media (max-width: 1400px) {
   .repair-result {
+    margin: 80px 0 100px;
     &__inner {
+      margin-top: 100px;
       justify-content: space-around;
       flex-wrap: wrap;
     }
@@ -75,7 +79,8 @@
 
 @media (max-width: 750px) {
   .repair-result {
-    margin-top: 70px;
+    margin: 80px 0;
+
     &__inner {
       margin-top: 50px;
       justify-content: center;

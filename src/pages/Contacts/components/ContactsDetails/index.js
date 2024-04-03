@@ -1,7 +1,7 @@
 import React from 'react'
 import FooterSocialList from '@layout/Footer/components/FooterSocialList'
-import ContactsEmail from './ContactsEmail'
-import ContactsAddress from './ContactsAddress'
+import ContactsEmail from './components/ContactsEmail'
+import ContactsAddress from './components/ContactsAddress'
 
 import './contactsDetails.scss'
 

@@ -1,8 +1,7 @@
 import { useDispatch, useSelector} from 'react-redux'
-import { handleNumber } from '@utils/formUtils'
 import WallsDecoration from './components/WallsDecoration'
 import CalcFormInput from './components/Input/CalcFormInput'
-import { wallsDecoration, floorDecor } from "@data/calculatorData"
+import { wallsDecoration, floorDecor } from "@calc/CalcParams/data"
 import {
   addSquarePrice,
   addSquare,
@@ -28,7 +27,7 @@ const CalcForm = () => {
   const dispatch = useDispatch()
 
   const handleChange = ({ target: { value } }, price, fn, val) => {
-    value = handleNumber(value)
+    value = value.replace(/[^\d.]/g, '')
     const totalPrice = value * price
     dispatch(val(value))
     dispatch(fn(totalPrice))

@@ -1,6 +1,7 @@
-import { servicesDesignData } from '@data/servicesData'
+import { servicesDesignData } from './data'
+import ServicesDesignItem from './components/ServicesDesignItem'
+
 import './servicesDesign.scss'
-import ServicesDesignItem from './ServicesDesignItem'
 
 const ServicesDesign = () => {
   return (

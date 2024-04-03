@@ -121,11 +121,14 @@
     position: relative;
     width: 100%;
     height: 210px;
+    background: #ccc;
 
     & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
+      z-index: 5;
     }
 
     &::before {
@@ -242,6 +245,7 @@
     height: 160px;
     width: 100%;
     background-image: url(../images/question-item.jpg);
+    background-color: #ccc;
   }
 
   &__item {

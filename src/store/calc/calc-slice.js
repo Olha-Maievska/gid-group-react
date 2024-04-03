@@ -28,7 +28,6 @@ const calcSlice = createSlice({
     },
     addStylePrice: (state, action) => { 
       state.calcStylePrice = action.payload
-      state.finishPrice = action.payload
     },
     addSquare: (state, action) => {
       state.square = action.payload
@@ -69,26 +68,9 @@ const calcSlice = createSlice({
     addDoorPrice: (state, action) => {
       state.doorPrice = action.payload
     },
-    resetAll: (state) => {
-      state.calcStyle = ''
-      state.calcStylePrice = 0
-      state.square = 0
-      state.squarePrice = 0
-      state.height = 0
-      state.heightPrice = 0
-      state.bathSquare = 0
-      state.bathPrice = 0
-      state.decor = ''
-      state.decorPrice = 0
-      state.floor = ''
-      state.floorPrice = 0
-      state.door = ''
-      state.sizeDoor = '2.1'
-      state.doorPrice = 0
-      state.finishPrice = 0
-    },
+    resetAll: () => initialState,
     addFinishPrice: (state) => {
-      state.finishPrice = state.calcStylePrice + state.squarePrice + state.heightPrice + state.bathPrice + state.decorPrice + state.floorPrice + state.doorPrice
+      state.finishPrice = Math.ceil(state.calcStylePrice + state.squarePrice + state.heightPrice + state.bathPrice + state.decorPrice + state.floorPrice + state.doorPrice)
     }
   }
 })

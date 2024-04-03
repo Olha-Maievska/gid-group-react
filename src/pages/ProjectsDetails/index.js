@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ProjectsRequest from '../Progects/components/Request'
 import Tab from '@components/UI/Tab'
 import Description from './components/Description'
 import Process from './components/Process'
+import { LoaderBigger } from '@components/Loader'
 
 const ProjectsDetails = () => {
   const [tab, setTab] = useState('')
-  const { id } = useParams()
+  const { project, isLoading } = useSelector(({ projects }) => projects)
 
   function handleTabs(e) {
     if (e.target.textContent === 'Description') {
@@ -18,7 +19,11 @@ const ProjectsDetails = () => {
     }
   }
 
-  useEffect(() => setTab('Description'), [])
+  useEffect(() => {
+    setTab('Description')
+  }, [])
+
+  if (isLoading) return <LoaderBigger/>
 
   return (
     <main>
@@ -26,7 +31,7 @@ const ProjectsDetails = () => {
         <div className="breadcrumbs">
           <BreadcrumbLink src="/" title="Home" />
           <BreadcrumbLink src="/projects" title="Projects" />
-          <BreadcrumbLink src={`/projects/${id}`} title="Project" />
+          <BreadcrumbLink src={`/projects/${project.id}`} title="Project" />
         </div>
 
         <div className="tabs">
@@ -41,11 +46,11 @@ const ProjectsDetails = () => {
             handleTabs={handleTabs}
           />
         </div>
-      </div>
 
-      {tab === 'Description' ? <Description /> : <Process />}
+        {tab === 'Description' ? <Description item={project} /> : <Process item={project} />}
 
-      <div className="container">
+
+
         <div className="tabs">
           <Tab
             title="Description"
@@ -58,7 +63,7 @@ const ProjectsDetails = () => {
             handleTabs={handleTabs}
           />
         </div>
-
+      
         <ProjectsRequest />
       </div>
     </main>

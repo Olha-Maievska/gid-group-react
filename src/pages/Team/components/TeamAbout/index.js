@@ -1,6 +1,6 @@
-import Approach from './Approach'
-import OurTeam from './OurTeam'
-import Realization from './Realization'
+import Approach from './components/Approach'
+import OurTeam from './components/OurTeam'
+import Realization from './components/Realization'
 import './teamAbout.scss'
 
 const TeamAbout = () => {

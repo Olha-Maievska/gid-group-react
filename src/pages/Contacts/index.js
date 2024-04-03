@@ -22,7 +22,7 @@ const Contacts = () => {
       </div>
 
       <ContactsMap />
-      
+
       <div className="container">
         <ProjectsRequest />
       </div>

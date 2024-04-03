@@ -1,5 +1,5 @@
-import { getStartProject } from '@store/price/price-slice'
 import { useDispatch, useSelector } from 'react-redux'
+import { getStartProject } from '@store/price/price-slice'
 
 const term = [
   { text: 'Already needed' },

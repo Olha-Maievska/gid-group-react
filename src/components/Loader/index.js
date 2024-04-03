@@ -1,11 +1,19 @@
 import BeatLoader from "react-spinners/BeatLoader";
 
-const Spinner = () => {
+import './loader.scss'
+
+export const LoaderBigger = () => {
 	return (
-		<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-			<BeatLoader size={10} color={'#86e7d4'}/>
+		<div className="loader">
+			<BeatLoader size={20} color={'#000'}/>
 		</div>
 	)
 }
 
-export default Spinner
+export const LoaderSmall = () => {
+	return (
+		<div className="loader-small">
+			<BeatLoader size={10} color={'#000'}/>
+		</div>
+	)
+}

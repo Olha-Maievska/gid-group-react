@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const initialState = {
+  projectSize: '',
+  projectStyle: '',
+  startProject: '',
+}
+
 const priceSlice = createSlice({
   name: '@@price',
-  initialState: {
-    projectSize: '',
-    projectStyle: '',
-    startProject: '',
-  },
+  initialState,
   reducers: {
     getProjectSize: (state, action) => {
       state.projectSize = action.payload
@@ -17,11 +19,7 @@ const priceSlice = createSlice({
     getStartProject: (state, action) => {
       state.startProject = action.payload
     },
-    resetStatePrice: (state) => {
-      state.projectSize = ''
-      state.projectStyle = ''
-      state.startProject = ''
-    }
+    resetStatePrice: () => initialState
   }
 })
 

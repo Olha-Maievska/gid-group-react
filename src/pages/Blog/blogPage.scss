@@ -19,6 +19,7 @@
     height: 356px;
     margin-bottom: 45px;
     position: relative;
+    background-color: #ccc;
 
     & img {
       width: 100%;
@@ -40,6 +41,8 @@
   }
 
   &__item-btn {
+    display: block;
+    background: transparent;
     width: 180px;
     height: 40px;
     border: 1px solid #000;
@@ -57,8 +60,9 @@
   }
 
   &__item-box-title {
-    display: block;
-    font-weight: normal;
+    background: transparent;
+    border: none;
+    text-align: left;
     font-size: 24px;
     line-height: 147.69%;
     margin-bottom: 25px;

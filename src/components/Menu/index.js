@@ -9,16 +9,16 @@ import { closeModalMenu } from '@store/modal/modal-slice'
 
 import './menu.scss'
 
-const Menu = ({openModalCall}) => {
-  const { menu } = useSelector(state => state.modal)
+const Menu = ({ openModalCall }) => {
+  const { menuClass } = useSelector(state => state.modal)
   const dispatch = useDispatch()
 
   const closeMenu = () => {
-    dispatch(closeModalMenu())
+    dispatch(closeModalMenu('disabled'))
   }
   
   return (
-    <section className={`main-menu ${menu ? 'active' : ''}`} onClick={closeMenu}>
+    <section className={`main-menu ${menuClass}`} onClick={closeMenu}>
       <Header fone='rgba(#131313, 95%)'>
         <CloseBtn close={closeMenu}/>
         <Logo />

@@ -12,26 +12,35 @@
     top: 0;
     right: 0;
     bottom: 0;
-
   }
   
   &__slide  {
     position: absolute;
-    opacity: 0;
-  }
-
-  &__slide-active {
-    position: absolute;
-    opacity: 1.3;
-    animation: fade 1.4s;
     width: 100%;
     height: 100%;
+    transition: all 2s ease-in-out;
+    opacity: 0;
 
     img {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
+  }
+
+  & .active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  & .prev {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  & .next {
+    transform: translateX(-100%);
+    opacity: 0;
   }
 
   &__title {
@@ -95,7 +104,7 @@
     border-radius: 50%;
     background: rgba(0, 0, 0, .8);
     transition: all .3s;
-    animation: fade 1.5s;
+    animation: fade 2s;
 
     &.active {
       background: rgba(255, 255, 255, .6);
@@ -106,11 +115,9 @@
 @keyframes fade {
   0% {
     opacity: 0;
-    // transform: translateY(100%);
   }
   100% {
     opacity: 1;
-    // transform: translateX(0%);
   }
 }
 

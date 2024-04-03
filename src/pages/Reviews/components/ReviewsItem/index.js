@@ -4,14 +4,14 @@ const ReviewsItem = (item) => {
   const { text, apartment, apartmentSmall, style } = item
   
   return (
-    <div className="container-fluid">
+    <>
       <ReviewsClient {...item} />
 
       <p className="reviews__text">{text}</p>
 
       <div className="reviews__images">
         <div className="reviews__img--big">
-          <img src={apartment} alt="" />
+          <img src={apartment} alt={style} />
         </div>
         <div className="reviews__img--small">
           <img className="reviews__img" src={apartmentSmall[0]} alt={style} />
@@ -19,7 +19,7 @@ const ReviewsItem = (item) => {
           <img className="reviews__img" src={apartmentSmall[2]} alt={style} />
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

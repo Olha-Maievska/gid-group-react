@@ -16,8 +16,8 @@ const questionsContent = [
   {id: 4, element: <QuestionsFourth />,},
 ]
 
-const QuestionsPrice = ({fn}) => {
-  const [index, setIndex] = useState(1)
+const QuestionsPrice = ({ fn }) => {
+  const [index, setIndex] = useState(0)
 
   function moveDot(i) {
     setIndex(i)
@@ -34,23 +34,23 @@ const QuestionsPrice = ({fn}) => {
   return (
     <div className="question__content" onClick={e => e.stopPropagation()}>
       <div className="question__close" onClick={fn}>
-        <img src={closeImg} alt="" />
+        <img src={closeImg} alt="close" />
       </div>
 
       {questionsContent.map((content, i) => {
-        return i + 1 === index ?
+        return i === index ?
           (<div key={content.id}>{content.element}</div>) :
           null
       })}
       
       <div className="question__buttons">
-        {index === 1 || index === questionsContent.length ?
+        {index === 0 || index === questionsContent.length - 1 ?
           <QuestionsBtn text="Back" style={{ opacity: 0 }} /> : 
           <QuestionsBtn text="Back" fn={toPrev} />
         }
         <Dots index={index} moveDot={moveDot} data={questionsContent}/>
 
-        {index === questionsContent.length ? (
+        {index === questionsContent.length - 1 ? (
           <QuestionsBtn text="Back" style={{ opacity: 0 }} /> 
         ) : (
           <QuestionsBtn text="Next" fn={toNext} />

@@ -1,5 +1,5 @@
-import {repairResult} from '@data/repair'
-import RepairResutItem from './RepairResutItem'
+import { repairResult } from './data'
+import RepairResutItem from './components/RepairResutItem'
 
 import './repairResult.scss'
 

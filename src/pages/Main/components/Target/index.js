@@ -1,7 +1,6 @@
-import TargetList from './TargetList'
+import TargetList from './components/TargetList'
 
 import './target.scss'
-
 
 const Target = () => {
   return (

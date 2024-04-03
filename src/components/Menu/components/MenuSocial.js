@@ -1,5 +1,5 @@
 import MenuSocialItem from './MenuSocialItem'
-import { socialItems } from '@data/menuData'
+import { socialItems } from '../data'
 
 const MenuSocial = () => {
   return (

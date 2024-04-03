@@ -7,7 +7,8 @@
 	height: 787px;
 	color: #fff;
 	position: relative;
-	margin-bottom: 92px;
+	margin-bottom: 120px;
+	background-color: #ccc;
 
 	&__inner {
 		position: absolute;
@@ -56,7 +57,6 @@
 @media (max-width: 1060px) {
 	.target {
 		height: 523px;
-		margin-bottom: 62px;
 
 		&__title {
 			font-size: 36px;

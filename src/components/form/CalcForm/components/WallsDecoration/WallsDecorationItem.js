@@ -1,5 +1,4 @@
 const WallsDecorationItem = ({ colorName, colorCode, fn, className}) => {
-
   return (
     <div
       className={className}

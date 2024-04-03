@@ -1,4 +1,4 @@
-import { calcStyleData } from '@data/calculatorData'
+import { calcStyleData } from '@calc/CalcStyles/data'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProjectStyle } from '@store/price/price-slice'
 

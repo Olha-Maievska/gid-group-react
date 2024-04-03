@@ -1,13 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom'
-import Logo from '../../images/Logo.png'
 import { useDispatch } from 'react-redux'
+import Logo from '../../images/Logo.png'
 import { closeModal } from '@store/modal/modal-slice'
 import PriceForm from '@components/form/PriceForm'
 
 const QuestionsFourth = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-
 
   function toOtherPage(path) {
     window.scrollTo(0, 0)
@@ -33,7 +32,7 @@ const QuestionsFourth = () => {
           <div className="question-four__item" onClick={() => toOtherPage('/projects')}>
             <div className="question-four__item-content">
               <div className="question-four__item-logo">
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="Git.Group" />
               </div>
             </div>
             <Link className="question-four__item-btn">
@@ -43,7 +42,7 @@ const QuestionsFourth = () => {
           <div className="question-four__item" onClick={() => toOtherPage('/services')}>
             <div className="question-four__item-content">
               <div className="question-four__item-logo">
-                <img src={Logo} alt="" />
+                <img src={Logo} alt="Git.Group" />
               </div>
             </div>
             <Link className="question-four__item-btn">

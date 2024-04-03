@@ -1,5 +1,5 @@
 import title from './images/instagram-title.png'
-import GalleryList from './GalleryList'
+import GalleryList from './components/GalleryList'
 
 import './gallery.scss'
 
@@ -13,7 +13,7 @@ const Gallery = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={title} alt="" />
+          <img src={title} alt="Gallery" />
         </a>
         <GalleryList />
       </div>

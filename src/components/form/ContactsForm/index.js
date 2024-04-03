@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { onSubmit, handleNumber } from '@utils/formUtils'
-import { API_URL_CONTACT } from '../../../config'
-import Loader from '../../Loader'
+import CheckboxLabel from '../CatalogForm/CheckboxLabel'
+import { config } from '../../../core/config'
+import { LoaderSmall } from '../../Loader'
+
 
 import './contactsForm.scss'
-import CheckboxLabel from '../CatalogForm/CheckboxLabel'
 
 const ContactsForm = () => {
   const [loading, setLoading] = useState(false)
@@ -20,10 +21,12 @@ const ContactsForm = () => {
     handleSubmit,
     reset,
   } = useForm({ mode: 'onBlur' })
-  const params = {setLoading, setError, setData, reset}
 
+  const params = { setLoading, setError, setData, reset }
+  const url = `${config.api.host}/sendContact`
+  
   return (
-    <div className="contacts-form" onSubmit={handleSubmit((d) => onSubmit(d, API_URL_CONTACT, params))}>
+    <div className="contacts-form" onSubmit={handleSubmit((data) => onSubmit(data, url, params))}>
       <h3 className="title__page">Contact us</h3>
       <form className="contacts-form__content">
 
@@ -94,18 +97,18 @@ const ContactsForm = () => {
             <input
               className="checkbox"
               type="checkbox"
-              {...register('checkbox', {
+              {...register('agreement', {
               required: 'Agreement is mandatory!',
               })}
             />
             <CheckboxLabel />
             <div className="form__error">
-              {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
+              {errors?.agreement && <p>{errors?.agreement.message || 'Error'}</p>}
             </div>
           </div>
 
           <div style={{height: '15px', marginTop: '5px'}}>
-            {loading && <Loader />}
+            {loading && <LoaderSmall />}
             {data && <div style={{textAlign: 'center'}}>Thank you! We will call you back within an hour.</div>}
             {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
           </div>

@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { handleNumber} from '@utils/formUtils'
-import { API_URL_PRICE } from '../../../config'
-import Loader from '../../Loader'
-import { sendForm } from '../../API/PostFrom'
-import { resetState } from '@utils/formUtils'
 import { useDispatch, useSelector } from 'react-redux'
 import { resetStatePrice } from '@store/price/price-slice'
+import { config } from '../../../core/config'
+import { onSubmit } from '@utils/formUtils'
+import { LoaderSmall } from '../../Loader'
 import CheckboxLabel from '../CatalogForm/CheckboxLabel'
 
 const PriceForm = () => {
@@ -15,7 +14,7 @@ const PriceForm = () => {
   const [data, setData] = useState(false)
   const [error, setError] = useState(false)
   const dispatch = useDispatch()
-  const id = new Date().getTime()
+
   const {
     register,
     formState: {
@@ -25,28 +24,16 @@ const PriceForm = () => {
     reset,
   } = useForm({ mode: 'onBlur' })
 
-  const sendData = (d, url) => {
-  setLoading(true)
+  const params = { setLoading, setError, setData, reset }
+  const url = `${config.api.host}/sendPrice`
 
-  sendForm(url, d)
-    .then(d => {
-      setError(false)
-      setData(true)
-      setLoading(false)
-    })
-    .catch(e => {
-      setLoading(false)
-      setData(false)
-      setError(true)
-    })
-
-  dispatch(resetStatePrice())
-  reset()
-  resetState(setData, setError)
-}
+  const sendData = (data, url, params) => {
+    onSubmit(data, url, params)
+    dispatch(resetStatePrice())
+  }
 
   return (
-    <form onSubmit={handleSubmit((data) => sendData({...data, ...price, id }, API_URL_PRICE))}>
+    <form onSubmit={handleSubmit((data) => sendData({...data, ...price}, url, params))}>
 
       <div className="form__error">
         {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
@@ -77,13 +64,13 @@ const PriceForm = () => {
       />
 
       <div className="form__error">
-        {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
+        {errors?.agreement && <p>{errors?.agreement.message || 'Error'}</p>}
       </div>
       <div className="agreement">
         <input
           className="checkbox"
           type="checkbox"
-          {...register('checkbox', {
+          {...register('agreement', {
           required: 'Agreement is mandatory!',
           })}
         />
@@ -91,7 +78,7 @@ const PriceForm = () => {
       </div>
 
       <div style={{height: '18px', marginTop: '15px'}}>
-        {loading && <Loader />}
+        {loading && <LoaderSmall />}
         {data && <div style={{textAlign: 'center'}}>Thank you! We will contact you shortly!</div>}
         {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
       </div>

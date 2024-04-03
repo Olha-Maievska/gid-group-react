@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import ProjectsList from './ProjectsList'
+import { useDispatch, useSelector } from 'react-redux'
+import ProjectsList from './components/ProjectsList'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
-import { projectsData } from '@data/projectsData'
+import { loadProjects } from '@store/projects/projects-slice'
+import { LoaderSmall } from '@components/Loader'
+import Error from '@components/Error'
 
 import './projects.scss'
 
 const Projects = () => {
-  const [items, setItems] = useState([])
+  const { projects, isError, isLoading} = useSelector(({projects}) => projects)
+  const dispatch = useDispatch()
+
+  const [items, setItems] = useState(projects.slice(0, 6))
   const navigate = useNavigate()
-  const start = 0
-  const offset = 6
 
   const addProjects = () => {
     window.scrollTo(0, 0)
@@ -18,8 +22,12 @@ const Projects = () => {
   }
 
   useEffect(() => {
-    setItems(projectsData.slice(start, offset))
-  }, [])
+    dispatch(loadProjects())
+  }, [dispatch])
+
+  if (isLoading) return <LoaderSmall />
+
+  if (isError) return <Error />
   
   return (
     <section className="projects">

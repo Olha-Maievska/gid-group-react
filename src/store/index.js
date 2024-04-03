@@ -7,7 +7,7 @@ const persistConfig = {
   key: 'root',
   storage,
   version: 1,
-  whitelist: ['calc'],
+  whitelist: ['calc', 'projects', 'reviews', 'team', 'blog'],
 }
 
 const persistedReducer = persistReducer(persistConfig, rootReducer)
@@ -17,9 +17,8 @@ export const store = configureStore({
   devTools: process.env.NODE_ENV !== 'production',
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
-      thunk: {},
       serializableCheck: false,
-    }),
+    })
 })
 
 export const persistor = persistStore(store)

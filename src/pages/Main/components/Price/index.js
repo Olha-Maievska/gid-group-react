@@ -4,6 +4,7 @@ import priceImg from './images/price-bonus.png'
 import QuestionsPrice from './components/QuestionsPrice'
 import { openModal, closeModal } from '@store/modal/modal-slice' 
 import Modal from '@components/UI/Modal'
+import { resetStatePrice } from '@store/price/price-slice'
 
 import './price.scss'
 
@@ -24,6 +25,7 @@ const Price = () => {
   function hidePriceModal() {
     setIsOpenModalPrice(false)
     dispatch(closeModal())
+    dispatch(resetStatePrice())
   }
 
   return (

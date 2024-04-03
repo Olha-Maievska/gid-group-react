@@ -1,5 +1,5 @@
 import FooterSocialItem from './FooterSocialItem'
-import { socialItems } from '@data/footerData'
+import { socialItems } from '../data'
 
 const FooterSocialList = () => {
   return (

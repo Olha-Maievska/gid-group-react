@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import RepairWorksList from './RepairWorksList'
+import RepairWorksList from './components/RepairWorksList'
 import ProjectsBtnElse from '@components/UI/Buttons/ProjectsBtnElse'
 import { openPage } from '@utils/utils'
 
@@ -16,7 +16,7 @@ const RepairWorks = () => {
     <div className="repair-works">
       <h2 className="title">COMPLETED WORKS</h2>
       <div className="container">
-        <RepairWorksList />
+        <RepairWorksList countSlides={6}/>
         <ProjectsBtnElse
           text="Portfolio"
           arrowRound={false}

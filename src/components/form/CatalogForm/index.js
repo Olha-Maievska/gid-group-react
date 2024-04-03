@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { API_URL_CATALOG } from '../../../config'
 import { onSubmit } from '@utils/formUtils'
-import Loader from '../../Loader'
+import { LoaderSmall } from '../../Loader'
 import CheckboxLabel from './CheckboxLabel'
+import { config } from '../../../core/config'
 
 import './catalogForm.scss'
 
@@ -20,10 +20,12 @@ const CatalogForm = () => {
     handleSubmit,
     reset,
   } = useForm({ mode: 'onBlur' })
-  const params = {setLoading, setError, setData, reset}
+
+  const params = { setLoading, setError, setData, reset }
+  const url = `${config.api.host}/sendCatalog`
 
   return (
-    <form onSubmit={handleSubmit((data) => onSubmit(data, API_URL_CATALOG, params))}>
+    <form onSubmit={handleSubmit((data) => onSubmit(data, url, params))}>
       <div className="form__error">
         {errors?.email && <p>{errors?.email.message || 'Error'}</p>}
       </div>
@@ -41,13 +43,13 @@ const CatalogForm = () => {
       />
       
       <div className="form__error">
-        {errors?.checkbox && <p>{errors?.checkbox.message || 'Error'}</p>}
+        {errors?.agreement && <p>{errors?.agreement.message || 'Error'}</p>}
       </div>
       <div className="agreement">
         <input
           className="checkbox"
           type="checkbox"
-          {...register('checkbox', {
+          {...register('agreement', {
           required: 'Agreement is mandatory!',
           })}
         />
@@ -55,7 +57,7 @@ const CatalogForm = () => {
       </div>
 
       <div style={{height: '20px', marginTop: '15px'}}>
-        {loading && <Loader />}
+        {loading && <LoaderSmall />}
         {data && <div style={{textAlign: 'center'}}>Thank you! Expect the catalog within an hour.</div>}
         {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
       </div>

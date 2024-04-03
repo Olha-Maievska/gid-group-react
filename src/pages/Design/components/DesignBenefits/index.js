@@ -1,5 +1,4 @@
-import { designBenefitsData } from '@data/designData'
-import DesignBenefitsItem from './DesignBenefitsItem'
+import DesignBenefitsList from './components/DesignBenefitsList'
 
 import './designBenefits.scss'
 
@@ -8,11 +7,7 @@ const designBenefits = () => {
     <div className="design-benefits">
       <h2 className="title">WHAT YOU WILL GET</h2>
       <div className="container">
-        <div className="design-benefits__innet">
-          {designBenefitsData.map(item =>
-            <DesignBenefitsItem key={item.id} {...item} />
-          )}
-        </div>
+        <DesignBenefitsList />
       </div>
     </div>
   )

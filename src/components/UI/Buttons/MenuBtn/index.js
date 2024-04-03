@@ -5,8 +5,9 @@ import './menuBtn.scss'
 
 const MenuBtn = () => {
   const dispatch = useDispatch()
+  
   return (
-    <button className="menu" onClick={() => dispatch(openModalMenu())}>
+    <button className="menu" onClick={() => dispatch(openModalMenu('active'))}>
       <div></div>
     </button>
   )

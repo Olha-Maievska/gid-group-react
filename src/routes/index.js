@@ -1,18 +1,20 @@
-import Main from "../pages/Main";
-import Contacts from '../pages/Contacts'
-import Projects from "../pages/Progects";
-import Design from "../pages/Design";
-import Blog from "../pages/Blog";
-import Repair from "../pages/Repair";
-import Team from "../pages/Team";
-import Services from "../pages/Services";
-import ProjectsDetails from "../pages/ProjectsDetails";
-import BlogDetails from "../pages/BlogDetails";
-import Reviews from "../pages/Reviews";
-import CalcStyles from "../pages/Calculator/CalcStyles";
-import CalcParams from "../pages/Calculator/CalcParams";
-import CalcAdditionally from "../pages/Calculator/CalcAdditionally";
-import PersonalData from '../pages/PersonalData';
+import { lazy } from 'react';
+
+const Main = lazy(() => import("../pages/Main"))
+const Contacts = lazy(() => import("../pages/Contacts"))
+const Projects = lazy(() => import("../pages/Progects"))
+const Design = lazy(() => import("../pages/Design"))
+const Blog = lazy(() => import("../pages/Blog"))
+const Repair = lazy(() => import("../pages/Repair"))
+const Team = lazy(() => import("../pages/Team"))
+const Services = lazy(() => import("../pages/Services"))
+const ProjectsDetails = lazy(() => import("../pages/ProjectsDetails"))
+const BlogDetails = lazy(() => import("../pages/BlogDetails"))
+const Reviews = lazy(() => import("../pages/Reviews"))
+const CalcStyles = lazy(() => import("../pages/Calculator/CalcStyles"))
+const CalcParams = lazy(() => import("../pages/Calculator/CalcParams"))
+const CalcAdditionally = lazy(() => import("../pages/Calculator/CalcAdditionally"))
+const PersonalData = lazy(() => import("../pages/PersonalData"))
 
 export const routes = [
   { path: '', element: <Main/>},

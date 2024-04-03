@@ -1,4 +1,4 @@
-import ServicesList from './ServicesList'
+import ServicesList from './components/ServicesList'
 
 import './services.scss'
 

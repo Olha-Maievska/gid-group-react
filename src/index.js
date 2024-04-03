@@ -7,13 +7,28 @@ import App from './App';
 
 import './index.scss';
 
+async function enableMocking() {
+  if (process.env.NODE_ENV !== 'development') {
+    return
+  }
+ 
+  const { worker } = await import('./mocks/browser')
+
+  return worker.start({
+    onUnhandledRequest: 'bypass',
+  })
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <App />
-      </PersistGate>
-    </Provider>
-  </React.StrictMode>
-);
+
+enableMocking().then(() => {
+  root.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
+      </Provider>
+    </React.StrictMode>
+  )
+})

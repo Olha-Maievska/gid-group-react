@@ -40,15 +40,16 @@
   &__social-link img {
     width: 100%;
     height: 100%;
-    transition: all .3s ease-in-out;
+
+    transition: transform .3s;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
 
   &__menu {
-    max-width: 870px;
+    max-width: 600px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -82,7 +83,7 @@
   }
 }
 
-@media (max-width: 1730px) {
+@media (max-width: 1870px) {
   .footer {
     background: #000;
     padding: 60px 0 30px;
@@ -96,9 +97,7 @@
     }
 
     &__menu {
-      max-width: 100%;
       margin-bottom: 50px;
-      justify-content: space-around;
     }
 
     &__copyright-text {
@@ -147,9 +146,6 @@
 
     &__menu-item {
       margin-right: 0px;
-      margin-bottom: 20px;
-      width: 50%;
-      text-align: center;
 
       &:last-child {
         margin-right: 0;
@@ -164,7 +160,8 @@
     }
 
     &__menu {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      max-width: 100%;
     }
 
     &__copyright-text { 

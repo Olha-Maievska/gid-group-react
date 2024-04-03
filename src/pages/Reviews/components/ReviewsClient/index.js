@@ -1,4 +1,6 @@
-const ReviewsClient = ({owner, complex, style, photoOwner, }) => {
+import '@repair/Reviews/repairReviews.scss'
+
+const ReviewsClient = ({ owner, complex, style, photoOwner, }) => {
   return (
     <div className="repair-review__box">
       <div className="repair-review__box-img">

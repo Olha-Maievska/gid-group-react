@@ -1,56 +1,135 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 .repair-works {
   padding-bottom: 35px;
   
   &__inner {
     position: relative;
-    margin: 50px 0;
     padding: 0 60px;
   }
-  
-  &__items {
-    overflow: hidden;
-    height: 100%;
-  }
 
-  &__track {
-    display: flex;
-		max-width: 1580px;
-		width: 100%;
-    transition: all .3s ease-in-out;
-  }
-
-  .projects__item {
-		min-width: 33.3333%;
+  &__item {
+    width: 100%;
 		margin-bottom: 0px;
 	}
-}
 
-@media (max-width: 1750px) {
-  .repair-works {
-    &__track {
-      flex-wrap: wrap;
-    }
+  .slider-container {
+    max-width: 1570px;
+    width: 100%;
+    margin: 50px auto 30px;
+  }
 
-    .projects__item {
-      min-width: 50%;
-      margin-bottom: 20px;
-    }
+  .slick-arrow {
+    top: 40%;
+    outline: transparent;
+    width: 50px;
+    height: 50px;
+    background-color: #FAFF09;
+    border-radius: 50%;
+  }
 
-    .arrow {
-      display: none;
+  .slick-next {
+    right: -60px;
+    &::before {
+      content: url(../../../../components/UI/Arrows/images/arrow-right-black.svg);
     }
   }
+
+  .slick-prev {
+    left: -60px;
+    &::before {
+      content: url(../../../../components/UI/Arrows/images/arrow-left-black.svg);
+    }
+  }
+
+  .slick-disabled {
+    cursor: not-allowed;
+  }
+
 }
 
-@media (max-width: 1200px) {
-  .repair-works {
+@media (max-width: 1470px) {
+ .repair-works {
+    .projects__item-img {
+      height: 550px;
+    }
+
+    .projects__item-title {
+      padding-right: 15px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    .slick-arrow {
+      top: 50%;
+  }
+ }
+}
+
+@media (max-width: 900px) {
+ .repair-works {
+    .projects__item-img {
+      height: 430px;
+    }
+ }
+}
+
+@media (max-width: 790px) {
+ .repair-works {
+    .projects__item-content {
+      left: 10px;
+      bottom: 15px;
+      width: 230px;
+    }
+ }
+}
+
+@media (max-width:  680px) {
+ .repair-works {
+    .projects__item-img {
+      height: 469px;
+    }
+ }
+}
+
+
+@media (max-width: 530px) {
+ .repair-works {
+
     &__inner {
-      padding: 0;
-      margin: 30px 0;
+      padding: 0 50px;
     }
 
     .projects__item {
-      margin-bottom: 0px;
+      height: 370px;
+    }
+
+    .projects__item-img {
+      height: 370px;
+    }
+
+    .projects__item-title {
+      padding-right: 15px;
+      font-size: 20px;
+    }
+
+    .projects__item-content {
+      width: 200px;
+    }
+
+    .slick-arrow {
+      top: 50%;
+      width: 40px;
+      height: 40px;
+    }
+
+    .slick-prev {
+      left: -50px;
+    }
+
+    .slick-next {
+      right: -50px;
     }
   }
 }

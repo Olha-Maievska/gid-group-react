@@ -12,6 +12,7 @@ const Team = () => {
           <BreadcrumbLink src="/team" title="Our team" />
         </div>
       </div>
+      
       <TeamAbout />
       <TeamPeople />
       

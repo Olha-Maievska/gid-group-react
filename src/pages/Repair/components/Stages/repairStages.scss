@@ -1,5 +1,6 @@
 .repair-stages {
-  margin: 90px 0 120px;
+  margin-bottom: 120px;
+  padding-top: 120px;
 
   &__items {
     margin: 85px auto 0;
@@ -28,7 +29,9 @@
 
 @media (max-width: 750px) {
   .repair-stages {
-    margin: 40px 0 70px;
+    margin-bottom: 70px;
+    padding-top: 90px;
+
     &__items {
       justify-content: center;
     }
