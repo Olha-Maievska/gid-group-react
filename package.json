@@ -26,7 +26,7 @@
 	"scripts": {
 		"dev": "react-app-rewired start",
 		"build": "react-app-rewired build",
-		"deploy": "npm run build && gh-pages -d dist"
+		"deploy": "npm run build && gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -58,5 +58,6 @@
 		"workerDirectory": [
 			"public"
 		]
-	}
+	},
+	"base": "/gid-group-react"
 }

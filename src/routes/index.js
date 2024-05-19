@@ -15,6 +15,7 @@ const CalcStyles = lazy(() => import("../pages/Calculator/CalcStyles"))
 const CalcParams = lazy(() => import("../pages/Calculator/CalcParams"))
 const CalcAdditionally = lazy(() => import("../pages/Calculator/CalcAdditionally"))
 const PersonalData = lazy(() => import("../pages/PersonalData"))
+const PageNotFound = lazy(() => import("../components/PageNotFound"))
 
 export const routes = [
   { path: '', element: <Main/>},
@@ -32,4 +33,5 @@ export const routes = [
   { path: '/calculatorParams', element: <CalcParams/>},
   { path: '/calculatorAdditionally', element: <CalcAdditionally/>},
   { path: '/personalData', element: <PersonalData/>},
+  { path: '*', element: <PageNotFound/>},
 ]
