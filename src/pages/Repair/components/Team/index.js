@@ -1,7 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import RepairTeamList from './components/RepairTeamList'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
-import { useNavigate } from 'react-router-dom'
-import { openPage } from '@utils/utils'
 
 import './repairTeam.scss'
 
@@ -19,7 +18,7 @@ const RepairTeam = () => {
         <RepairTeamList />
         <ProjectsBtnElse
           text="More employees"
-          fn={() => openPage(toTeam)}
+          fn={toTeam}
         />
       </div>
     </div>

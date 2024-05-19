@@ -6,7 +6,7 @@ const CalcAdditionallyItem = ({text, price}) => {
         <div className="calc-other__item-text">{text}</div>
       </div>
       <div className="calc-other__item-price">
-        from {price} hrn.
+        from {price} $
       </div>
     </div>
   )

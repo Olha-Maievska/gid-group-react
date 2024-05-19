@@ -12,8 +12,7 @@
 	}
 
 	&.disabled {
-		animation: modalCloseMenu 2s;
-		transform: translateY(-100%);
+		animation: modalCloseMenu 1s;
 	}
 
 	&__list {
@@ -85,20 +84,24 @@
 }
 
 @keyframes modalOpenMenu {
-  from {
-		transform: translateY(-100%);
+from {
+    opacity: 0;
+    transform: scale(.8, .8);
   }
   to {
-		transform: translateY(0%);
+    transform: scale(1, 1);
+    opacity: 1;
   }
 }
 
 @keyframes modalCloseMenu {
-  from {
-		transform: translateY(0%);
+	from {
+		transform: scale(1, 1);
+    opacity: 1;
   }
   to {
-		transform: translateY(-100%);
+    opacity: 0;
+    transform: scale(.8, .8);
   }
 }
 

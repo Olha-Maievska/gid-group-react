@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import RepairWorksList from './components/RepairWorksList'
 import ProjectsBtnElse from '@components/UI/Buttons/ProjectsBtnElse'
-import { openPage } from '@utils/utils'
 
 import './repairWorks.scss'
 
@@ -20,7 +19,7 @@ const RepairWorks = () => {
         <ProjectsBtnElse
           text="Portfolio"
           arrowRound={false}
-          fn={() => openPage(toPage)}
+          fn={toPage}
         />
       </div>
     </div>

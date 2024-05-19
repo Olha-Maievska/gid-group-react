@@ -7,7 +7,7 @@ const MenuBtn = () => {
   const dispatch = useDispatch()
   
   return (
-    <button className="menu" onClick={() => dispatch(openModalMenu('active'))}>
+    <button className="menu" onClick={() => dispatch(openModalMenu())}>
       <div></div>
     </button>
   )

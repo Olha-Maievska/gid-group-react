@@ -13,7 +13,7 @@ const Projects = () => {
   const { projects, isError, isLoading} = useSelector(({projects}) => projects)
   const dispatch = useDispatch()
 
-  const [items, setItems] = useState(projects.slice(0, 6))
+  const [items] = useState(projects.slice(0, 6))
   const navigate = useNavigate()
 
   const addProjects = () => {
@@ -23,7 +23,8 @@ const Projects = () => {
 
   useEffect(() => {
     dispatch(loadProjects())
-  }, [dispatch])
+    // eslint-disable-next-line
+  }, [])
 
   if (isLoading) return <LoaderSmall />
 

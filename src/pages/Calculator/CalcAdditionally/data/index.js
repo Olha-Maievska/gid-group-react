@@ -2,46 +2,46 @@ export const additionallyData = [
   {
     id: crypto.randomUUID(),
     text: 'Stretch ceiling',
-    price: '1 400',
+    price: '400',
   },
   {
     id: crypto.randomUUID(),
     text: 'Replacing radiators',
-    price: '18 000',
+    price: '4 000',
   },
   {
     id: crypto.randomUUID(),
     text: 'Apron in the kitchen',
-    price: '15 000',
+    price: '5 000',
   },
   {
     id: crypto.randomUUID(),
     text: 'Steel entrance door',
-    price: '6 000',
+    price: '600',
   },
   {
     id: crypto.randomUUID(),
     text: 'Warm floor in the bathroom',
-    price: '18 000',
+    price: '8 000',
   },
   {
     id: crypto.randomUUID(),
     text: 'Air conditioners',
-    price: '24 000',
+    price: '4 000',
   },
   {
     id: crypto.randomUUID(),
     text: 'Bathroom accessories',
-    price: '18 000',
+    price: '800',
   },
   {
     id: crypto.randomUUID(),
     text: 'Window replacement',
-    price: '10 000',
+    price: '1 000',
   },
   {
     id: crypto.randomUUID(),
     text: 'Replacing doors',
-    price: '16 000',
+    price: '6 000',
   },
 ]

@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import ReviewsClient from '@reviews/components/ReviewsClient'
-import { openPage } from '@utils/utils'
 import { addOneReview } from '@store/reviews/reviews-slice'
 
 const RepairReviewsItem = (item) => {
@@ -21,7 +20,7 @@ const RepairReviewsItem = (item) => {
         <p className="repair-review__text">{text.slice(0, 300)}...</p>
         <button
           className="repair-review__btn"
-          onClick={() => openPage(toReview)}
+          onClick={toReview}
         >
           Read more
         </button>

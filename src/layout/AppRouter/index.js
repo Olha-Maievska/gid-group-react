@@ -11,6 +11,7 @@ import MenuBtn from '@ui/Buttons/MenuBtn'
 import CallBtn from '@ui/Buttons/CallBtn'
 import { routes } from '../../routes'
 import { openModal} from '@store/modal/modal-slice'
+import ScrollToTop from '@components/ScrollToTop'
 
 const AppRouter = () => {
   const { menu, modal } = useSelector(state => state.modal)
@@ -25,7 +26,7 @@ const AppRouter = () => {
   useEffect(() => {
     const padding = window.innerWidth - document.body.offsetWidth
 
-    if (modal || menu) {
+    if (modal || menu ) {
       document.body.style.overflow = "hidden";
       document.body.style.paddingRight = `${padding}px`
     } else {
@@ -36,6 +37,7 @@ const AppRouter = () => {
 
   return (
     <div className="wrapper">
+      <ScrollToTop /> 
       <Header>
         <MenuBtn/>
         <Logo/>

@@ -9,7 +9,7 @@ import '@main/Projects/projects.scss'
 const RepairWorksList = ({ countSlides }) => {
   const dispatch = useDispatch()
   const { projects } = useSelector(({ projects }) => projects)
-  const [items, setItems] = useState(projects.slice(0, countSlides))
+  const [items] = useState(projects.slice(0, countSlides))
 
   const settings = {
     dots: false,
@@ -38,6 +38,7 @@ const RepairWorksList = ({ countSlides }) => {
 
   useEffect(() => {
     dispatch(loadProjects())
+    // eslint-disable-next-line
   }, [])
 
   return (

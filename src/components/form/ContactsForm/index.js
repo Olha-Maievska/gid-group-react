@@ -55,10 +55,6 @@ const ContactsForm = () => {
                 value: 6,
                 message: 'Minimum 6 characters'
               },
-              maxLength: {
-                value: 14,
-                message: 'Maximum 16 characters'
-              }
             })}
             onChange={event => {
               event.target.value = handleNumber(event.target.value)
