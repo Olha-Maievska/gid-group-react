@@ -28,7 +28,11 @@ const Projects = () => {
 
   if (isLoading) return <LoaderSmall />
 
-  if (isError) return <Error />
+  if (isError) {
+    return <div style={{textAlign: 'center', marginBottom: '40px'}}>
+     <Error />
+    </div> 
+  }
   
   return (
     <section className="projects">

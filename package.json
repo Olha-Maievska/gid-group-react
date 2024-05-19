@@ -2,6 +2,7 @@
 	"name": "gid-group-react",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://olha-maievska.github.io/gid-group-react",
 	"dependencies": {
 		"@hookform/resolvers": "^2.9.10",
 		"@reduxjs/toolkit": "^2.0.1",
@@ -24,7 +25,8 @@
 	},
 	"scripts": {
 		"dev": "react-app-rewired start",
-		"build": "react-app-rewired build"
+		"build": "react-app-rewired build",
+		"deploy": "npm run build && gh-pages -d dist"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -47,6 +49,7 @@
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@babel/plugin-transform-private-property-in-object": "^7.23.4",
+		"gh-pages": "6.1.1",
 		"msw": "^2.2.13",
 		"react-app-rewire-alias": "^1.1.7",
 		"react-app-rewired": "^2.2.1"

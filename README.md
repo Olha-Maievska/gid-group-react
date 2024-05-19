@@ -15,6 +15,7 @@ Commands:
 
 `npm run dev` - runs the application in development mode;
 `npm run build` - builds the application in production mode;
+`npm run deploy` - deploy the application;
 
 Project Structure:
 

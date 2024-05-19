@@ -17,13 +17,13 @@
 
 	&__list {
 		text-align: center;
-		margin: 154px auto 70px;
-		width: 250px;
+		margin: 124px auto 30px;
+		width: 200px;
 	}
 
 	&__item {
 		display: inline-block;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 
 		&:last-child {
 			margin-bottom: 0;
@@ -32,8 +32,8 @@
 
 	&__link {
 		font-weight: 400;
-		font-size: 48px;
-		line-height: 56px;
+		font-size: 36px;
+		line-height: 48px;
 		padding: 10px 0;
 		color: #828282;
 		transition: all .5s ease-in-out;
@@ -44,7 +44,7 @@
 			content: '';
 			position: absolute;
 			left: 0;
-			bottom: 15px;
+			bottom: 10px;
 			width: 100%;
 			height: 3px;
 			border-bottom: 3px solid #FAFF09;
@@ -122,18 +122,26 @@ from {
 		}
 
 		&__item {
-			margin-bottom: 25px;
+			margin-bottom: 15px;
 		}
 
 		&__list {
 			width: 125px;
-			margin: 100px auto 50px;
+			margin: 100px auto 30px;
 		}
 
 		&__link  {
 			font-size: 24px;
 			line-height: 28px;
 			padding: 7px 0;
+		}
+	}
+}
+
+@media (max-height: 660px) {
+	.main-menu {
+		&__social {
+			display: none;
 		}
 	}
 }
