@@ -58,6 +58,5 @@
 		"workerDirectory": [
 			"public"
 		]
-	},
-	"base": "/gid-group-react"
+	}
 }
