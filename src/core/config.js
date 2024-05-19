@@ -1,5 +1,5 @@
 export const config = {
   api: {
-    host: 'http://localhost:3000',
+    host: 'https://olha-maievska.github.io',
   },
 }
