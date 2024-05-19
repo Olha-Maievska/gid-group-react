@@ -33,5 +33,5 @@ export const routes = [
   { path: '/calculatorParams', element: <CalcParams/>},
   { path: '/calculatorAdditionally', element: <CalcAdditionally/>},
   { path: '/personalData', element: <PersonalData/>},
-  { path: '*', element: <PageNotFound/>},
+  { path: '/*', element: <PageNotFound/>},
 ]
