@@ -14,10 +14,11 @@ export const resetState = (setData, setError) => {
 
 export const onSubmit = (data, url, other) => {
   const { setLoading, setError, setData, reset } = other
-  const id = new Date().getTime()
+  const id = crypto.randomUUID()
+  const createdAt = new Date()
 
   setLoading(true)
-  sendForm(url, {...data, id})
+  sendForm(url, {...data, id, createdAt})
     .then(d => {
       setLoading(false)
       setError(false)

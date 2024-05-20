@@ -1,4 +1,4 @@
-import ProjectsRequest from '../Progects/components/Request'
+import Request from '@components/Request'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import TeamAbout from './components/TeamAbout'
 import TeamPeople from './components/TeamPeople'
@@ -17,7 +17,7 @@ const Team = () => {
       <TeamPeople />
       
       <div className="container">
-        <ProjectsRequest />
+        <Request />
       </div>
     </section>
   )

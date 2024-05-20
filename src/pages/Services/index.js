@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import ProjectsRequest from '../Progects/components/Request'
+import Request from '@components/Request'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import Tab from '@components/UI/Tab'
 import ServicesRepair from './components/ServicesRepair'
@@ -41,7 +41,7 @@ const Services = () => {
           />
         </div>
         {tab === 'ServicesRepair' ? <ServicesRepair /> : <ServicesDesign />}
-        <ProjectsRequest />
+        <Request />
       </div>
     </main>
   )

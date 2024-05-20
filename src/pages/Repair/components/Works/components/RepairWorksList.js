@@ -1,15 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Slider from "react-slick";
 import ProjectsItem from '@main/Projects/components/ProjectsItem'
-import { useSelector, useDispatch } from 'react-redux'
-import { loadProjects } from '@store/projects/projects-slice'
+import { projectsData } from '@projects/data';
 
 import '@main/Projects/projects.scss'
 
 const RepairWorksList = ({ countSlides }) => {
-  const dispatch = useDispatch()
-  const { projects } = useSelector(({ projects }) => projects)
-  const [items] = useState(projects.slice(0, countSlides))
+  const [items] = useState(projectsData.slice(0, countSlides))
 
   const settings = {
     dots: false,
@@ -35,11 +32,6 @@ const RepairWorksList = ({ countSlides }) => {
       }
     ]
   }
-
-  useEffect(() => {
-    dispatch(loadProjects())
-    // eslint-disable-next-line
-  }, [])
 
   return (
     <div className="repair-works__inner">

@@ -1,40 +1,26 @@
-import { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ProjectsBtnElse from '@ui/Buttons/ProjectsBtnElse'
 import ProjectsList from '@main/Projects/components/ProjectsList'
-import ProjectsRequest from './components/Request'
-import { loadProjects } from '@store/projects/projects-slice'
-import Error from '@components/Error'
-import { LoaderBigger } from '@components/Loader'
+import Request from '@components/Request'
+import { projectsData } from './data'
 
 import '@main/Projects/projects.scss'
 
 const Projects = () => {
-  const { projects, isLoading, isError } = useSelector(({ projects }) => projects)
-  const dispatch = useDispatch()
-
-  const [items, setItems] = useState(projects.slice(0, 6))
+  const [items, setItems] = useState(projectsData.slice(0, 6))
   const [start, setStart] = useState(6)
   const [offset, setOffset] = useState(9)
   const [isDisabled, setIsDisabled] = useState(false)
 
   const addProjects = () => {
-    if (offset === projects.length) {
+    if (offset === projectsData.length) {
       setIsDisabled(true)
     }
     setStart(offset)
     setOffset(prev => prev + 3)
-    setItems([...items, ...projects.slice(start, offset)])
+    setItems([...items, ...projectsData.slice(start, offset)])
   }
-
-  useEffect(() => {
-    dispatch(loadProjects())
-  }, [dispatch])
-
-  if (isLoading) return <LoaderBigger />
-
-  if (isError) return <Error />
 
   return (
     <main className="projects-page">
@@ -51,7 +37,7 @@ const Projects = () => {
           isDisabled={isDisabled}
         />
 
-        <ProjectsRequest />
+        <Request />
       </div>
     </main>
   )

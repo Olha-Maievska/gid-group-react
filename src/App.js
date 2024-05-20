@@ -6,7 +6,7 @@ import { LoaderBigger } from '@components/Loader'
 function App() {
   return (
     <Suspense fallback={<LoaderBigger/>}>
-      <BrowserRouter basename='/gid-group-react'>
+        <BrowserRouter basename='/gid-group-react'>
         <AppRouter />
       </BrowserRouter>
     </Suspense>

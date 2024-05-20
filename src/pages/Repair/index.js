@@ -5,7 +5,7 @@ import Catalog from '@main/Catalog'
 import RepairStages from './components/Stages'
 import RepairResult from './components/Result'
 import RepairReviews from './components/Reviews'
-import ProjectsRequest from '../Progects/components/Request'
+import Request from '@components/Request'
 import { repairBenefits } from './data'
 import Intro from './components/Intro'
 
@@ -24,7 +24,7 @@ const Repair = () => {
       <RepairReviews />
 
       <div className="container">
-        <ProjectsRequest />
+        <Request />
       </div>
     </main>
   )

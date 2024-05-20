@@ -2,7 +2,7 @@ import BreadcrumbLink from '@components/BreadcrumbLink'
 import ContactsDetails from './components/ContactsDetails'
 import ContactsForm from '@components/form/ContactsForm'
 import ContactsMap from './components/ContactsMap'
-import ProjectsRequest from '../Progects/components/Request'
+import Request from '@components/Request'
 
 import './contacts.scss'
 
@@ -24,7 +24,7 @@ const Contacts = () => {
       <ContactsMap />
 
       <div className="container">
-        <ProjectsRequest />
+        <Request />
       </div>
     </main>
   )
