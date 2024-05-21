@@ -64,6 +64,7 @@
 @media (max-width: 1400px) {
   .repair-result {
     margin: 80px 0 100px;
+
     &__inner {
       margin-top: 100px;
       justify-content: space-around;
@@ -85,12 +86,12 @@
       margin-top: 50px;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 0 50px;
     }
 
     &__item {
-      width: 100%;
+      width: 80%;
       margin-bottom: 60px;
+
       &::after,
       &::before {
         display: none;
@@ -103,3 +104,14 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .repair-result {
+    margin: 60px 0 40px;
+
+    &__item {
+      width: 100%;
+    }
+  }
+}
+

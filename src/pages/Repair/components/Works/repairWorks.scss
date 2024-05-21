@@ -32,14 +32,14 @@
   .slick-next {
     right: -60px;
     &::before {
-      content: url(../../../../components/UI/Arrows/images/arrow-right-black.svg);
+      content: url(./images/arrow-right-black.svg);
     }
   }
 
   .slick-prev {
     left: -60px;
     &::before {
-      content: url(../../../../components/UI/Arrows/images/arrow-left-black.svg);
+      content: url(./images/arrow-left-black.svg);
     }
   }
 
@@ -130,6 +130,22 @@
 
     .slick-next {
       right: -50px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+ .repair-works {
+    &__inner {
+      padding: 0 35px;
+    }
+
+    .slick-prev {
+      left: -45px;
+    }
+
+    .slick-next {
+      right: -45px;
     }
   }
 }

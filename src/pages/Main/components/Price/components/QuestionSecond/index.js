@@ -15,7 +15,7 @@ const QuestionSecond = () => {
       <h2 className="question__title">
           <span>Question 2:</span> Which style is better for your project?
       </h2>
-      <div className="question-two__items question__height">
+      <div className="question-two__items question__flex">
         {calcStyleData.map((item) => {
           return (
             <div

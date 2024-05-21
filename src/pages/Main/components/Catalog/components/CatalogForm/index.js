@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { onSubmit } from '@utils/formUtils'
-import { LoaderSmall } from '../../Loader'
+import { LoaderSmall } from '@components/Loader'
 import CheckboxLabel from './CheckboxLabel'
-import { config } from '../../../core/config'
+import { config } from '@core/config'
 
 import './catalogForm.scss'
 

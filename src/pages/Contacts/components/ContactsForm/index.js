@@ -1,10 +1,9 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { onSubmit, handleNumber } from '@utils/formUtils'
-import CheckboxLabel from '../CatalogForm/CheckboxLabel'
-import { config } from '../../../core/config'
-import { LoaderSmall } from '../../Loader'
-
+import CheckboxLabel from '@main/Catalog/components/CatalogForm/CheckboxLabel'
+import { config } from '@core/config'
+import { LoaderSmall } from '@components/Loader'
 
 import './contactsForm.scss'
 
@@ -20,7 +19,13 @@ const ContactsForm = () => {
     },
     handleSubmit,
     reset,
-  } = useForm({ mode: 'onBlur' })
+    clearErrors
+  } = useForm({ mode: 'onTouched' })
+  const name = register("name", { required: true });
+  const phone = register("phone", { required: true });
+  const square = register("square", { required: true });
+  const agreement = register("agreement", { required: true });
+  const message = register("message");
 
   const params = { setLoading, setError, setData, reset }
   const url = `${config.api.host}/sendContact`
@@ -36,12 +41,14 @@ const ContactsForm = () => {
             className="contacts-form__input"
             type="text"
             placeholder="Please enter your name"
-            {...register('name', {
-              required: 'Fill in the field!',
-            })}
+            {...name}
+            onChange={(e) => {
+              name.onChange(e);
+              clearErrors("name");
+            }}
           />
           <div className="form__error">
-            {errors?.name && <p>{errors?.name.message || 'Error'}</p>}
+            {errors.name?.type === 'required' && 'Fill in the field!'}
           </div>
 
           <label className="contacts-form__label" htmlFor="phone">Phone number</label>
@@ -49,19 +56,15 @@ const ContactsForm = () => {
             className="contacts-form__input"
             type="text"
             placeholder="Please enter your phone number"
-            {...register('phone', {
-              required: 'Phone number is required!',
-              minLength: {
-                value: 6,
-                message: 'Minimum 6 characters'
-              },
-            })}
-            onChange={event => {
-              event.target.value = handleNumber(event.target.value)
+            {...phone}
+            onChange={(e) => {
+              e.target.value = handleNumber(e.target.value)
+              phone.onChange(e);
+              clearErrors("phone");
             }}
           />
           <div className="form__error">
-            {errors?.phone && <p>{errors?.phone.message || 'Error'}</p>}
+            {errors.phone?.type === 'required' && 'Phone number is required!'}
           </div>
 
           <label className="contacts-form__label" htmlFor="square">Object area</label>
@@ -69,15 +72,15 @@ const ContactsForm = () => {
             className="contacts-form__input"
             type="text"
             placeholder="m2"
-            {...register('square', {
-              required: 'Fill in the field!',
-            })}
-            onChange={event => {
-              event.target.value = handleNumber(event.target.value)
+            {...square}
+            onChange={(e) => {
+              e.target.value = handleNumber(e.target.value)
+              square.onChange(e);
+              clearErrors("square");
             }}
           />
           <div className="form__error">
-            {errors?.square && <p>{errors?.square.message || 'Error'}</p>}
+            {errors.square?.type === 'required' && 'Fill in the field!'}
           </div>
         </div>
 
@@ -86,7 +89,10 @@ const ContactsForm = () => {
           <textarea
             className="contacts-form__textarea"
             placeholder="Enter text"
-            {...register('message')}
+            {...message}
+            onChange={(e) => {
+              message.onChange(e);
+            }}
           ></textarea>
 
           <div className="agreement">
@@ -96,16 +102,21 @@ const ContactsForm = () => {
               {...register('agreement', {
               required: 'Agreement is mandatory!',
               })}
+              {...agreement}
+              onChange={(e) => {
+                agreement.onChange(e);
+                clearErrors("agreement");
+              }}
             />
             <CheckboxLabel />
             <div className="form__error">
-              {errors?.agreement && <p>{errors?.agreement.message || 'Error'}</p>}
+              {errors.agreement?.type === 'required' && 'Agreement is mandatory!'}
             </div>
           </div>
 
           <div style={{height: '15px', marginTop: '5px'}}>
             {loading && <LoaderSmall />}
-            {data && <div style={{textAlign: 'center'}}>Thank you! We will call you back within an hour.</div>}
+            {data && <div style={{textAlign: 'center'}}>Thank you! Wait a call within an hour.</div>}
             {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
           </div>
           <button className="contacts-form__btn" type="submit">Send</button>

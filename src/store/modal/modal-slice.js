@@ -4,7 +4,7 @@ const modalSlice = createSlice({
   name: '@@modal',
   initialState: {
     menu: false,
-    modal: false,
+    modal: '',
     modalSrc: null,
   },
   reducers: {
@@ -14,12 +14,12 @@ const modalSlice = createSlice({
     closeModalMenu: (state) => {
       state.menu = false
     },
-    openModal: (state, action) => {
-      state.modal = true
-      state.modalSrc = action?.payload
+    openModal: (state, {payload}) => {
+      state.modal = payload.name
+      state.modalSrc = payload?.imgSrc
     },
     closeModal: (state) => {
-      state.modal = false
+      state.modal = ''
     }
   }
 })

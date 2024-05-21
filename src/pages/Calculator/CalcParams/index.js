@@ -2,12 +2,18 @@ import { Link } from "react-router-dom"
 import { useSelector } from "react-redux"
 import CalcParamsStyle from "./components/CalcParamsStyle"
 import PrevBtn from "@ui/Buttons/PrevBtn"
-import CalcForm from "@components/form/CalcForm"
+import CalcForm from "./components/CalcForm"
 import CalcTotalPrice from '@ui/Buttons/CalcTotalPrice'
 import ResetBtn from "@components/UI/Buttons/ResetBtn"
 import OtherParams from "./components/Other"
 
 import "./calcParams.scss"
+
+const prices = {
+  priceForSquare: 180,
+  priceForHeight: 210,
+  priceForBath: 200,
+}
 
 const CalcParams = () => {
   const { finishPrice } = useSelector(state => state.calc)
@@ -22,7 +28,7 @@ const CalcParams = () => {
           <CalcParamsStyle />
 
           <div className="calc-param__data">
-            <CalcForm />
+            <CalcForm prices={prices}/>
           </div> 
           <OtherParams />
         </div>

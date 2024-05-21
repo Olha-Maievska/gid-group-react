@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import priceImg from './images/price-bonus.png'
 import QuestionsPrice from './components/QuestionsPrice'
@@ -9,7 +8,6 @@ import { resetStatePrice } from '@store/price/price-slice'
 import './price.scss'
 
 const Price = () => {
-  const [isOpenModalPrice, setIsOpenModalPrice] = useState(false)
   const { modal } = useSelector(state => state.modal)
   const dispatch = useDispatch()
 
@@ -18,12 +16,10 @@ const Price = () => {
   }
 
   function showPriceModal() {
-    setIsOpenModalPrice(true)
-    dispatch(openModal())
+    dispatch(openModal({name: 'price'}))
   }
 
   function hidePriceModal() {
-    setIsOpenModalPrice(false)
     dispatch(closeModal())
     dispatch(resetStatePrice())
   }
@@ -56,8 +52,8 @@ const Price = () => {
         </div>
       </div>
 
-      {(modal && isOpenModalPrice) && (
-        <Modal isOpenModal={setIsOpenModalPrice}>
+      {(modal === 'price') && (
+        <Modal>
           <QuestionsPrice fn={hidePriceModal} />
         </Modal>
       )}

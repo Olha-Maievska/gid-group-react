@@ -16,13 +16,7 @@ import {
   addFloor,
 } from '@store/calc/calc-slice'
 
-const prices = {
-  priceForSquare: 180,
-  priceForHeight: 210,
-  priceForBath: 200,
-}
-
-const CalcForm = () => {
+const CalcForm = ({ prices}) => {
   const { square, height, bathSquare } = useSelector(state => state.calc)
   const dispatch = useDispatch()
 

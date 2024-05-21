@@ -14,7 +14,7 @@ const Main = () => {
   return (
     <main>
       <Slider />
-      <Advantages data={advantagesArray} />
+       <Advantages data={advantagesArray} />
       <Price />
       <Services />
       <Projects />

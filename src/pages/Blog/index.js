@@ -13,12 +13,12 @@ const Blog = () => {
           <BreadcrumbLink src="/blog" title="Blog" />
         </div>
         <h3 className="title__page">Our blog</h3>
-        <div className="container-fluid">
-          <div className="blog__inner">
-            {blogData.map(article =>
-              <BlogItem key={article.blogId} article={article} />
-            )}
-          </div>
+      </div>
+      <div className="container-fluid">
+        <div className="blog__inner">
+          {blogData.map(article =>
+            <BlogItem key={article.blogId} article={article} />
+          )}
         </div>
       </div>
     </section>

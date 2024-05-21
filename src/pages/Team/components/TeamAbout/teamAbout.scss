@@ -1,4 +1,6 @@
 .team-about {
+  margin-bottom: 160px;
+
   &__item {
     display: flex;
     justify-content: space-between;
@@ -22,7 +24,7 @@
     }
   }
 
-  &__img {
+  &__img img {
     background-color: #ccc;
   }
 
@@ -37,7 +39,10 @@
 
   &__command-img {
     width: 40%;
-    background-color: #ccc;
+
+    & img {
+      background-color: #ccc;
+    }
   }
 
   &__text {
@@ -100,9 +105,11 @@
 
 @media (max-width: 1400px) {
   .team-about {
+    margin-bottom: 100px;
+
     &__item {
       font-size: 20px;
-      line-height: 28px;
+      line-height: 34px;
     }
 
     &__text {
@@ -117,7 +124,7 @@
     &__item {
       margin-bottom: 60px;
       font-size: 16px;
-      line-height: 22px;
+      line-height: 28px;
     }
 
     &__text {
@@ -143,7 +150,7 @@
 
     &__item {
       font-size: 14px;
-      line-height: 20px;
+      line-height: 24px;
     }
 
     &__reality {

@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { onSubmit, handleNumber } from '@utils/formUtils'
-import { config } from '../../../core/config'
-import { LoaderSmall } from '../../Loader'
+import { config } from '../../../../core/config'
+import { LoaderSmall } from '@components/Loader'
 
 const ModalCallForm = () => {
   const [loading, setLoading] = useState(false)
@@ -16,6 +16,7 @@ const ModalCallForm = () => {
     },
     handleSubmit,
     reset,
+    clearErrors
   } = useForm({ mode: 'onChange' })
 
   const params = { setLoading, setError, setData, reset }
@@ -48,18 +49,19 @@ const ModalCallForm = () => {
           required: 'Fill in the field!',
            minLength: {
             value: 6,
-            message: 'Minimum 2 characters'
+            message: 'Minimum 6 characters'
           }
         })}
         onChange={event => {
           event.target.value = handleNumber(event.target.value)
+          clearErrors('phone')
         }}
 
       />
-      <div style={{height: '20px'}}>
+      <div className='modal-call__messages'>
         {loading && <LoaderSmall />}
-        {data && <div style={{textAlign: 'center'}}>Thank you! We will contact you shortly!</div>}
-        {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
+        {data && <div>Thank you! We will contact you shortly!</div>}
+        {error && <span>Something went wrong. Try again!</span>}
       </div>
       <button
         className="modal-call__btn"

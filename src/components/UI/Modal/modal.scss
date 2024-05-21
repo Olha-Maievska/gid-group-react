@@ -8,8 +8,7 @@
   z-index: 99;
   overflow: hidden;
   padding: 0 70px;
-  animation-name: modal;
-  animation-duration: 1s;
+  transition: all .3s;
 
   &__wrapper {
     width: 600px;
@@ -28,7 +27,7 @@
   }
 }
 
-@keyframes modal {
+@keyframes modalOpen {
   from {
     opacity: 0;
     transform: scale(.8, .8);
@@ -39,9 +38,20 @@
   }
 }
 
+@keyframes modalClose {
+  from {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(.8, .8);
+  }
+}
+
 @media (max-width: 878px) {
   .modal {
-    padding: 0 40px;
+    padding: 0 30px;
   }
 }
 

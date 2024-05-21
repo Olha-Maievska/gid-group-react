@@ -21,7 +21,7 @@ const QuestionThird = () => {
       <h2 className="question__title">
           <span>Question 3:</span> When do you plan to start work?
       </h2>
-      <div className="question-three__items question__height">
+      <div className="question-three__items question__flex">
         {term.map(({ text }, i) => (
           <div
             key={text}

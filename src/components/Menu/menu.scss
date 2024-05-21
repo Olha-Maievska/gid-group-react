@@ -81,10 +81,15 @@
 	&__social-link {
 		outline: transparent;
 	}
+
+	& .close-btn {
+		margin-top: 5px;
+		margin-right: 0;
+	}
 }
 
 @keyframes modalOpenMenu {
-from {
+	from {
     opacity: 0;
     transform: scale(.8, .8);
   }
@@ -122,12 +127,12 @@ from {
 		}
 
 		&__item {
-			margin-bottom: 15px;
+			margin-bottom: 18px;
 		}
 
 		&__list {
 			width: 125px;
-			margin: 100px auto 30px;
+			margin: 120px auto 40px;
 		}
 
 		&__link  {
@@ -135,13 +140,9 @@ from {
 			line-height: 28px;
 			padding: 7px 0;
 		}
-	}
-}
 
-@media (max-height: 660px) {
-	.main-menu {
-		&__social {
-			display: none;
+		& .close-btn {
+			margin-right: 0;
 		}
 	}
 }

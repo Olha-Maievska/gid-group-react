@@ -1,15 +1,14 @@
 import { useDispatch } from 'react-redux'
 import { closeModal } from '@store/modal/modal-slice'
-import ModalCallForm from '@form/ModalCallForm'
+import ModalCallForm from  './components/ModalCallForm'
 import CloseBtn from '@ui/Buttons/CloseBtn'
 
 import './modalCall.scss'
 
-const ModalCall = ({setIsOpenModalCall}) => {
+const ModalCall = () => {
   const dispatch = useDispatch()
 
   const closeModalCall = () => {
-    setIsOpenModalCall(false)
     dispatch(closeModal())
   }
 

@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import Logo from '../../images/Logo.png'
 import { closeModal } from '@store/modal/modal-slice'
-import PriceForm from '@components/form/PriceForm'
+import PriceForm from '../PriceForm'
 
 const QuestionsFourth = () => {
   const dispatch = useDispatch()
@@ -21,7 +21,7 @@ const QuestionsFourth = () => {
           <span>Completion</span>
       </h2>
 
-      <div className="question-four__inner question__height">
+      <div className="question-four__inner question__flex">
 
         <div className="question-four__form">
           <p className="question-four__form-text">Fill in your contact information and we will call you</p>

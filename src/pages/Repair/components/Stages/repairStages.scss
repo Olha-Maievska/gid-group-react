@@ -35,15 +35,11 @@
     &__items {
       justify-content: center;
     }
-  }
 
-  .stages__btn {
-    margin: 0 auto;
-  }
-
-  .stages__item {
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom: 30px;
+    .stages__item {
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 0 30px;
+    }
   }
 } 

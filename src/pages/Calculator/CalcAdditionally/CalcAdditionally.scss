@@ -161,3 +161,11 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+.calc-other {
+    &__item {
+      font-size: 12px;
+    }
+  }
+}

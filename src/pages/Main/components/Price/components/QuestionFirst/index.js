@@ -21,7 +21,7 @@ const QuestionFirst = () => {
         <span>Question 1:</span> What is the room size of your project?
       </h2>
 
-      <div className="question-one__items question__height">
+      <div className="question-one__items question__flex">
         {sizes.map((size) => (
           <div
             className={`question-one__item ${projectSize === size ? 'active' : ''}`}

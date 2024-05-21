@@ -3,16 +3,13 @@ import { galleryData } from '../data'
 import { openModal } from '@store/modal/modal-slice'
 import Modal from '@ui/Modal'
 import GalleryItem from './GalleryItem'
-import { useState } from 'react'
 
 const GalleryList = () => {
-  const [isOpen, setIsOpen] = useState(false)
   const { modal, modalSrc } = useSelector(state => state.modal)
   const dispatch = useDispatch()
 
   function openModalGallery(img) {
-    dispatch(openModal(img))
-    setIsOpen(true)
+    dispatch(openModal({name: 'gallery', imgSrc: img}))
   }
 
   return (
@@ -24,8 +21,8 @@ const GalleryList = () => {
           {...item}
         />
         )}
-      {(modal && isOpen) && (
-        <Modal isOpenModal={setIsOpen}>
+      {(modal === 'gallery') && (
+        <Modal>
           <div className="modal__wrapper" onClick={e => e.stopPropagation()}>
             <img src={modalSrc} alt="Gallery" />
           </div>

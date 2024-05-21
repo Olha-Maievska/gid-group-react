@@ -22,7 +22,7 @@
 
   &__social-link {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     
     &::after {
       content: '';
@@ -126,7 +126,7 @@
 
 @media (max-width: 780px) {
   .footer {
-    padding: 30px 0 30px;
+    padding: 50px 0 30px;
     margin-top: 60px;
 
     &__logo {
@@ -142,15 +142,6 @@
       max-width: 400px;
       width: 100%;
       margin: 30px auto 0;
-    }
-
-    &__menu-item {
-      margin-right: 0px;
-
-      &:last-child {
-        margin-right: 0;
-        margin-bottom: 0;
-      }
     }
 
     &__menu-title {
@@ -194,6 +185,10 @@
   .footer {
     margin-top: 40px;
 
+    &__logo {
+      width: 135px;
+    }
+
     &__social-link img {
       border-radius: 4px;
       width: 38px;
@@ -204,8 +199,20 @@
       &::after {
         content: '';
         left: 4px;
-        top: -16px;
+        top: -14px;
+         width: 30px;
+        height: 30px;
       }
+    }
+
+     &__menu {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__menu-item {
+      margin-bottom: 10px;
     }
   }
 }

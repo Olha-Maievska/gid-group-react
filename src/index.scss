@@ -171,7 +171,6 @@ a {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 100px;
 
 		&__with__reset {
 			display: flex;
@@ -207,14 +206,6 @@ a {
   outline: none;
 }
 
-@media (max-width: 1730px) {
-	.calc {
-		&__bottom {
-			margin-bottom: 40px;
-		}
-	}
-}
-
 @media (max-width: 1140px) {
   .calc {
 		&__btn {
@@ -233,11 +224,10 @@ a {
 
 @media (max-width: 1090px) {
 	.title {
-		font-size: 24px;
-		line-height: 28px;
+		font-size: 34px;
+		line-height: 48px;
 		padding-bottom: 10px;
 		padding-left: 40px;
-		width: 408px;
 
 		&::before {
 			width: 97px;
@@ -262,6 +252,11 @@ a {
 		&__btn {
 			margin-top: 20px;
 		}
+	}
+
+	.title {
+		font-size: 24px;
+		line-height: 28px;
 	}
 }
 

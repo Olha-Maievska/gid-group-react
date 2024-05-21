@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { useDispatch, useSelector} from "react-redux"
 import ModalCall from '@ui/ModalCall'
@@ -15,12 +15,10 @@ import ScrollToTop from '@components/ScrollToTop'
 
 const AppRouter = () => {
   const { menu, modal } = useSelector(state => state.modal)
-  const [isOpenModalCall, setIsOpenModalCall] = useState(false)
   const dispatch = useDispatch()
 
   function showModalCall() {
-    setIsOpenModalCall(true)
-    dispatch(openModal())
+    dispatch(openModal({name: 'call'}))
   }
 
   useEffect(() => {
@@ -57,9 +55,9 @@ const AppRouter = () => {
 
       <Footer />
       
-      { (modal && isOpenModalCall) && (
-        <Modal isOpenModal={setIsOpenModalCall}>
-          <ModalCall setIsOpenModalCall={setIsOpenModalCall} />
+      { (modal === 'request' || modal === 'call') && (
+        <Modal >
+          <ModalCall />
         </Modal>
       )}
       { menu && <Menu openModalCall={showModalCall}/> }

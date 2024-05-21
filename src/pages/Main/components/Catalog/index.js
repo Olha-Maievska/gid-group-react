@@ -1,4 +1,4 @@
-import CatalogForm from '@form/CatalogForm'
+import CatalogForm from './components/CatalogForm'
 import img from './images/catalog.jpg'
 
 import './catalog.scss'

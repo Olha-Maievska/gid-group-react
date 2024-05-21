@@ -1,6 +1,4 @@
 .team-people {
-  margin-top: 160px;
-
   &__inner {
     margin-top: 80px;
     display: flex;
@@ -38,7 +36,6 @@
 
 @media (max-width: 960px) {
   .team-people {
-    margin-top: 100px;
     &__inner {
       margin-top: 40px;
     }
@@ -61,8 +58,6 @@
 
 @media (max-width: 740px) {
   .team-people {
-    margin-top: 80px;
-    margin-bottom: 0;
     &__inner {
       margin-top: 20px;
     }

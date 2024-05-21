@@ -130,13 +130,13 @@
 		}
 
 		&__content-btn {
-			padding: 25px 80px; 
+			padding: 25px 80px;
 			font-size: 24px;
 		}
 	}
 }
 
-@media (max-width: 790px)  {
+@media (max-width: 790px) {
 	.price {
 		margin-bottom: 70px;
 
@@ -181,5 +181,41 @@
 			padding: 17px 50px; 
 			font-size: 20px;
 		}
+	}
+}
+
+@media (max-width: 490px) {
+	.price {
+		&__inner { 
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 20px;
+		}
+
+		&__content-title {
+			font-size: 22px;
+			line-height: 30px;
+		}
+
+		&__content-text {
+			font-size: 20px;
+		}
+
+		&__bonus-list {
+			margin: 50px auto 0;
+			font-size: 24px;
+		}
+
+		&__bonus-item {
+			font-size: 20px;
+			margin: 15px 0 10px;
+
+			&::before {
+				left: 20px;
+			}
+		}
+
 	}
 }

@@ -52,17 +52,14 @@
 
 @media (max-width: 780px) {
   .button__up {
-    right: -5px;
+    right: -18px;
     top: 45px;
     background: none;
-    border: none;
-    padding: 0;
+    padding: 3px 8px;
     letter-spacing: 1.4px;
 
     &:hover {
-      background: none;
-      color: #FAFF09;
-      border: none;
+      color: #000;
     }
   }
 }

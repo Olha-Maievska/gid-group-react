@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { handleNumber} from '@utils/formUtils'
 import { useDispatch, useSelector } from 'react-redux'
+import { handleNumber} from '@utils/formUtils'
 import { resetStatePrice } from '@store/price/price-slice'
-import { config } from '../../../core/config'
+import { config } from '@core/config'
 import { onSubmit } from '@utils/formUtils'
-import { LoaderSmall } from '../../Loader'
-import CheckboxLabel from '../CatalogForm/CheckboxLabel'
+import { LoaderSmall } from '@components/Loader'
+import CheckboxLabel from '@main/Catalog/components/CatalogForm/CheckboxLabel'
 
 const PriceForm = () => {
   const price = useSelector(state => state.price)
@@ -22,6 +22,7 @@ const PriceForm = () => {
     },
     handleSubmit,
     reset,
+    clearErrors
   } = useForm({ mode: 'onBlur' })
 
   const params = { setLoading, setError, setData, reset }
@@ -59,6 +60,8 @@ const PriceForm = () => {
         })}
         onChange={event => {
           event.target.value = handleNumber(event.target.value)
+          clearErrors('phone')
+
         }}
 
       />
@@ -77,10 +80,10 @@ const PriceForm = () => {
         <CheckboxLabel />
       </div>
 
-      <div style={{height: '18px', marginTop: '15px'}}>
+      <div className='question-four__form-messages'>
         {loading && <LoaderSmall />}
-        {data && <div style={{textAlign: 'center'}}>Thank you! We will contact you shortly!</div>}
-        {error && <div style={{textAlign: 'center', color: 'red'}}>Something went wrong. Try again!</div>}
+        {data && <div>Thank you! We will contact you shortly!</div>}
+        {error && <span>Something went wrong. Try again!</span>}
       </div>
       
       <button className="question-four__form-btn" type="submit">Send</button>

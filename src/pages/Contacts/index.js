@@ -1,6 +1,6 @@
 import BreadcrumbLink from '@components/BreadcrumbLink'
 import ContactsDetails from './components/ContactsDetails'
-import ContactsForm from '@components/form/ContactsForm'
+import ContactsForm from './components/ContactsForm'
 import ContactsMap from './components/ContactsMap'
 import Request from '@components/Request'
 
