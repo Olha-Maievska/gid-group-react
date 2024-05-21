@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/gid-group-react/static/css/main.21c14f0c.css",
-    "main.js": "/gid-group-react/static/js/main.9acf8714.js",
+    "main.css": "/gid-group-react/static/css/main.1109c339.css",
+    "main.js": "/gid-group-react/static/js/main.fc7eeb71.js",
     "static/css/949.934c117e.chunk.css": "/gid-group-react/static/css/949.934c117e.chunk.css",
     "static/js/949.fcaaaf80.chunk.js": "/gid-group-react/static/js/949.fcaaaf80.chunk.js",
     "static/css/67.95dd5e4c.chunk.css": "/gid-group-react/static/css/67.95dd5e4c.chunk.css",
@@ -274,27 +274,27 @@
     "static/media/slick.svg": "/gid-group-react/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/gid-group-react/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/gid-group-react/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/viber.svg": "/gid-group-react/static/media/viber.21fb9aa82ca64ea17990ae1260cdfc46.svg",
+    "static/media/viber.svg": "/gid-group-react/static/media/viber.d6a9731bffa4c4705b1a856f47ecb6b9.svg",
     "static/media/services3.svg": "/gid-group-react/static/media/services3.93efac61fa9b0c9a1167b86fe8fde572.svg",
-    "static/media/instagram.svg": "/gid-group-react/static/media/instagram.c32eb76b669fede8fed20d8c01acef5b.svg",
+    "static/media/instagram.svg": "/gid-group-react/static/media/instagram.55a464926e34b155e6d20f81dd2c9fcc.svg",
     "static/media/slick.woff": "/gid-group-react/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/tiktok.svg": "/gid-group-react/static/media/tiktok.cb4c9179a32bf8ab2e97010326f8ccba.svg",
+    "static/media/tiktok.svg": "/gid-group-react/static/media/tiktok.e1c1eb6154acfb4257f1acc793ab1320.svg",
     "static/media/services2.svg": "/gid-group-react/static/media/services2.b5aa208c82a8512fbbdd7e11181a69fb.svg",
     "static/media/phone.svg": "/gid-group-react/static/media/phone.b40308dcc049c3180bdf7f0fea107085.svg",
     "static/media/round-arrow.svg": "/gid-group-react/static/media/round-arrow.27315faa0de772bc1ab014691e96b41c.svg",
     "index.html": "/gid-group-react/index.html",
     "static/media/services1.svg": "/gid-group-react/static/media/services1.14cd7d813c373258f85453fd88663d66.svg",
-    "static/media/facebook.svg": "/gid-group-react/static/media/facebook.705e2f88e506143db321b3f9eab0b976.svg",
-    "static/media/telegram.svg": "/gid-group-react/static/media/telegram.d94b19e3aa0001d980ed50d0fb1e56ec.svg",
+    "static/media/facebook.svg": "/gid-group-react/static/media/facebook.c9c8c4cdd730ecbdaed556c7c030492a.svg",
+    "static/media/telegram.svg": "/gid-group-react/static/media/telegram.a3afa8f43eb6ceb11f402383b3bf1313.svg",
     "static/media/arrow-up.svg": "/gid-group-react/static/media/arrow-up.4139a7b48d1c2b3840b7.svg",
     "static/media/arrow-left.svg": "/gid-group-react/static/media/arrow-left.e497f23a4731b71ed3ab.svg",
-    "static/media/youtube.svg": "/gid-group-react/static/media/youtube.05e7c801176066b36f79d64faa7033f1.svg",
+    "static/media/youtube.svg": "/gid-group-react/static/media/youtube.675dcd291e29fc5ea80af637e760d9ec.svg",
     "static/media/close.svg": "/gid-group-react/static/media/close.6c383e4c1d3d08da30467a6c464cb0d5.svg",
     "static/media/check.svg": "/gid-group-react/static/media/check.ac688b982a68f54c5437.svg",
     "static/media/arrow-left-black.svg": "/gid-group-react/static/media/arrow-left-black.a0fc5608796bc94c9a068158ad320afe.svg",
     "static/media/arrow-right-black.svg": "/gid-group-react/static/media/arrow-right-black.12f4553f4ef646b5f2e3977398f7cda7.svg",
-    "main.21c14f0c.css.map": "/gid-group-react/static/css/main.21c14f0c.css.map",
-    "main.9acf8714.js.map": "/gid-group-react/static/js/main.9acf8714.js.map",
+    "main.1109c339.css.map": "/gid-group-react/static/css/main.1109c339.css.map",
+    "main.fc7eeb71.js.map": "/gid-group-react/static/js/main.fc7eeb71.js.map",
     "949.934c117e.chunk.css.map": "/gid-group-react/static/css/949.934c117e.chunk.css.map",
     "949.fcaaaf80.chunk.js.map": "/gid-group-react/static/js/949.fcaaaf80.chunk.js.map",
     "67.95dd5e4c.chunk.css.map": "/gid-group-react/static/css/67.95dd5e4c.chunk.css.map",
@@ -331,7 +331,7 @@
     "501.a9de853e.chunk.js.map": "/gid-group-react/static/js/501.a9de853e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21c14f0c.css",
-    "static/js/main.9acf8714.js"
+    "static/css/main.1109c339.css",
+    "static/js/main.fc7eeb71.js"
   ]
 }
