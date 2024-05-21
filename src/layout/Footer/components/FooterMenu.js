@@ -18,8 +18,8 @@ const FooterMenu = () => {
       </div>
       <div className="footer__menu-item">
         <h4 className="footer__menu-title">Contacts</h4>
-        <a className="footer__menu-link" href="tel:74955551505">+ (745) 555-15-05</a>
-        <a className="footer__menu-link" href="mailto:info@gid.pro">info@gid.pro</a>
+        <a className="footer__menu-link" href="tel:380977596455">+380 (97) 759 64 55</a>
+        <a className="footer__menu-link" href="mailto:info@gid.pro">gid-group@gmail.com</a>
       </div>
   </div>
   )
