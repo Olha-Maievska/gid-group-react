@@ -201,13 +201,14 @@
         content: '';
         left: 2px;
         top: -17px;
-        width: 34px;
-        height: 34px;
+        width: 33px;
+        height: 33px;
         border-radius: 12px;
       }
     }
 
     &__menu {
+      max-width: 200px;
       width: 100%;
       align-items: center;
       flex-direction: column;
