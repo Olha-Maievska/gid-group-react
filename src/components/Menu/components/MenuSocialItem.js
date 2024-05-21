@@ -7,7 +7,7 @@ const MenuSocialItem = ({src, href}) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={src} alt=""/>
+        <img src={src} alt="social"/>
       </a>
     </li>
   )
